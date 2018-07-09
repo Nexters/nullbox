@@ -9,6 +9,7 @@ injectGlobal`
   }
 `;
 
+
 const Container  = styled.div`
   height: 100vh;
   width: 100%;
@@ -39,6 +40,7 @@ class Home extends Component {
   render() {
     return (
       <Container>
+        <div>Nexters</div>
         <h1>Null Box</h1>
 
         <ButtonBox>
