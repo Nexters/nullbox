@@ -9,12 +9,11 @@ injectGlobal`
   }
 `;
 
-
-const Container  = styled.div`
+const Container = styled.div`
   height: 100vh;
   width: 100%;
   background-color: white;
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -40,13 +39,17 @@ class Home extends Component {
   render() {
     return (
       <Container>
-        <div>Nexters</div>
         <h1>Null Box</h1>
-
         <ButtonBox>
-          <Link to="/Game/Speed"><Button>스피드 게임</Button></Link>
-          <Link to="/Game/Letter"><Button>초성 게임</Button></Link>
-          <Link to="/Game/Brand"><Button>브랜드 게임</Button></Link>
+          <Link to="/Game/Speed">
+            <Button>스피드 게임</Button>
+          </Link>
+          <Link to="/Game/Letter">
+            <Button>초성 게임</Button>
+          </Link>
+          <Link to="/Game/Brand">
+            <Button>브랜드 게임</Button>
+          </Link>
         </ButtonBox>
       </Container>
     );
