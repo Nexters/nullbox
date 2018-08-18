@@ -75,8 +75,10 @@ const korean = [
 
 class Korean extends Component {
   state = {
+    index: 0,
     word: '',
     time: 0,
+    history: [],
   };
 
   componentDidMount() {
@@ -95,13 +97,15 @@ class Korean extends Component {
     });
   }
 
-  question = () => {
+  createQuestion = () => {
     let first = parseInt(Math.random() * korean.length);
     let second = parseInt(Math.random() * korean.length);
-
+    let i = this.index;
     let qord = korean[first] + ' ' + korean[second];
 
     this.setState({ word: qord });
+    this.setState({ index: i++ });
+    this.setState({ history: this.state.history.concat(qord) });
   };
 
   render() {
@@ -116,8 +120,8 @@ class Korean extends Component {
         <Main>
           <Word>{word}</Word>
           <Nav>
-            <Button onClick={this.question}>Correct</Button>
-            <Button onClick={this.question}>Pass</Button>
+            <Button onClick={this.createQuestion}>Correct</Button>
+            <Button onClick={this.createQuestion}>Pass</Button>
           </Nav>
         </Main>
         <Line strokeWidth="4" percent={this.state.time} />

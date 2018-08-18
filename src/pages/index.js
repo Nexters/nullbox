@@ -1,4 +1,4 @@
-export { default as Home } from './Home';
-export { default as Game } from './Game';
-export { default as Setting } from './Setting';
-export { default as Korean } from './Korean';
+export { default as Home } from './Home/Home';
+export { default as Game } from './Game/Game';
+export { default as Setting } from './Setting/Setting';
+export { default as Korean } from './Korean/Korean';
