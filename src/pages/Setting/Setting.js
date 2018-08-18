@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import './Setting.css';
 
 class Setting extends Component {
   render() {
     return (
-      <div>
-
+      <div className="setting">
+        <p>세팅페이지</p>
       </div>
     );
   }
