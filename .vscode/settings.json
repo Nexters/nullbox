@@ -1,2 +1,56 @@
 {
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.fontLigatures": true,
+  "editor.snippetSuggestions": "top",
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  // files
+  "files.associations": {
+    "*.js": "javascriptreact"
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.DS_Store": true,
+    "*/node_modules": true,
+    "**/.idea": true,
+    "**/.vscode": false,
+    "**/yarn.lock": true,
+    "**/tmp": true,
+    "node_modules": true
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/node_modules/**": true,
+    "**/tmp": true,
+    "**/build": true
+  },
+  "files.trimTrailingWhitespace": true,
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/tmp": true,
+    "**/coverage": true,
+    "**/build": true,
+    "**/Pods": true,
+    "**/*.xcodeproj": true,
+    "**/*.xcworkspace": true,
+    "**/.meteor": true
+  },
+  "html.suggest.html5": true,
+  "extensions.autoUpdate": true,
+  // flow
+  "javascript.validate.enable": false,
+  // prettier
+  "prettier.eslintIntegration": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "prettier.jsxBracketSameLine": true,
+  "prettier.parser": "flow",
+  // eslint
+  "eslint.autoFixOnSave": true,
 }

@@ -1,0 +1,32 @@
+.setting {
+  padding: 30px;
+}
+
+.text {
+  color: #fd575f;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-name {
+  color: #2eb299;
+  font-size: 40px;
+}
+
+.game-info {
+  font-size: 13px;
+  color: #fff;
+  text-align: center;
+}
+
+label {
+  color: #fff;
+}
