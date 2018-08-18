@@ -10,7 +10,7 @@ class App extends Component {
         <Route exact path="/Game" component={Game} />
         <Route exact path="/Game/:subjects" component={Game} />
         <Route exact path="/Korean" component={Korean} />
-        <Route exact path="/Setting" component={Setting} />
+        <Route exact path="/Setting/:subjects" component={Setting} />
         <Route exact path="/Info" component={Info} />
       </Fragment>
     );

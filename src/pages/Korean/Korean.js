@@ -1,60 +1,8 @@
 import React, { Component } from 'react';
-import styled, { injectGlobal } from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Line } from 'rc-progress';
 import 'rc-progress/assets/index.css';
-
-injectGlobal`
-  body {
-    padding:0;
-    margin:0;
-  }
-`;
-
-const Container = styled.div`
-  height: 100vh;
-  width: 100%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-`;
-
-const Header = styled.div`
-  height: 10vh;
-  width: 100%;
-`;
-
-const Main = styled.div`
-  height: 70vh;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-`;
-
-const Nav = styled.div`
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-`;
-
-const Button = styled.button`
-  height: 60px;
-  width: 100px;
-  background-color: #3498db;
-  color: white;
-  font-weight: 200;
-`;
-
-const Word = styled.h1`
-  color: black;
-  font-weight: 600;
-  font-size: 250px;
-`;
+import './Korean.css';
 
 const korean = [
   'ㄱ',
@@ -107,21 +55,25 @@ class Korean extends Component {
   render() {
     const { word } = this.state;
     return (
-      <Container>
-        <Header>
-          <Button>
+      <div className="korean">
+        <div className="Header">
+          <button className="button">
             <Link to="/">X</Link>
-          </Button>
-        </Header>
-        <Main>
-          <Word>{word}</Word>
-          <Nav>
-            <Button onClick={this.question}>Correct</Button>
-            <Button onClick={this.question}>Pass</Button>
-          </Nav>
-        </Main>
+          </button>
+        </div>
+        <div className="main">
+          <h1 className="word-title">{word}</h1>
+          <div className="nav">
+            <button className="button" onClick={this.question}>
+              Correct
+            </button>
+            <button className="button" onClick={this.question}>
+              Pass
+            </button>
+          </div>
+        </div>
         <Line strokeWidth="4" percent={this.state.time} />
-      </Container>
+      </div>
     );
   }
 }

@@ -10,13 +10,13 @@ class Home extends Component {
         <img src={logo} alt="logo" className="logo" />
         <p className="main-text">바로가기</p>
         <div className="home-button">
-          <Link to="/Game/Letter">
+          <Link to="/Setting/초성게임">
             <div className="button">초성 게임</div>
           </Link>
-          <Link to="/Game/Brand">
+          <Link to="/Setting/브랜드게임">
             <div className="button">브랜드 게임</div>
           </Link>
-          <Link to="/Game/Speed">
+          <Link to="/Setting/스피드게임">
             <div className="button">스피드 게임</div>
           </Link>
         </div>
