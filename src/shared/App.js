@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Route } from 'react-router-dom';
-import { Home, Game, Setting, Korean } from '../pages';
+import { Home, Game, Setting, Korean, Info } from '../pages';
 
 class App extends Component {
   render() {
@@ -11,6 +11,7 @@ class App extends Component {
         <Route exact path="/Game/:subjects" component={Game} />
         <Route exact path="/Korean" component={Korean} />
         <Route exact path="/Setting" component={Setting} />
+        <Route exact path="/Info" component={Info} />
       </Fragment>
     );
   }
