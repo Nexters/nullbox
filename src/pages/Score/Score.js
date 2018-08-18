@@ -19,12 +19,57 @@ const Container = styled.div`
   flex-direction: column;
 `;
 
-class Score extends Components {
-  state = {
-    word: '',
-    time: 0,
-  }
+const Header = styled.div`
+  height: 10vh;
+  width: 100%;
+  margin-left: 5%;
+`;
 
+const Main = styled.div`
+  height: 70vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+`;
+
+const Nav = styled.div`
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+`;
+
+const Button = styled.button`
+  height: 60px;
+  width: 100px;
+  background-color: #3498db;
+  color: white;
+  font-weight: 200;
+  justify-content: flex-start;
+`;
+
+const Word = styled.h1`
+  color: black;
+  font-weight: 600;
+  font-size: 3em;
+`;
+const Count = styled.h1` 
+
+`;
+
+const Time = styled.h1` 
+
+`;
+class Score extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+       
+      time: 0,
+    }
+  }
 
   showResult = () => {
 
@@ -38,14 +83,19 @@ class Score extends Components {
           Score
         </Header>
         <Main>
-          <Word>{word}</Word>
+
+          <Word>{this.state.word}</Word>
           <Count></Count>
           <Time></Time>
           <Nav>
-            <Button onClick={this.}></Button>
-            <Button onClick={this.}></Button>
-          /* 홈으로 */
-          /* 다음팀 시작하기 */
+            <Button >
+              <Link to = "/"> 홈으로 </Link>
+            </Button>
+            <Button >
+              <Link to ="/"> 다음팀 시작하기 </Link>
+            </Button>
+
+     
           </Nav>
         </Main>
       </Container>

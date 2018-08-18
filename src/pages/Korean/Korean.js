@@ -74,21 +74,26 @@ const korean = [
 ];
 
 class Korean extends Component {
-  state = {
-    index: 0,
-    word: '',
-    time: 0,
-    history: [],
+  constructor(props){
+    super(props);
+    
+    this.state = {
+      index: 0,
+      word: '',
+      time: 0,
+      history: [],
+      SuccesHistory : [],
+    }
   };
 
   componentDidMount() {
     this.timerID = setInterval(() => this.tick(), 1000);
-    console.log('didmont');
+    // console.log('didmont');
   }
 
   componentWillUnmount() {
     clearInterval(this.timerID);
-    console.log('willmount');
+    // console.log('willmount');
   }
 
   tick() {
@@ -97,16 +102,36 @@ class Korean extends Component {
     });
   }
 
-  createQuestion = () => {
+  createQuestionPass = () => {
     let first = parseInt(Math.random() * korean.length);
     let second = parseInt(Math.random() * korean.length);
     let i = this.index;
+  
     let qord = korean[first] + ' ' + korean[second];
 
     this.setState({ word: qord });
     this.setState({ index: i++ });
     this.setState({ history: this.state.history.concat(qord) });
+    console.log("history : "+ this.state.history);
+    console.log("succes : "+ this.state.SuccesHistory);
   };
+
+  createQuestionCorrect = () => {
+    let first = parseInt(Math.random() * korean.length);
+    let second = parseInt(Math.random() * korean.length);
+    let i = this.index;
+  
+    let qord = korean[first] + ' ' + korean[second];
+
+    this.setState({ word: qord });
+    this.setState({ index: i++ });
+    this.setState({ SuccesHistory: this.state.SuccesHistory.concat(qord) });
+    this.setState({ history: this.state.history.concat(qord) });
+ 
+  
+  };
+  
+
 
   render() {
     const { word } = this.state;
@@ -120,8 +145,8 @@ class Korean extends Component {
         <Main>
           <Word>{word}</Word>
           <Nav>
-            <Button onClick={this.createQuestion}>Correct</Button>
-            <Button onClick={this.createQuestion}>Pass</Button>
+            <Button onClick={this.createQuestionCorrect}>Correct</Button>
+            <Button onClick={this.createQuestionPass}>Pass</Button>
           </Nav>
         </Main>
         <Line strokeWidth="4" percent={this.state.time} />
