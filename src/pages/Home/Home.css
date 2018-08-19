@@ -1,11 +1,3 @@
-.home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  justify-content: center;
-}
-
 .logo {
   width: 50vh;
   height: 15vh;

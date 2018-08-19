@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 import logo from './../../assets/P01_main/img_logo.png';
