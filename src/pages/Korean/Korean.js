@@ -54,8 +54,7 @@ class Korean extends Component {
     this.setState({ word: qord });
     this.setState({ index: i++ });
     this.setState({ history: this.state.history.concat(qord) });
-    console.log('history : ' + this.state.history);
-    console.log('succes : ' + this.state.SuccessHistory);
+
   };
 
   createQuestionCorrect = () => {
@@ -65,10 +64,15 @@ class Korean extends Component {
 
     let qord = korean[first] + ' ' + korean[second];
 
+
+
     this.setState({ word: qord });
     this.setState({ index: i++ });
-    this.setState({ SuccesHistory: this.state.SuccessHistory.concat(qord) });
+    this.setState({ SuccessHistory: this.state.SuccessHistory.concat(qord) });
     this.setState({ history: this.state.history.concat(qord) });
+
+    localStorage.setItem('value', this.state.history);
+
   };
 
   render() {
