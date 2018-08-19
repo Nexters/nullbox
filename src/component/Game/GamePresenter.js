@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import styled, { injectGlobal } from 'styled-components';
 import { Line } from 'rc-progress';
 import 'rc-progress/assets/index.css';
+import './Game.css';
 
 injectGlobal`
   body {
     padding:0;
-    margin:0
+    margin:0;
   }
 `;
 
@@ -46,7 +47,6 @@ class Game extends Component {
     console.log(this.state.time);
     return (
       <Container>
-        {/* <h1>{match.params.subjects} Game Page</h1> */}
         <h1>Game Page</h1>
         <div class="question"> Question</div>
         <Line strokeWidth="4" percent={this.state.time} />
