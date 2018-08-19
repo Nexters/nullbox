@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Route } from 'react-router-dom';
-import { Home, Game, Setting, Korean, Score, Info, Result, Select, Brand } from '../pages';
+import { Home, Game, Setting, Korean, Score, Info, Result, Select, Brand, Speed } from '../pages';
 
 class App extends Component {
   render() {
@@ -16,6 +16,7 @@ class App extends Component {
         <Route exact path="/Result" component={Result} />
         <Route exact path="/Select" component={Select} />
         <Route exact path="/Brand" component={Brand} />
+        <Route exact path="/Speed" component={Speed} />
       </Fragment>
     );
   }

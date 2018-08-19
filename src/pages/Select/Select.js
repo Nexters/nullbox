@@ -18,32 +18,14 @@ class Select extends Component {
   };
 
 
-  componentDidMount() {
-
-    axios.get(`http://nexters-env-1.upmjem4hcw.us-east-2.elasticbeanstalk.com//api/category/3/1`).then(
-      r => {
-        this.setState({ easy: r.data });
-      }
-
-    )
-
-    axios.get(`http://nexters-env-1.upmjem4hcw.us-east-2.elasticbeanstalk.com//api/category/3/2`).then(
-      r => {
-        this.setState({ difficult: r.data });
-      }
-
-    )
-
-
-  }
 
   game1 = () => {
-    localStorage.setItem('list', this.state.easy);
+
     localStorage.setItem('difficulty', 1);
   };
 
   game2 = () => {
-    localStorage.setItem('list', this.state.difficult);
+
     localStorage.setItem('difficulty', 2);
 
   };

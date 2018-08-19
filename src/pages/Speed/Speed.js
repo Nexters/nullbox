@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Line } from 'rc-progress';
 import 'rc-progress/assets/index.css';
-import './Brand.css';
+import './Speed.css';
 import { list } from '../../../node_modules/postcss';
 import axios from 'axios';
 
-class Brand extends Component {
+class Speed extends Component {
   state = {
     index: 0,
     word: '',
@@ -21,9 +21,9 @@ class Brand extends Component {
   componentDidMount() {
 
     this.timerID = setInterval(() => this.tick(), 1000);
-    let id = localStorage.getItem('difficulty');
+    let id = 1
 
-    axios.get(`http://nexters-env-1.upmjem4hcw.us-east-2.elasticbeanstalk.com//api/category/3/${id}`).then(
+    axios.get(`http://nexters-env-1.upmjem4hcw.us-east-2.elasticbeanstalk.com//api/question/all`).then(
       r => {
         this.setState({ list: r.data });
       }
@@ -43,26 +43,29 @@ class Brand extends Component {
   }
 
   createQuestionPass = () => {
-    var s = JSON.stringify(this.state.list[0]);
+    var s = JSON.stringify(this.state.list[this.state.index]);
     var s1 = JSON.parse(s);
 
     let i = this.state.index;
     let qord = s1.name;
+    i++;
     this.setState({ index: i });
     this.setState({ word: qord });
 
     i = this.state.pass;
     i++;
     this.setState({ pass: i });
+
+    this.setState({ history: this.state.history.concat(qord) });
   };
 
   createQuestionCorrect = () => {
 
-    var s = JSON.stringify(this.state.list[0]);
+    var s = JSON.stringify(this.state.list[this.state.index]);
     var s1 = JSON.parse(s);
     let i = this.state.index;
     let qord = s1.name;
-
+    i++;
     this.setState({ index: i });
     this.setState({ word: qord });
 
@@ -70,12 +73,16 @@ class Brand extends Component {
     i++;
     this.setState({ count: i });
 
+    this.setState({ SuccessHistory: this.state.SuccessHistory.concat(qord) });
+    this.setState({ history: this.state.history.concat(qord) });
+
   };
 
   gameEnd = () => {
     localStorage.setItem('pass', this.state.pass);
     localStorage.setItem('count', this.state.count);
-    localStorage.setItem('history', "브랜드");
+    localStorage.setItem('history', this.state.history);
+    localStorage.setItem('successHistory', this.state.SuccessHistory);
   };
 
 
@@ -111,4 +118,4 @@ class Brand extends Component {
   }
 }
 
-export default Brand;
+export default Speed;
