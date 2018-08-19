@@ -9,6 +9,11 @@ injectGlobal`
 ${reset};
 body{
     background-color:#0d062e;
+    height: 100%;
+}
+html,
+#root {
+  height: 100%;
 }`;
 
 ReactDOM.render(<Root />, document.getElementById('root'));
