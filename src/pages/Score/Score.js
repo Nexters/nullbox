@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './Score.css';
-import { isNull } from 'util';
+
 
 class Score extends Component {
 
@@ -36,7 +36,7 @@ class Score extends Component {
         <div className="Header">Score</div>
         <div className="main">
           <div className="wordBox">
-            <h1 className="word-title">{history}</h1>
+            <h1 className="word-title" >{history}</h1>
 
           </div>
           <div className="nav">

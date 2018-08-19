@@ -6,6 +6,7 @@
   color: #fd575f;
   font-size: 13px;
   text-decoration: none;
+  flex-direction: row;
 }
 
 article {

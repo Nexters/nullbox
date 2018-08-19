@@ -7,6 +7,9 @@ import arrow from '../../assets/P03_setting/icon_scrolldownarrow.png';
 const Setting = ({ match }) => {
 
   let explain = localStorage.getItem('explain');
+  let param = match.params.subjects;
+
+
   return (
 
     <div className="setting">
@@ -65,13 +68,13 @@ const Setting = ({ match }) => {
           </div>
         </section>
         <div className="next-btn">
-          <Link to="/Korean">
+          <Link to="/select">
             <p>준비하기</p>
             <img src={arrow} alt="" />
           </Link>
         </div>
       </article>
-    </div>
+    </div >
   );
 };
 
