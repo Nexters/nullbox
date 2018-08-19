@@ -64,19 +64,24 @@ class Korean extends Component {
 
     let qord = korean[first] + ' ' + korean[second];
 
-
-
     this.setState({ word: qord });
     this.setState({ index: i++ });
     this.setState({ SuccessHistory: this.state.SuccessHistory.concat(qord) });
     this.setState({ history: this.state.history.concat(qord) });
 
-    localStorage.setItem('value', this.state.history);
 
   };
 
+  gameEnd = () => {
+
+    localStorage.setItem('history', this.state.history);
+    localStorage.setItem('successHistory', this.state.SuccessHistory);
+  };
+
+
   render() {
     const { word } = this.state;
+
     return (
       <div className="korean">
         <div className="Header">
@@ -85,7 +90,7 @@ class Korean extends Component {
           </button>
         </div>
         <div className="main">
-          <h1 className="word-title">{word}</h1>
+          <h1 className="word-title" >{word}</h1>
           <div className="nav">
             <button className="button" onClick={this.createQuestionCorrect}>
               Correct
@@ -96,6 +101,11 @@ class Korean extends Component {
           </div>
         </div>
         <Line strokeWidth="4" percent={this.state.time} />
+
+
+        <button className="button" onClick={this.gameEnd}>
+          <Link to="/score">score</Link>
+        </button>
       </div>
     );
   }

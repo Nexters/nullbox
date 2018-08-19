@@ -8,9 +8,11 @@
   margin-left: 10%;
 }
 
-.header {
+.Header {
   height: 10vh;
   width: 100%;
+  font-size: 4em;
+  color: aliceblue;
 }
 
 .button {
@@ -24,7 +26,7 @@
 .word-title {
   color: white;
   font-weight: 600;
-  font-size: 250px;
+  font-size: 3em;
 }
 
 .main {
@@ -34,6 +36,7 @@
   align-items: center;
   display: flex;
   flex-direction: row;
+  margin-bottom: 10%;
 }
 
 .nav {
@@ -44,17 +47,16 @@
 
 }
 
-.wordBox{
+.resultBox{
     width: 40%;
     height: 70%;
     border: 1px solid black;
-    justify-content: flex-end;
-    display: flex;
+    justify-content: flex-start;
     margin-right: 13%;
   }
 
   .home{
-    width: 100px;
+    width: 70px;
     height: 70px;
     border: 1px solid black;
   }
@@ -63,4 +65,19 @@
     width: 100px;
     height: 70px;
     border: 1px solid black;
+  }
+
+  .result{
+    height: 100px;
+  }
+
+  .team{
+    margin-right: 10%;
+    font-size: 3em;
+    color: aliceblue;
+  }
+
+  .Resultscore{
+    font-size: 3em;
+    color: aliceblue;
   }

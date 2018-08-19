@@ -1,14 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Setting.css';
+import './Select.css';
 import arrow from '../../assets/P03_setting/icon_scrolldownarrow.png';
 
+const Select = ({ match }) => {
 
-const Setting = ({ match }) => {
 
-  let explain = localStorage.getItem('explain');
   return (
-
     <div className="setting">
       <div className="header">
         <Link to="/">
@@ -16,10 +14,11 @@ const Setting = ({ match }) => {
         </Link>
       </div>
       <article>
-        <p className="game-name">{match.params.subjects}</p>
+        <p className="game-name">Select</p>
         <div className="game-info">
-          {explain}
+          2개의 초성이 제시됩니다. 제시한 초성과 일치하는 단어를 말해주세요.
           <br />
+          제한시간 동안 가장 많은 단어를 이야기한 팀이 승리합니다.
         </div>
         <section class="radio-items">
           <div class="radio-btn">
@@ -75,4 +74,4 @@ const Setting = ({ match }) => {
   );
 };
 
-export default Setting;
+export default Select;
