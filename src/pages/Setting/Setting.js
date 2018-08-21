@@ -10,7 +10,7 @@ class Setting extends Component {
   state = {
     easy: '',
     difficult: '',
-    team: '',
+    team: '1',
     list: [],
     categoryId: '',
 
@@ -54,14 +54,32 @@ class Setting extends Component {
 
   speed = () => {
     localStorage.setItem("category", this.state.categoryId);
-
+    localStorage.setItem("team", this.state.team);
+    localStorage.setItem("j", this.state.team);
   };
+
+  korean = () => {
+    localStorage.setItem("team", this.state.team);
+    localStorage.setItem("j", this.state.team);
+  }
+
+  brand = () => {
+    localStorage.setItem("team", this.state.team);
+    localStorage.setItem("j", this.state.team);
+  }
+
+
+  handleChange = (event) => {
+    let target = event.target;
+    let i = target.value;
+    this.setState({ team: i });
+
+  }
 
   render() {
     let explain = localStorage.getItem('explain');
     let param = localStorage.getItem('game');
-    let team = '';
-    console.log(this.state.categoryId);
+
 
 
     var s = JSON.stringify(this.state.list);
@@ -87,6 +105,60 @@ class Setting extends Component {
               {explain}
               <br />
             </div>
+            <section class="radio-items" onChange={this.handleChange}>
+              <div class="radio-btn">
+                <input
+                  id="b1"
+                  class="only-sr checked"
+                  type="radio"
+                  name="team"
+                  value="1"
+
+                />
+                <label for="b1">1</label>
+              </div>
+              <div class="radio-btn">
+                <input
+                  id="b2"
+                  class="only-sr"
+                  type="radio"
+                  name="team"
+                  value="2"
+                />
+                <label for="b2">2</label>
+              </div>
+              <div class="radio-btn">
+                <input
+                  id="b3"
+                  class="only-sr"
+                  type="radio"
+                  name="team"
+                  value="3"
+                />
+                <label for="b3">3</label>
+              </div>
+              <div class="radio-btn">
+                <input
+                  id="b4"
+                  class="only-sr"
+                  type="radio"
+                  name="team"
+                  value="4"
+                />
+                <label for="b4">4</label>
+              </div>
+              <div class="radio-btn">
+                <input
+                  id="b5"
+                  class="only-sr"
+                  type="radio"
+                  name="team"
+                  value="5"
+                />
+                <label for="b4">5</label>
+              </div>
+            </section>
+
             <section class="radio-items">
               <div class="radio-btn">
                 <input
@@ -162,6 +234,63 @@ class Setting extends Component {
               {explain}
               <br />
             </div>
+
+
+            <section class="radio-items" onChange={this.handleChange}>
+              <div class="radio-btn">
+                <input
+                  id="b1"
+                  class="only-sr checked"
+                  type="radio"
+                  name="team"
+                  value="1"
+
+                />
+                <label for="b1">1</label>
+              </div>
+              <div class="radio-btn">
+                <input
+                  id="b2"
+                  class="only-sr"
+                  type="radio"
+                  name="team"
+                  value="2"
+                />
+                <label for="b2">2</label>
+              </div>
+              <div class="radio-btn">
+                <input
+                  id="b3"
+                  class="only-sr"
+                  type="radio"
+                  name="team"
+                  value="3"
+                />
+                <label for="b3">3</label>
+              </div>
+              <div class="radio-btn">
+                <input
+                  id="b4"
+                  class="only-sr"
+                  type="radio"
+                  name="team"
+                  value="4"
+                />
+                <label for="b4">4</label>
+              </div>
+              <div class="radio-btn">
+                <input
+                  id="b5"
+                  class="only-sr"
+                  type="radio"
+                  name="team"
+                  value="5"
+                />
+                <label for="b4">5</label>
+              </div>
+            </section>
+
+
             <section class="radio-items">
               <div class="radio-btn">
                 <input
@@ -217,7 +346,7 @@ class Setting extends Component {
 
             </div>
             <div className="next-btn">
-              <Link to="/Brand">
+              <Link to="/Brand" onClick={this.brand}>
                 <p>준비하기</p>
                 <img src={arrow} alt="" />
               </Link>
@@ -242,6 +371,61 @@ class Setting extends Component {
               {explain}
               <br />
             </div>
+
+            <section class="radio-items" onChange={this.handleChange}>
+              <div class="radio-btn">
+                <input
+                  id="b1"
+                  class="only-sr checked"
+                  type="radio"
+                  name="team"
+                  value="1"
+
+                />
+                <label for="b1">1</label>
+              </div>
+              <div class="radio-btn">
+                <input
+                  id="b2"
+                  class="only-sr"
+                  type="radio"
+                  name="team"
+                  value="2"
+                />
+                <label for="b2">2</label>
+              </div>
+              <div class="radio-btn">
+                <input
+                  id="b3"
+                  class="only-sr"
+                  type="radio"
+                  name="team"
+                  value="3"
+                />
+                <label for="b3">3</label>
+              </div>
+              <div class="radio-btn">
+                <input
+                  id="b4"
+                  class="only-sr"
+                  type="radio"
+                  name="team"
+                  value="4"
+                />
+                <label for="b4">4</label>
+              </div>
+              <div class="radio-btn">
+                <input
+                  id="b5"
+                  class="only-sr"
+                  type="radio"
+                  name="team"
+                  value="5"
+                />
+                <label for="b4">5</label>
+              </div>
+            </section>
+
             <section class="radio-items">
               <div class="radio-btn">
                 <input
@@ -290,7 +474,7 @@ class Setting extends Component {
 
 
             <div className="next-btn">
-              <Link to="/Korean">
+              <Link to="/Korean" onClick={this.korean}>
                 <p>준비하기</p>
                 <img src={arrow} alt="" />
               </Link>

@@ -23,11 +23,14 @@ class Speed extends Component {
     this.timerID = setInterval(() => this.tick(), 1000);
     let id = localStorage.getItem("category");
     console.log(id);
+
     axios.get(`http://nexters-env-1.upmjem4hcw.us-east-2.elasticbeanstalk.com//api/question?ids=${id}`).then(
       r => {
         this.setState({ list: r.data });
       }
     )
+
+
   }
 
 
@@ -102,6 +105,10 @@ class Speed extends Component {
           <div className="nav">
             <button className="button" onClick={this.createQuestionCorrect}>
               Correct
+            </button>
+
+            <button className="button" onClick={this.createQuestionCorrect}>
+              시작
             </button>
             <button className="button" onClick={this.createQuestionPass}>
               Pass

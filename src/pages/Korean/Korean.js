@@ -28,6 +28,8 @@ class Korean extends Component {
     time: 0,
     history: [],
     SuccessHistory: [],
+    count: 0,
+    pass: 0,
   };
 
   componentDidMount() {
@@ -55,6 +57,10 @@ class Korean extends Component {
     this.setState({ index: i++ });
     this.setState({ history: this.state.history.concat(qord) });
 
+
+    i = this.state.pass;
+    i++;
+    this.setState({ pass: i });
   };
 
   createQuestionCorrect = () => {
@@ -70,12 +76,19 @@ class Korean extends Component {
     this.setState({ history: this.state.history.concat(qord) });
 
 
+    i = this.state.count;
+    i++;
+    this.setState({ count: i });
   };
 
   gameEnd = () => {
 
     localStorage.setItem('history', this.state.history);
     localStorage.setItem('successHistory', this.state.SuccessHistory);
+
+    localStorage.setItem('pass', this.state.pass);
+    localStorage.setItem('count', this.state.count);
+
   };
 
 

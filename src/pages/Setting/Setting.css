@@ -26,6 +26,9 @@ article {
   align-items: center;
   height: 100vh;
 }
+.checkbox{
+  margin-top: 3%;
+}
 
 .game-name {
   color: #2eb299;
