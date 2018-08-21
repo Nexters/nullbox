@@ -14,6 +14,7 @@ class Select extends Component {
   state = {
     easy: '',
     difficult: '',
+    team: '',
 
   };
 
@@ -31,7 +32,7 @@ class Select extends Component {
   };
 
   render() {
-
+    console.log(this.value);
 
     return (
       <Fragment>
@@ -39,6 +40,53 @@ class Select extends Component {
           <Link to="/">
             <p className="text">뒤로가기</p>
           </Link>
+
+          <section class="radio-items">
+            <h3 className="team_value">팀 수 </h3>
+            <div class="radio-btn">
+
+              <input
+                id="b1"
+                class="only-sr checked"
+                type="radio"
+                name="team"
+                value="1"
+                checked
+              />
+              <label for="b1">1</label>
+            </div>
+            <div class="radio-btn">
+              <input
+                id="b2"
+                class="only-sr"
+                type="radio"
+                name="team"
+                value="2"
+              />
+              <label for="b2">2</label>
+            </div>
+            <div class="radio-btn">
+              <input
+                id="b3"
+                class="only-sr"
+                type="radio"
+                name="team"
+                value="3"
+
+              />
+              <label for="b3">3</label>
+            </div>
+            <div class="radio-btn">
+              <input
+                id="b4"
+                class="only-sr"
+                type="radio"
+                name="team"
+                value="4"
+              />
+              <label for="b4">4</label>
+            </div>
+          </section>
 
           <p className="main-text">Select</p>
           <div className="home-button">

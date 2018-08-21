@@ -81,8 +81,8 @@ class Speed extends Component {
   gameEnd = () => {
     localStorage.setItem('pass', this.state.pass);
     localStorage.setItem('count', this.state.count);
-    localStorage.setItem('history', this.state.history);
-    localStorage.setItem('successHistory', this.state.SuccessHistory);
+    localStorage.setItem('history', "스피드");
+
   };
 
 
