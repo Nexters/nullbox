@@ -21,9 +21,9 @@ class Speed extends Component {
   componentDidMount() {
 
     this.timerID = setInterval(() => this.tick(), 1000);
-    let id = 1
-
-    axios.get(`http://nexters-env-1.upmjem4hcw.us-east-2.elasticbeanstalk.com//api/question/all`).then(
+    let id = localStorage.getItem("category");
+    console.log(id);
+    axios.get(`http://nexters-env-1.upmjem4hcw.us-east-2.elasticbeanstalk.com//api/question?ids=${id}`).then(
       r => {
         this.setState({ list: r.data });
       }
@@ -46,8 +46,9 @@ class Speed extends Component {
     var s = JSON.stringify(this.state.list[this.state.index]);
     var s1 = JSON.parse(s);
 
+
     let i = this.state.index;
-    let qord = s1.name;
+    let qord = s1[1];
     i++;
     this.setState({ index: i });
     this.setState({ word: qord });
@@ -64,7 +65,7 @@ class Speed extends Component {
     var s = JSON.stringify(this.state.list[this.state.index]);
     var s1 = JSON.parse(s);
     let i = this.state.index;
-    let qord = s1.name;
+    let qord = s1[1];
     i++;
     this.setState({ index: i });
     this.setState({ word: qord });

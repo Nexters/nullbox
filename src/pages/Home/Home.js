@@ -38,13 +38,19 @@ class Home extends Component {
 
   game1 = () => {
     localStorage.setItem('explain', this.state.explain1);
+    localStorage.setItem('game', this.state.game1);
+
   };
 
   game2 = () => {
     localStorage.setItem('explain', this.state.explain2);
+    localStorage.setItem('game', this.state.game2);
+
   };
   game3 = () => {
     localStorage.setItem('explain', this.state.explain3);
+    localStorage.setItem('game', this.state.game3);
+
   };
 
 

@@ -24,10 +24,10 @@ class Result extends Component {
         <div className="main">
           <div className="resultBox">
 
-            <p className="result"> <span className="team">A팀</span>  <span className="Resultscore">맞춘 개수 :  {score}/10</span> </p>
-            <p className="result"> <span className="team">B팀</span>  <span className="Resultscore">맞춘 개수 :  1/10</span> </p>
-            <p className="result"> <span className="team">C팀</span>  <span className="Resultscore">맞춘 개수 :  1/10</span> </p>
-            <p className="result"> <span className="team">D팀</span>  <span className="Resultscore">맞춘 개수 :  1/10</span> </p>
+            <p className="result"> <span className="team">A팀</span>  <span className="Resultscore">맞춘 개수 :  {score}</span> </p>
+            <p className="result"> <span className="team">B팀</span>  <span className="Resultscore">맞춘 개수 :  1</span> </p>
+            <p className="result"> <span className="team">C팀</span>  <span className="Resultscore">맞춘 개수 :  1</span> </p>
+            <p className="result"> <span className="team">D팀</span>  <span className="Resultscore"> 1</span> </p>
           </div>
           <div className="nav">
             <Link to="/" className="home"> 홈으로 </Link>
