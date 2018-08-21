@@ -7,7 +7,14 @@
   font-size: 13px;
   text-decoration: none;
 }
+.team_value{
+  color: #fff;
+  font-size: 3em;
 
+}
+.radio-items{
+  margin-top: 3%;
+}
 article {
   display: flex;
   flex-direction: column;

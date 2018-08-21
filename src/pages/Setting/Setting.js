@@ -8,6 +8,8 @@ const Setting = ({ match }) => {
 
   let explain = localStorage.getItem('explain');
   let param = match.params.subjects;
+  let team = '';
+  localStorage.setItem('team', team);
 
   if (param === "스피드게임") {
     return (
@@ -204,6 +206,10 @@ const Setting = ({ match }) => {
               <label for="b4">2분</label>
             </div>
           </section>
+
+
+
+
           <div className="next-btn">
             <Link to="/Korean">
               <p>준비하기</p>

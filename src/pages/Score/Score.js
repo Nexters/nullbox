@@ -26,10 +26,7 @@ class Score extends Component {
 
 
 
-    if (history === "브랜드") {
-
-
-
+    if (history === "브랜드" || history === "스피드") {
       return (
         <div className="score">
           <div className="Header">Score</div>
