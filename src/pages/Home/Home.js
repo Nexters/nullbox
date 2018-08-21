@@ -58,15 +58,15 @@ class Home extends Component {
           <img src={logo} alt="logo" className="logo" />
           <p className="main-text">바로가기</p>
           <div className="home-button">
-            <Link to="/Setting/초성게임">
+            <Link to="/Setting/스피드게임">
               <div className="button" onClick={this.game1}>{this.state.game1}</div>
 
             </Link>
-            <Link to="/Setting/브랜드게임">
+            <Link to="/Setting/초성게임">
               <div className="button" onClick={this.game2}>{this.state.game2}</div>
               <p></p>
             </Link>
-            <Link to="/Setting/스피드게임">
+            <Link to="/Setting/브랜드게임">
               <div className="button" onClick={this.game3}>{this.state.game3}</div>
               <p> </p>
             </Link>
