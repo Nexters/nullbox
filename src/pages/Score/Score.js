@@ -34,6 +34,13 @@ class Score extends Component {
       <Link to="/Speed" className="next" onClick={this.gameEnd}> 다음팀 시작하기
 </Link>;
 
+    console.log(history);
+    console.log(success);
+
+    let historyResult =
+      <span>{history}</span>;
+
+
     if (game === '초성게임') {
       result =
         <Link to="/Korean" className="next" > 다음팀 시작하기
@@ -152,7 +159,7 @@ class Score extends Component {
           <div className="Header">Score</div>
           <div className="main">
             <div className="wordBox">
-              <h3 className="word-title" >{history}</h3>
+              <h3 className="word-title" >{historyResult}</h3>
 
             </div>
             <div className="nav">

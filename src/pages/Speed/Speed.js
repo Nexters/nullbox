@@ -46,11 +46,7 @@ class Speed extends Component {
       this.setState({ state: 1 });
     }
 
-
-
   }
-
-
 
   componentWillUnmount() {
     clearInterval(this.timerID);
@@ -60,9 +56,9 @@ class Speed extends Component {
     this.setState({
       time: this.state.time + 1,
     });
-
+    console.log(this.state.time);
     if (this.state.time === 30) {
-      this.gameEnd();
+
     }
   }
 
