@@ -13,7 +13,7 @@ class Setting extends Component {
     team: '1',
     list: [],
     categoryId: '',
-
+    time: 30,
   };
 
 
@@ -309,7 +309,7 @@ class Setting extends Component {
             {selectTeam}
             {selectTime}
 
-            <div className="home-button">
+            <div className="brand-button">
 
               <button className="button" onClick={this.game1.bind(this)}>쉬움</button>
 

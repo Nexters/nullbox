@@ -58,6 +58,8 @@ a:hover {
   font-weight: 600;
   font-size: 1.3em;
   letter-spacing: 2px;
+  display: flex;
+
 }
 
 .cancel {
@@ -116,7 +118,7 @@ a:hover {
   height: 70vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 article{
