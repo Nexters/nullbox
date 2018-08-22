@@ -36,8 +36,20 @@ class Score extends Component {
     console.log(history);
     console.log(success);
 
-    let historyResult =
-      <span>{history}</span>;
+    let historyResult = [];
+    var arr1 = history.split(",");
+    var arr2 = success.split(",");
+
+
+    for (var i = 0; i < arr1.length; i++) {
+      console.log(arr2.indexOf(arr1[i]));
+      if (arr2.indexOf(arr1[i]) === -1) {
+        historyResult[i] = <span className="history1" >{arr1[i]}</span>;
+      }
+      else {
+        historyResult[i] = <span className="history" >{arr1[i]}</span>;
+      }
+    }
 
 
     if (game === '초성게임') {
@@ -124,9 +136,7 @@ class Score extends Component {
           <div className="Header">Score</div>
           <div className="main">
             <div className="wordBox">
-              <h3 className="word">{teamName}팀</h3>
-              <h3 className="word">맞힌 개수 : {count}</h3>
-              <h3 className="word">패스한 개수 : {pass} </h3>
+              {historyResult}
             </div>
             <div className="nav">
               <Link to="/" className="home">
@@ -152,8 +162,7 @@ class Score extends Component {
           <div className="Header">Score</div>
           <div className="main">
             <div className="wordBox">
-
-              <h3 className="word-title" >{historyResult}</h3>
+              {historyResult}
             </div>
             <div className="nav">
               <Link to="/" className="home">

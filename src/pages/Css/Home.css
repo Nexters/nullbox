@@ -122,3 +122,36 @@ label{
   text-align: center;
   color: #e8f8f5;
 }
+
+.history{
+  width: 122px;
+  height: 70px;
+  opacity: 0.9;
+  font-family: BlackHanSans;
+  font-size: 70px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 4.4px;
+  text-align: center;
+  color: #2eb299;
+  margin-right: 3%;
+}
+
+.history1{
+  width: 123px;
+  height: 70px;
+  opacity: 0.7;
+  font-family: BlackHanSans;
+  font-size: 70px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 4.4px;
+  text-align: center;
+  color: #ffffff;
+  margin-right: 3%;
+
+}
