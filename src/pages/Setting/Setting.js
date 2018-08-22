@@ -136,6 +136,107 @@ class Setting extends Component {
         <div className="button" id={list.id}>{list.name}</div>
       </button>);
 
+
+    let selectTeam = <section class="radio-items" onChange={this.handleChange}>
+      <span className="game-info"> 팀</span>
+      <div class="radio-btn">
+        <input
+          id="b1"
+          class="only-sr checked"
+          type="radio"
+          name="team"
+          value="1"
+
+        />
+        <label for="b1">1</label>
+      </div>
+      <div class="radio-btn">
+        <input
+          id="b2"
+          class="only-sr"
+          type="radio"
+          name="team"
+          value="2"
+        />
+        <label for="b2">2</label>
+      </div>
+      <div class="radio-btn">
+        <input
+          id="b3"
+          class="only-sr"
+          type="radio"
+          name="team"
+          value="3"
+        />
+        <label for="b3">3</label>
+      </div>
+      <div class="radio-btn">
+        <input
+          id="b4"
+          class="only-sr"
+          type="radio"
+          name="team"
+          value="4"
+        />
+        <label for="b4">4</label>
+      </div>
+      <div class="radio-btn">
+        <input
+          id="b5"
+          class="only-sr"
+          type="radio"
+          name="team"
+          value="5"
+        />
+        <label for="b4">5</label>
+      </div>
+    </section>
+
+    let selectTime = <section class="radio-items">
+      <span className="game-info"> time</span>
+      <div class="radio-btn">
+        <input
+          id="b1"
+          class="only-sr checked"
+          type="radio"
+          name="temp2"
+          value="1"
+          checked
+        />
+        <label for="b1">30초</label>
+      </div>
+      <div class="radio-btn">
+        <input
+          id="b2"
+          class="only-sr"
+          type="radio"
+          name="temp2"
+          value="2"
+        />
+        <label for="b2">1분</label>
+      </div>
+      <div class="radio-btn">
+        <input
+          id="b3"
+          class="only-sr"
+          type="radio"
+          name="temp2"
+          value="3"
+        />
+        <label for="b3">1분 30초</label>
+      </div>
+      <div class="radio-btn">
+        <input
+          id="b4"
+          class="only-sr"
+          type="radio"
+          name="temp2"
+          value="4"
+        />
+        <label for="b4">2분</label>
+      </div>
+    </section>;
+
     if (param === "스피드퀴즈") {
       return (
 
@@ -151,105 +252,8 @@ class Setting extends Component {
               {explain}
               <br />
             </div>
-            <section class="radio-items" onChange={this.handleChange}>
-              <span className="game-info"> 팀</span>
-              <div class="radio-btn">
-                <input
-                  id="b1"
-                  class="only-sr checked"
-                  type="radio"
-                  name="team"
-                  value="1"
-
-                />
-                <label for="b1">1</label>
-              </div>
-              <div class="radio-btn">
-                <input
-                  id="b2"
-                  class="only-sr"
-                  type="radio"
-                  name="team"
-                  value="2"
-                />
-                <label for="b2">2</label>
-              </div>
-              <div class="radio-btn">
-                <input
-                  id="b3"
-                  class="only-sr"
-                  type="radio"
-                  name="team"
-                  value="3"
-                />
-                <label for="b3">3</label>
-              </div>
-              <div class="radio-btn">
-                <input
-                  id="b4"
-                  class="only-sr"
-                  type="radio"
-                  name="team"
-                  value="4"
-                />
-                <label for="b4">4</label>
-              </div>
-              <div class="radio-btn">
-                <input
-                  id="b5"
-                  class="only-sr"
-                  type="radio"
-                  name="team"
-                  value="5"
-                />
-                <label for="b4">5</label>
-              </div>
-            </section>
-
-            <section class="radio-items">
-              <span className="game-info"> time</span>
-              <div class="radio-btn">
-                <input
-                  id="b1"
-                  class="only-sr checked"
-                  type="radio"
-                  name="temp2"
-                  value="1"
-                  checked
-                />
-                <label for="b1">30초</label>
-              </div>
-              <div class="radio-btn">
-                <input
-                  id="b2"
-                  class="only-sr"
-                  type="radio"
-                  name="temp2"
-                  value="2"
-                />
-                <label for="b2">1분</label>
-              </div>
-              <div class="radio-btn">
-                <input
-                  id="b3"
-                  class="only-sr"
-                  type="radio"
-                  name="temp2"
-                  value="3"
-                />
-                <label for="b3">1분 30초</label>
-              </div>
-              <div class="radio-btn">
-                <input
-                  id="b4"
-                  class="only-sr"
-                  type="radio"
-                  name="temp2"
-                  value="4"
-                />
-                <label for="b4">2분</label>
-              </div>
-            </section>
+            {selectTeam}
+            {selectTime}
             <div className="next-btn">
 
               <div className="category-button">
@@ -284,106 +288,8 @@ class Setting extends Component {
             </div>
 
 
-            <section class="radio-items" onChange={this.handleChange}>
-              <span className="game-info"> 팀</span>
-              <div class="radio-btn">
-                <input
-                  id="b1"
-                  class="only-sr checked"
-                  type="radio"
-                  name="team"
-                  value="1"
-
-                />
-                <label for="b1">1</label>
-              </div>
-              <div class="radio-btn">
-                <input
-                  id="b2"
-                  class="only-sr"
-                  type="radio"
-                  name="team"
-                  value="2"
-                />
-                <label for="b2">2</label>
-              </div>
-              <div class="radio-btn">
-                <input
-                  id="b3"
-                  class="only-sr"
-                  type="radio"
-                  name="team"
-                  value="3"
-                />
-                <label for="b3">3</label>
-              </div>
-              <div class="radio-btn">
-                <input
-                  id="b4"
-                  class="only-sr"
-                  type="radio"
-                  name="team"
-                  value="4"
-                />
-                <label for="b4">4</label>
-              </div>
-              <div class="radio-btn">
-                <input
-                  id="b5"
-                  class="only-sr"
-                  type="radio"
-                  name="team"
-                  value="5"
-                />
-                <label for="b4">5</label>
-              </div>
-            </section>
-
-
-            <section class="radio-items">
-              <span className="game-info"> time</span>
-              <div class="radio-btn">
-                <input
-                  id="b1"
-                  class="only-sr checked"
-                  type="radio"
-                  name="temp2"
-                  value="1"
-                  checked
-                />
-                <label for="b1">30초</label>
-              </div>
-              <div class="radio-btn">
-                <input
-                  id="b2"
-                  class="only-sr"
-                  type="radio"
-                  name="temp2"
-                  value="2"
-                />
-                <label for="b2">1분</label>
-              </div>
-              <div class="radio-btn">
-                <input
-                  id="b3"
-                  class="only-sr"
-                  type="radio"
-                  name="temp2"
-                  value="3"
-                />
-                <label for="b3">1분 30초</label>
-              </div>
-              <div class="radio-btn">
-                <input
-                  id="b4"
-                  class="only-sr"
-                  type="radio"
-                  name="temp2"
-                  value="4"
-                />
-                <label for="b4">2분</label>
-              </div>
-            </section>
+            {selectTeam}
+            {selectTime}
 
             <div className="home-button">
 
@@ -422,106 +328,8 @@ class Setting extends Component {
               <br />
             </div>
 
-            <section class="radio-items" onChange={this.handleChange}>
-              <span className="game-info"> 팀</span>
-              <div class="radio-btn">
-                <input
-                  id="b1"
-                  class="only-sr checked"
-                  type="radio"
-                  name="team"
-                  value="1"
-
-                />
-                <label for="b1">1</label>
-              </div>
-              <div class="radio-btn">
-                <input
-                  id="b2"
-                  class="only-sr"
-                  type="radio"
-                  name="team"
-                  value="2"
-                />
-                <label for="b2">2</label>
-              </div>
-              <div class="radio-btn">
-                <input
-                  id="b3"
-                  class="only-sr"
-                  type="radio"
-                  name="team"
-                  value="3"
-                />
-                <label for="b3">3</label>
-              </div>
-              <div class="radio-btn">
-                <input
-                  id="b4"
-                  class="only-sr"
-                  type="radio"
-                  name="team"
-                  value="4"
-                />
-                <label for="b4">4</label>
-              </div>
-              <div class="radio-btn">
-                <input
-                  id="b5"
-                  class="only-sr"
-                  type="radio"
-                  name="team"
-                  value="5"
-                />
-                <label for="b4">5</label>
-              </div>
-            </section>
-
-            <section class="radio-items">
-              <span className="game-info"> time</span>
-              <div class="radio-btn">
-                <input
-                  id="b1"
-                  class="only-sr checked"
-                  type="radio"
-                  name="temp2"
-                  value="1"
-                  checked
-                />
-                <label for="b1">30초</label>
-              </div>
-              <div class="radio-btn">
-                <input
-                  id="b2"
-                  class="only-sr"
-                  type="radio"
-                  name="temp2"
-                  value="2"
-                />
-                <label for="b2">1분</label>
-              </div>
-              <div class="radio-btn">
-                <input
-                  id="b3"
-                  class="only-sr"
-                  type="radio"
-                  name="temp2"
-                  value="3"
-                />
-                <label for="b3">1분 30초</label>
-              </div>
-              <div class="radio-btn">
-                <input
-                  id="b4"
-                  class="only-sr"
-                  type="radio"
-                  name="temp2"
-                  value="4"
-                />
-                <label for="b4">2분</label>
-              </div>
-            </section>
-
+            {selectTeam}
+            {selectTime}
 
 
 

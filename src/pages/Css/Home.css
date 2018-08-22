@@ -81,3 +81,31 @@
   position: absolute;
   bottom: 0;
 }
+
+.game-name {
+  width: 182px;
+  height: 74px;
+  font-family: NotoSansCJKkr;
+  font-size: 40px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #2eb299;
+}
+.game-info{
+  width: 815px;
+  height: 98px;
+  opacity: 0.9;
+  font-family: NotoSansCJKkr;
+  font-size: 26px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.62;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
