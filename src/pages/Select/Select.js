@@ -78,12 +78,12 @@ class Select extends Component {
           <p className="main-text">Select</p>
           <div className="home-button">
             <Link to="/Brand?1">
-              <div className="button" onClick={this.game1}>
+              <div className="btn-fill" onClick={this.game1}>
                 쉬움
               </div>
             </Link>
             <Link to="/Brand?2">
-              <div className="button" onClick={this.game2}>
+              <div className="btn-fill" onClick={this.game2}>
                 어려움
               </div>
             </Link>
