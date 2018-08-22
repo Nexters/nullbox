@@ -53,19 +53,26 @@ class Setting extends Component {
   };
 
   speed = () => {
+
     localStorage.setItem("category", this.state.categoryId);
     localStorage.setItem("team", this.state.team);
     localStorage.setItem("j", this.state.team);
+    localStorage.setItem("t", 1);
+
   };
 
   korean = () => {
     localStorage.setItem("team", this.state.team);
     localStorage.setItem("j", this.state.team);
+    localStorage.setItem("t", 1);
+
   }
 
   brand = () => {
     localStorage.setItem("team", this.state.team);
     localStorage.setItem("j", this.state.team);
+    localStorage.setItem("t", 1);
+
   }
 
 

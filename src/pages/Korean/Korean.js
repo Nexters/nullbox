@@ -30,6 +30,7 @@ class Korean extends Component {
     SuccessHistory: [],
     count: 0,
     pass: 0,
+    start: 0,
   };
 
   componentDidMount() {
@@ -91,9 +92,55 @@ class Korean extends Component {
 
   };
 
+  start = () => {
+    this.setState({ start: 1 });
+    let first = parseInt(Math.random() * korean.length);
+    let second = parseInt(Math.random() * korean.length);
+    let i = this.index;
+
+    let qord = korean[first] + ' ' + korean[second];
+
+    this.setState({ word: qord });
+  }
 
   render() {
     const { word } = this.state;
+
+    let teamName = '';
+    let t = localStorage.getItem('t');
+    if (t === '1') {
+      teamName = 'A';
+    }
+    if (t === '2') {
+      teamName = 'B';
+    }
+    if (t === '3') {
+      teamName = 'C';
+    }
+    if (t === '4') {
+      teamName = 'D';
+    }
+    if (t === '5') {
+      teamName = 'E';
+    }
+
+    let pass = '';
+    let start = <button className="button" onClick={this.start}>
+      {teamName}팀   시작하기
+  </button>;
+
+    if (this.state.start === 1) {
+      start =
+        <button className="button" onClick={this.createQuestionCorrect}>
+          Correct
+        </button>
+
+      pass = <button className="button" onClick={this.createQuestionPass}>
+        Pass
+      </button>
+
+    }
+
 
     return (
       <div className="korean">
@@ -105,12 +152,8 @@ class Korean extends Component {
         <div className="main">
           <h1 className="word-title" >{word}</h1>
           <div className="nav">
-            <button className="button" onClick={this.createQuestionCorrect}>
-              Correct
-            </button>
-            <button className="button" onClick={this.createQuestionPass}>
-              Pass
-            </button>
+            {start}
+            {pass}
           </div>
         </div>
         <Line strokeWidth="4" percent={this.state.time} />

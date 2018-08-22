@@ -29,6 +29,7 @@ class Score extends Component {
     let team = localStorage.getItem('j');
     let game = localStorage.getItem('game');
     let teamName = '';
+    let t = localStorage.getItem('t');
     let result =
       <Link to="/Speed" className="next" onClick={this.gameEnd}> 다음팀 시작하기
 </Link>;
@@ -56,23 +57,23 @@ class Score extends Component {
 
 
     var s = "맞힌 개수 : " + count + "  pass한 개수:" + pass;
-    if (team === '1') {
+    if (t === '1') {
       localStorage.setItem('A', s);
       teamName = 'A';
     }
-    if (team === '2') {
+    if (t === '2') {
       localStorage.setItem('B', s);
       teamName = 'B';
     }
-    if (team === '3') {
+    if (t === '3') {
       localStorage.setItem('C', s);
       teamName = 'C';
     }
-    if (team === '4') {
+    if (t === '4') {
       localStorage.setItem('D', s);
       teamName = 'D';
     }
-    if (team === '5') {
+    if (t === '5') {
       localStorage.setItem('E', s);
       teamName = 'E';
     }
@@ -80,6 +81,12 @@ class Score extends Component {
     console.log(team);
 
     localStorage.setItem("j", team);
+
+
+    t++;
+    console.log(t);
+
+    localStorage.setItem("t", t);
 
 
 
