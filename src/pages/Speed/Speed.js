@@ -60,6 +60,10 @@ class Speed extends Component {
     this.setState({
       time: this.state.time + 1,
     });
+
+    if (this.state.time === 30) {
+      this.gameEnd();
+    }
   }
 
   createQuestionPass = () => {

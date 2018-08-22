@@ -31,33 +31,72 @@ class Setting extends Component {
     let target = event.target;
     let id = target.id;
 
-    let i = this.state.categoryId;
-    if (i == '') {
-      i += id;
+
+
+    if (target.style.color === 'yellow') {
+      target.style.color = "";
     }
+
     else {
-      i += ",";
-      i += id;
+      target.style = "color : yellow";
     }
 
-    this.setState({ categoryId: i });
-
   };
 
-  game1 = () => {
+  game1 = (event) => {
     localStorage.setItem('difficulty', 1);
+    let target = event.target;
+    let id = target.id;
+
+
+
+    if (target.style.color === 'yellow') {
+      target.style.color = "";
+    }
+
+    else {
+      target.style = "color : yellow";
+    }
   };
 
-  game2 = () => {
+  game2 = (event) => {
     localStorage.setItem('difficulty', 2);
+    let target = event.target;
+    let id = target.id;
+
+    if (target.style.color === 'yellow') {
+      target.style.color = "";
+    }
+
+    else {
+      target.style = "color : yellow";
+    }
   };
 
   speed = () => {
 
-    localStorage.setItem("category", this.state.categoryId);
     localStorage.setItem("team", this.state.team);
     localStorage.setItem("j", this.state.team);
     localStorage.setItem("t", 1);
+
+    var arr = document.querySelectorAll(".button");
+    let i = this.state.categoryId;
+
+    for (var j = 0; j < arr.length; j++) {
+      if (arr[j].style.color === "yellow") {
+        if (i == '') {
+          i += arr[j].id;
+        }
+        else {
+          i += ",";
+          i += arr[j].id;
+        }
+
+      }
+    }
+    console.log(i);
+
+    localStorage.setItem("category", i);
 
   };
 
@@ -113,6 +152,7 @@ class Setting extends Component {
               <br />
             </div>
             <section class="radio-items" onChange={this.handleChange}>
+              <span className="game-info"> 팀</span>
               <div class="radio-btn">
                 <input
                   id="b1"
@@ -167,6 +207,7 @@ class Setting extends Component {
             </section>
 
             <section class="radio-items">
+              <span className="game-info"> time</span>
               <div class="radio-btn">
                 <input
                   id="b1"
@@ -211,7 +252,7 @@ class Setting extends Component {
             </section>
             <div className="next-btn">
 
-              <div className="home-button">
+              <div className="category-button">
 
                 {category}
 
@@ -244,6 +285,7 @@ class Setting extends Component {
 
 
             <section class="radio-items" onChange={this.handleChange}>
+              <span className="game-info"> 팀</span>
               <div class="radio-btn">
                 <input
                   id="b1"
@@ -299,6 +341,7 @@ class Setting extends Component {
 
 
             <section class="radio-items">
+              <span className="game-info"> time</span>
               <div class="radio-btn">
                 <input
                   id="b1"
@@ -344,11 +387,11 @@ class Setting extends Component {
 
             <div className="home-button">
 
-              <button className="button" onClick={this.game1}>쉬움</button>
+              <button className="button" onClick={this.game1.bind(this)}>쉬움</button>
 
 
 
-              <button className="button" onClick={this.game2}>어려움</button>
+              <button className="button" onClick={this.game2.bind(this)}>어려움</button>
 
 
             </div>
@@ -380,6 +423,7 @@ class Setting extends Component {
             </div>
 
             <section class="radio-items" onChange={this.handleChange}>
+              <span className="game-info"> 팀</span>
               <div class="radio-btn">
                 <input
                   id="b1"
@@ -434,6 +478,7 @@ class Setting extends Component {
             </section>
 
             <section class="radio-items">
+              <span className="game-info"> time</span>
               <div class="radio-btn">
                 <input
                   id="b1"
