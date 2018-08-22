@@ -31,22 +31,31 @@ class Korean extends Component {
     count: 0,
     pass: 0,
     start: 0,
+    setTime: 0,
   };
 
   componentDidMount() {
-    this.timerID = setInterval(() => this.tick(), 1000);
+    let t = localStorage.getItem('time');
+
+    this.setState({ setTime: t });
   }
 
   componentWillUnmount() {
     clearInterval(this.timerID);
   }
-
   tick() {
+    let t = this.state.setTime;
+
+    this.gameEnd();
+
     this.setState({
-      time: this.state.time + 1,
+      time: this.state.time + (100 / t),
     });
-    if (this.state.time === 30) {
-      this.gameEnd();
+
+    var url = 'http://localhost:3000/score'
+
+    if (this.state.time > 100) {
+      window.location = url;
     }
   }
 
@@ -104,6 +113,7 @@ class Korean extends Component {
     let qord = korean[first] + ' ' + korean[second];
 
     this.setState({ word: qord });
+    this.timerID = setInterval(() => this.tick(), 1000);
   }
 
   render() {

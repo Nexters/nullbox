@@ -16,11 +16,12 @@ class Speed extends Component {
     count: 0,
     pass: 0,
     state: 0,
+    setTime: 0,
+    start: 0,
   };
 
   componentDidMount() {
 
-    this.timerID = setInterval(() => this.tick(), 1000);
     let id = localStorage.getItem("category");
     console.log(id);
 
@@ -44,7 +45,9 @@ class Speed extends Component {
 
       this.setState({ state: 1 });
     }
+    let t = localStorage.getItem('time');
 
+    this.setState({ setTime: t });
   }
 
   componentWillUnmount() {
@@ -52,12 +55,18 @@ class Speed extends Component {
   }
 
   tick() {
-    this.setState({
-      time: this.state.time + 1,
-    });
-    console.log(this.state.time);
-    if (this.state.time === 30) {
+    let t = this.state.setTime;
 
+    this.gameEnd();
+
+    this.setState({
+      time: this.state.time + (100 / t),
+    });
+
+    var url = 'http://localhost:3000/score'
+
+    if (this.state.time > 100) {
+      window.location = url;
     }
   }
 
@@ -117,8 +126,9 @@ class Speed extends Component {
     localStorage.setItem('pass', this.state.pass);
     localStorage.setItem('count', this.state.count);
     localStorage.setItem('history', "스피드");
-
+    console.log("do");
   };
+
   start = () => {
 
     this.setState({ start: 1 });
@@ -139,12 +149,13 @@ class Speed extends Component {
     i++;
     this.setState({ index: i });
     this.setState({ word: qord });
-
+    this.timerID = setInterval(() => this.tick(), 1000);
   }
 
 
   render() {
     const { word } = this.state;
+    console.log(this.state.setTime);
 
     let teamName = '';
     let t = localStorage.getItem('t');

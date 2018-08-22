@@ -16,11 +16,12 @@ class Brand extends Component {
     list: '',
     count: 0,
     pass: 0,
+    setTime: 0,
   };
 
   componentDidMount() {
 
-    this.timerID = setInterval(() => this.tick(), 1000);
+
     let id = localStorage.getItem('difficulty');
 
     axios.get(`http://nexters-env-1.upmjem4hcw.us-east-2.elasticbeanstalk.com//api/category/3/${id}`).then(
@@ -28,6 +29,10 @@ class Brand extends Component {
         this.setState({ list: r.data });
       }
     )
+
+    let t = localStorage.getItem('time');
+
+    this.setState({ setTime: t });
   }
 
 
@@ -37,13 +42,21 @@ class Brand extends Component {
   }
 
   tick() {
+    let t = this.state.setTime;
+
+    this.gameEnd();
+
     this.setState({
-      time: this.state.time + 1,
+      time: this.state.time + (100 / t),
     });
-    if (this.state.time === 30) {
-      this.gameEnd();
+
+    var url = 'http://localhost:3000/score'
+
+    if (this.state.time > 100) {
+      window.location = url;
     }
   }
+
 
   createQuestionPass = () => {
     var s = JSON.stringify(this.state.list[0]);
@@ -90,7 +103,7 @@ class Brand extends Component {
     let qord = s1.name;
     this.setState({ index: i });
     this.setState({ word: qord });
-
+    this.timerID = setInterval(() => this.tick(), 1000);
   }
 
 

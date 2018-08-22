@@ -109,3 +109,16 @@
   text-align: center;
   color: #ffffff;
 }
+label{
+  width: 99px;
+  height: 38px;
+  font-family: NotoSansCJKkr;
+  font-size: 26px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #e8f8f5;
+}

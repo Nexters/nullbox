@@ -97,6 +97,7 @@ class Setting extends Component {
     console.log(i);
 
     localStorage.setItem("category", i);
+    localStorage.setItem("time", this.state.time);
 
   };
 
@@ -104,6 +105,7 @@ class Setting extends Component {
     localStorage.setItem("team", this.state.team);
     localStorage.setItem("j", this.state.team);
     localStorage.setItem("t", 1);
+    localStorage.setItem("time", this.state.time);
 
   }
 
@@ -111,6 +113,7 @@ class Setting extends Component {
     localStorage.setItem("team", this.state.team);
     localStorage.setItem("j", this.state.team);
     localStorage.setItem("t", 1);
+    localStorage.setItem("time", this.state.time);
 
   }
 
@@ -122,10 +125,15 @@ class Setting extends Component {
 
   }
 
+  handleChangeTime = (event) => {
+    let target = event.target;
+    let i = target.value;
+    this.setState({ time: i });
+  }
+
   render() {
     let explain = localStorage.getItem('explain');
     let param = localStorage.getItem('game');
-
 
 
     var s = JSON.stringify(this.state.list);
@@ -192,7 +200,7 @@ class Setting extends Component {
       </div>
     </section>
 
-    let selectTime = <section class="radio-items">
+    let selectTime = <section class="radio-items" onChange={this.handleChangeTime}>
       <span className="game-info"> time</span>
       <div class="radio-btn">
         <input
@@ -200,8 +208,8 @@ class Setting extends Component {
           class="only-sr checked"
           type="radio"
           name="temp2"
-          value="1"
-          checked
+          value="30"
+
         />
         <label for="b1">30초</label>
       </div>
@@ -211,7 +219,7 @@ class Setting extends Component {
           class="only-sr"
           type="radio"
           name="temp2"
-          value="2"
+          value="60"
         />
         <label for="b2">1분</label>
       </div>
@@ -221,7 +229,7 @@ class Setting extends Component {
           class="only-sr"
           type="radio"
           name="temp2"
-          value="3"
+          value="90"
         />
         <label for="b3">1분 30초</label>
       </div>
@@ -231,9 +239,19 @@ class Setting extends Component {
           class="only-sr"
           type="radio"
           name="temp2"
-          value="4"
+          value="120"
         />
         <label for="b4">2분</label>
+      </div>
+      <div class="radio-btn">
+        <input
+          id="b5"
+          class="only-sr"
+          type="radio"
+          name="temp2"
+          value="180"
+        />
+        <label for="b4">2분 30초</label>
       </div>
     </section>;
 
