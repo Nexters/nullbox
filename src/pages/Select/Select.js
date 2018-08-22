@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import logo from './../../assets/P01_main/img_logo.png';
 import Flex, { FlexItem } from 'styled-flex-component';
-import './Select.css';
+
 
 import axios from 'axios';
 

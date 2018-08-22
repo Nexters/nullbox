@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Line } from 'rc-progress';
 import 'rc-progress/assets/index.css';
-import './Speed.css';
 import { list } from '../../../node_modules/postcss';
 import axios from 'axios';
 

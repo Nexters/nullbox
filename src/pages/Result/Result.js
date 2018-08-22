@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './Result.css';
+// import './Result.css';
 
 class Result extends Component {
   state = {
     time: 0,
   };
 
-  showResult = () => {};
+  showResult = () => { };
 
   render() {
     const { word } = this.state;

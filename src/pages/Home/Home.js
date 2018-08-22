@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import logo from './../../assets/P01_main/img_logo.png';
 import Flex, { FlexItem } from 'styled-flex-component';
-import './Home.css';
+import '../Css/Home.css';
 
 import axios from 'axios';
 
@@ -56,17 +56,17 @@ class Home extends Component {
             <Link to="/Setting/스피드게임">
 
               <div className="game-button" onClick={this.game1}>
-                <p >{this.state.game1}</p>
+                {this.state.game1}
               </div>
             </Link>
             <Link to="/Setting/초성게임">
               <div className="game-button" onClick={this.game2}>
-                <p >{this.state.game2}</p>
+                {this.state.game2}
               </div>
             </Link>
             <Link to="/Setting/브랜드게임">
               <div className="game-button" onClick={this.game3}>
-                <p >{this.state.game3}</p>
+                {this.state.game3}
               </div>
             </Link>
 

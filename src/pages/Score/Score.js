@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './Score.css';
+// import './Score.css';
 
 class Score extends Component {
   state = {

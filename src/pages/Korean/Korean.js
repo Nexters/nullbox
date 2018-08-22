@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Line } from 'rc-progress';
 import 'rc-progress/assets/index.css';
-import './Korean.css';
+import '../Css/Korean.css';
 
 const korean = [
   'ㄱ',
@@ -134,11 +134,11 @@ class Korean extends Component {
 
     if (this.state.start === 1) {
       start =
-        <button className="button" onClick={this.createQuestionCorrect}>
+        <button className="button correct" onClick={this.createQuestionCorrect}>
           Correct
         </button>
 
-      pass = <button className="button" onClick={this.createQuestionPass}>
+      pass = <button className="button pass" onClick={this.createQuestionPass}>
         Pass
       </button>
 

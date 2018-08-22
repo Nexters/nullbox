@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import './Setting.css';
+
 import arrow from '../../assets/P03_setting/icon_scrolldownarrow.png';
 import axios from 'axios';
 
