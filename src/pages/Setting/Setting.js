@@ -265,7 +265,7 @@ class Setting extends Component {
             </Link>
           </div>
           <article>
-            <p className="game-name">{param}</p>
+            <div className="game-name">{param}</div>
             <div className="game-info">
               {explain}
               <br />
@@ -299,7 +299,7 @@ class Setting extends Component {
             </Link>
           </div>
           <article>
-            <p className="game-name">{param}</p>
+            <div className="game-name">{param}</div>
             <div className="game-info">
               {explain}
               <br />
@@ -340,7 +340,7 @@ class Setting extends Component {
             </Link>
           </div>
           <article>
-            <p className="game-name">{param}</p>
+            <div className="game-name">{param}</div>
             <div className="game-info">
               {explain}
               <br />

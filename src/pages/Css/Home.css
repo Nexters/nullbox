@@ -83,7 +83,7 @@
 }
 
 .game-name {
-  width: 182px;
+  width: 300px;
   height: 74px;
   font-family: NotoSansCJKkr;
   font-size: 40px;
@@ -94,6 +94,8 @@
   letter-spacing: normal;
   text-align: center;
   color: #2eb299;
+ display: flex;
+ justify-content: center;
 }
 .game-info{
   width: 815px;

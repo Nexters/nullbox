@@ -33,6 +33,18 @@ a:hover {
 .header {
   height: 10vh;
   width: 100%;
+
+  font-family: NotoSansCJKkr;
+  font-size: 26px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #fd575f;
+  margin-top: 3%;
+  margin-left: 3%;
+
 }
 
 .button {
@@ -107,6 +119,6 @@ a:hover {
   justify-content: space-between;
 }
 
-.wordBox{
-
+article{
+  text-align: center;
 }
