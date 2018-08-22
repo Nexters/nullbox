@@ -7,7 +7,7 @@ class Result extends Component {
     time: 0,
   };
 
-  showResult = () => { };
+  showResult = () => {};
 
   render() {
     const { word } = this.state;
@@ -16,7 +16,7 @@ class Result extends Component {
     console.log(game);
 
     let result = (
-      <Link to="/Setting/스피드게임" className="next">
+      <Link to="/Setting/스피드게임" className="btn-fill  next">
         {' '}
         스피드퀴즈 한번 더하기{' '}
       </Link>
@@ -24,7 +24,7 @@ class Result extends Component {
 
     if (game === '초성게임') {
       result = (
-        <Link to="/Setting/초성게임" className="next">
+        <Link to="/Setting/초성게임" className="btn-fill next">
           {' '}
           초성게임 한번 더하기
         </Link>
@@ -33,7 +33,7 @@ class Result extends Component {
 
     if (game === '브랜드이름') {
       result = (
-        <Link to="/Setting/브랜드게임" className="next">
+        <Link to="/Setting/브랜드게임" className="btn-fill next">
           {' '}
           브랜드이름 한번 더하기
         </Link>

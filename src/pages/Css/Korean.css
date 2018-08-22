@@ -1,84 +1,23 @@
-.korean {
-  height: 98%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  box-sizing: border-box;
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  border-style: solid;
-  border-image: linear-gradient(to right, #fe565d 0%, #7fe5ce 100%);
-  border-image-slice: 1;
-  border-image-width: 20px;
-}
-
-a:link {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:visited {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
-  color: inherit;
-  text-decoration: underline;
-}
-
 .header {
-  height: 10vh;
-  width: 100%;
-
+  width: 25vh;
+  height: 10vw;
+  padding: 5vh;
+  text-align: center;
   font-family: NotoSansCJKkr;
-  font-size: 26px;
-  font-weight: 500;
+  font-size: 1.2em;
+  font-weight: 400;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
+  text-align: center;
   color: #fd575f;
-  margin-top: 3%;
-  margin-left: 3%;
-
 }
 
-.button {
-  width: 20vh;
-  height: 12vh;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-  background-color: #242348;
-  border: solid 1px #30b9a0;
-  color: #fff;
-  font-weight: 600;
-  font-size: 1.3em;
-  letter-spacing: 2px;
-}
-
-.cancel {
+.back {
   position: absolute;
-  top: 20vh;
-  left: 8vh;
-  color: #fff;
-}
-
-.pass {
-  position: absolute;
-  right: 8vh;
-  bottom: 20vh;
-  color: #fff;
-}
-
-.correct {
-  position: absolute;
-  right: 8vh;
-  top: 20vh;
-  color: #fff;
+  left: 0;
+  top: 0;
 }
 
 .rc-progress-line-path {
@@ -97,12 +36,6 @@ a:hover {
   vertical-align: middle;
 }
 
-.word-title {
-  color: white;
-  font-weight: 600;
-  font-size: 250px;
-}
-
 .main {
   height: 90vh;
   width: 100%;
@@ -119,6 +52,6 @@ a:hover {
   justify-content: space-between;
 }
 
-article{
+article {
   text-align: center;
 }

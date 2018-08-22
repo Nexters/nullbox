@@ -3,32 +3,21 @@ import { Link } from 'react-router-dom';
 import logo from './../../assets/P01_main/img_logo.png';
 import Flex, { FlexItem } from 'styled-flex-component';
 
-
 import axios from 'axios';
 
-
-
 class Select extends Component {
-
-
   state = {
     easy: '',
     difficult: '',
     team: '',
-
   };
 
-
-
   game1 = () => {
-
     localStorage.setItem('difficulty', 1);
   };
 
   game2 = () => {
-
     localStorage.setItem('difficulty', 2);
-
   };
 
   render() {
@@ -38,13 +27,12 @@ class Select extends Component {
       <Fragment>
         <Flex center full column>
           <Link to="/">
-            <p className="text">뒤로가기</p>
+            <p className="btn-top back">뒤로가기</p>
           </Link>
 
           <section class="radio-items">
             <h3 className="team_value">팀 수 </h3>
             <div class="radio-btn">
-
               <input
                 id="b1"
                 class="only-sr checked"
@@ -72,7 +60,6 @@ class Select extends Component {
                 type="radio"
                 name="team"
                 value="3"
-
               />
               <label for="b3">3</label>
             </div>
@@ -91,12 +78,14 @@ class Select extends Component {
           <p className="main-text">Select</p>
           <div className="home-button">
             <Link to="/Brand?1">
-              <div className="button" onClick={this.game1}>쉬움</div>
-
+              <div className="button" onClick={this.game1}>
+                쉬움
+              </div>
             </Link>
             <Link to="/Brand?2">
-              <div className="button" onClick={this.game2}>어려움</div>
-
+              <div className="button" onClick={this.game2}>
+                어려움
+              </div>
             </Link>
           </div>
         </Flex>
