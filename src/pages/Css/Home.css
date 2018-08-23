@@ -4,13 +4,9 @@
   align-items: center;
   height: 100vh;
   justify-content: center;
-
   width: 180px;
   height: 180px;
   object-fit: contain;
-
-
-
 }
 
 .border-gradation {
@@ -47,7 +43,6 @@
   justify-content: space-between;
 }
 
-
 .brand-button {
   display: flex;
   flex-direction: row;
@@ -59,13 +54,13 @@
 .game-button {
   width: 25vw;
   height: 8vh;
+}
 
 .btn {
   width: 10vw;
   height: 10vh;
   font-size: 1em;
   /* default */
-
   margin: 0.5vw;
   border-radius: 6px;
   border: solid 2px #30b9a0;
@@ -75,11 +70,8 @@
   object-fit: contain;
   text-align: center;
   vertical-align: middle;
-
   padding-top: 6%;
-
   letter-spacing: 2px;
-
 }
 
 .home {
@@ -211,10 +203,8 @@ button:hover {
   color: #2eb299;
   display: flex;
   justify-content: center;
-
   flex-wrap: wrap;
   align-items: center;
-
 }
 
 .game-info {
