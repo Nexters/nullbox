@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-
 class Score extends Component {
   state = {
     time: 0,
@@ -154,10 +153,10 @@ class Score extends Component {
 
       return (
         <div className="score">
-
           <div className="header">Score</div>
 
           <div className="main">
+
             <div className="wordBox">
 
               {historyResult}
@@ -167,6 +166,7 @@ class Score extends Component {
 
           <div className="container">
             <div className="count">{score}</div>
+
             <div className="nav">
               <Link to="/" className="home">
                 {' '}
