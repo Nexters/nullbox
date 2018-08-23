@@ -50,7 +50,7 @@ class Home extends Component {
       <Fragment>
         <Flex center full column>
           <div className="container-basic">
-            <Link to="/#">
+            <Link to="/Info">
               <p className="btn-top inform">서비스 소개</p>
             </Link>
             <img src={logo} alt="logo" className="logo" />

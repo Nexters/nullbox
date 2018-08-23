@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-
 import arrow from '../../assets/P03_setting/icon_scrolldownarrow.png';
 import axios from 'axios';
 
@@ -126,7 +125,7 @@ class Setting extends Component {
 
     let selectTeam = (
       <section class="radio-items" onChange={this.handleChange}>
-        <span className="game-info"> team</span>
+        <span className="game-info">Team</span>
         <div class="btn-radio">
           <input
             id="b1"
@@ -240,15 +239,12 @@ class Setting extends Component {
               {explain}
               <br />
             </div>
-
             {selectTeam}
             {selectTime}
-
             <div className="home-button">
               <button className="btn-fill" onClick={this.game1.bind(this)}>
                 쉬움
               </button>
-
               <button className="btn-fill" onClick={this.game2.bind(this)}>
                 어려움
               </button>
@@ -276,10 +272,8 @@ class Setting extends Component {
               {explain}
               <br />
             </div>
-
             {selectTeam}
             {selectTime}
-
             <div className="next-btn">
               <Link to="/Korean" onClick={this.korean}>
                 <p>준비하기</p>

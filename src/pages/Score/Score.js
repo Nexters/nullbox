@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
+import '../Css/Score.css';
 class Score extends Component {
   state = {
     time: 0,
@@ -42,9 +42,9 @@ class Score extends Component {
     for (var i = 0; i < arr1.length; i++) {
       console.log(arr2.indexOf(arr1[i]));
       if (arr2.indexOf(arr1[i]) === -1) {
-        historyResult[i] = <span className="history1">{arr1[i]}</span>;
+        historyResult[i] = <p className="history1">{arr1[i]}</p>;
       } else {
-        historyResult[i] = <span className="history">{arr1[i]}</span>;
+        historyResult[i] = <p className="history">{arr1[i]}</p>;
       }
     }
 
@@ -108,15 +108,15 @@ class Score extends Component {
 
     if (history === '브랜드') {
       return (
-        <div className="score">
-          <div className="header">Score</div>
-          <div className="main">
-            <div className="wordBox">
-              <h3 className="word">{teamName}팀</h3>
-              <h3 className="word">맞힌 개수 : {count}</h3>
-              <h3 className="word">패스한 개수 : {pass} </h3>
+        <div className="scoreScore">
+          <div className="headerScore">Score</div>
+          <div className="mainScore">
+            <div className="wordBoxScore">
+              <h3 className="wordScore">{teamName}팀</h3>
+              <h3 className="wordScore">맞힌 개수 : {count}</h3>
+              <h3 className="wordScore">패스한 개수 : {pass} </h3>
             </div>
-            <div className="nav">
+            <div className="navScore">
               <Link to="/" className="home">
                 {' '}
                 홈으로{' '}
@@ -129,10 +129,10 @@ class Score extends Component {
     } else if (history === '스피드') {
       return (
         <div className="score">
-          <div className="header">Score</div>
-          <div className="main">
-            <div className="wordBox">{historyResult}</div>
-            <div className="nav">
+          <div className="headerScore">Score</div>
+          <div className="mainScore">
+            <div className="wordBoxScore">{historyResult}</div>
+            <div className="navScore">
               <Link to="/" className="home">
                 {' '}
                 홈으로{' '}
@@ -142,7 +142,9 @@ class Score extends Component {
           </div>
         </div>
       );
-    } else {
+    }
+
+    else {
       let score = success.split(',').length;
 
       if (success === '') {
@@ -152,22 +154,16 @@ class Score extends Component {
       localStorage.setItem('score', score);
 
       return (
-        <div className="score">
-          <div className="header">Score</div>
+        <div className="scoreScore">
+          <div className="headerScore">Score</div>
 
-          <div className="main">
-
-            <div className="wordBox">
-
-              {historyResult}
-
-            </div>
+          <div className="mainScore">
+            <div className="wordBoxScore">{historyResult}</div>
           </div>
 
-          <div className="container">
-            <div className="count">{score}</div>
-
-            <div className="nav">
+          <div className="containerScore">
+            <div className="countScore">{score}</div>
+            <div className="navScore">
               <Link to="/" className="home">
                 {' '}
                 홈으로{' '}
