@@ -296,7 +296,6 @@ button:hover {
   text-align: center;
   color: #2eb299;
   margin-right: 3%;
-  position: relative !important;
   display: inline;
 
 }
@@ -315,9 +314,9 @@ button:hover {
   text-align: center;
   color: #ffffff;
   margin-right: 3%;
-  position: relative !important;
-
   display: inline;
+
+
 }
 
 /* game font */

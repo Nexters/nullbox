@@ -38,7 +38,11 @@ class Score extends Component {
     let historyResult = [];
     var arr1 = history.split(',');
     var arr2 = success.split(',');
+    let historyResult1 = [];
 
+    let historyResult2 = [];
+    let historyResult3 = [];
+    let historyResult4 = [];
     for (var i = 0; i < arr1.length; i++) {
       console.log(arr2.indexOf(arr1[i]));
       if (arr2.indexOf(arr1[i]) === -1) {
@@ -48,9 +52,25 @@ class Score extends Component {
       }
     }
 
+    for (var i = 0; i < historyResult.length; i++) {
+      if (i < 8) {
+        historyResult1[i] = historyResult[i];
+      }
+      else if (i < 16) {
+        historyResult2[i] = historyResult[i];
+      }
+      else if (i < 24) {
+        historyResult3[i] = historyResult[i];
+      }
+      else {
+        historyResult4[i] = historyResult[i];
+      }
+    }
+
+
     if (game === '초성게임') {
       result = (
-        <Link to="/Korean" className="btn-fill next">
+        <Link to="/Korean" className="nextScore">
           {' '}
           다음팀 시작하기
         </Link>
@@ -59,7 +79,7 @@ class Score extends Component {
 
     if (game === '브랜드이름') {
       result = (
-        <Link to="/Brand" className="btn-fill next">
+        <Link to="/Brand" className="nextScore">
           {' '}
           다음팀 시작하기
         </Link>
@@ -68,7 +88,7 @@ class Score extends Component {
 
     if (team === '1') {
       result = (
-        <Link to="/Result" className="btn-fill next">
+        <Link to="/Result" className="nextScore">
           {' '}
           결과보기
         </Link>
@@ -158,13 +178,18 @@ class Score extends Component {
           <div className="headerScore">Score</div>
 
           <div className="mainScore">
-            <div className="wordBoxScore">{historyResult}</div>
+
+
+            <div className="wordBoxScore">{historyResult1}</div>
+            <div className="wordBoxScore">{historyResult2}</div>
+            <div className="wordBoxScore">{historyResult3}</div>
+            <div className="wordBoxScore">{historyResult4}</div>
           </div>
 
           <div className="containerScore">
             <div className="countScore">{score}</div>
             <div className="navScore">
-              <Link to="/" className="home">
+              <Link to="/" className="homeScore">
                 {' '}
                 홈으로{' '}
               </Link>

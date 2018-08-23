@@ -30,17 +30,16 @@
 /**************** main **************/
 
 .wordBoxScore{
-  width: 100%;
-  height: 100%;
-  display: block;
+  width: 200px;
+  height: 80%;
+  display: inline-block;
   border: 1px solid black;
   justify-content: center;
   flex-direction: column;
-}
-
-.history {
+  border: none;
 
 }
+
 
 .wordTitleScore{
   font-size: 4.6vh;
@@ -65,15 +64,19 @@
 }
 
 .homeScore{
-  width: 100px;
-  height: 70px;
-  border: 1px solid white;
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
 }
 
 .nextScore{
-  width: 100px;
-  height: 70px;
-  border: 1px solid white;
+  width: 276px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 6px;
+  background-color: #403e70;
+  background-color: var(--dusk);
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.75);
 }
 
 /*******************************************/
