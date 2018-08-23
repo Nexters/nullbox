@@ -66,7 +66,7 @@ class Speed extends Component {
 
 
     var url = window.location.href;
-    url = url + "/score";
+    url = url + "/Score";
 
     if (this.state.time > 100) {
       window.location = url;
