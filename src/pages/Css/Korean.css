@@ -33,7 +33,6 @@ a:hover {
 .header {
   height: 10vh;
   width: 100%;
-
   font-family: NotoSansCJKkr;
   font-size: 26px;
   font-weight: 500;
@@ -44,8 +43,6 @@ a:hover {
   color: #fd575f;
   margin-top: 3%;
   margin-left: 3%;
-  
-
 }
 
 .button {
@@ -60,7 +57,6 @@ a:hover {
   font-size: 1.3em;
   letter-spacing: 2px;
   display: flex;
-
 }
 
 .cancel {
@@ -122,6 +118,6 @@ a:hover {
   justify-content: center;
 }
 
-article{
+article {
   text-align: center;
 }
