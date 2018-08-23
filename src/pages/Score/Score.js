@@ -37,24 +37,21 @@ class Score extends Component {
     console.log(success);
 
     let historyResult = [];
-    var arr1 = history.split(",");
-    var arr2 = success.split(",");
-
+    var arr1 = history.split(',');
+    var arr2 = success.split(',');
 
     for (var i = 0; i < arr1.length; i++) {
       console.log(arr2.indexOf(arr1[i]));
       if (arr2.indexOf(arr1[i]) === -1) {
-        historyResult[i] = <span className="history1" >{arr1[i]}</span>;
-      }
-      else {
-        historyResult[i] = <span className="history" >{arr1[i]}</span>;
+        historyResult[i] = <span className="history1">{arr1[i]}</span>;
+      } else {
+        historyResult[i] = <span className="history">{arr1[i]}</span>;
       }
     }
 
-
     if (game === '초성게임') {
       result = (
-        <Link to="/Korean" className="next">
+        <Link to="/Korean" className="btn-fill next">
           {' '}
           다음팀 시작하기
         </Link>
@@ -63,7 +60,7 @@ class Score extends Component {
 
     if (game === '브랜드이름') {
       result = (
-        <Link to="/Brand" className="next">
+        <Link to="/Brand" className="btn-fill next">
           {' '}
           다음팀 시작하기
         </Link>
@@ -72,7 +69,7 @@ class Score extends Component {
 
     if (team === '1') {
       result = (
-        <Link to="/Result" className="next">
+        <Link to="/Result" className="btn-fill next">
           {' '}
           결과보기
         </Link>
@@ -135,9 +132,7 @@ class Score extends Component {
         <div className="score">
           <div className="header">Score</div>
           <div className="main">
-            <div className="wordBox">
-              {historyResult}
-            </div>
+            <div className="wordBox">{historyResult}</div>
             <div className="nav">
               <Link to="/" className="home">
                 {' '}

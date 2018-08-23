@@ -21,27 +21,27 @@ class Speed extends Component {
   };
 
   componentDidMount() {
-
-    let id = localStorage.getItem("category");
+    let id = localStorage.getItem('category');
     console.log(id);
 
-
     if (id === '') {
-      axios.get(`http://nexters-env-1.upmjem4hcw.us-east-2.elasticbeanstalk.com//api/question/all`).then(
-        r => {
+      axios
+        .get(
+          `http://nexters-env-1.upmjem4hcw.us-east-2.elasticbeanstalk.com//api/question/all`
+        )
+        .then(r => {
           this.setState({ list: r.data });
-        }
-      )
+        });
 
       this.setState({ state: 0 });
-
-    }
-    else {
-      axios.get(`http://nexters-env-1.upmjem4hcw.us-east-2.elasticbeanstalk.com//api/question?ids=${id}`).then(
-        r => {
+    } else {
+      axios
+        .get(
+          `http://nexters-env-1.upmjem4hcw.us-east-2.elasticbeanstalk.com//api/question?ids=${id}`
+        )
+        .then(r => {
           this.setState({ list: r.data });
-        }
-      )
+        });
 
       this.setState({ state: 1 });
     }
@@ -60,9 +60,8 @@ class Speed extends Component {
     this.gameEnd();
 
     this.setState({
-      time: this.state.time + (100 / t),
+      time: this.state.time + 100 / t,
     });
-
 
 
     var url = window.location.href;
@@ -77,14 +76,11 @@ class Speed extends Component {
     var s = JSON.stringify(this.state.list[this.state.index]);
     var s1 = JSON.parse(s);
 
-
     let i = this.state.index;
     let qord = '';
     if (this.state.state === 0) {
       qord = s1.name;
-
-    }
-    else {
+    } else {
       qord = s1[1];
     }
     i++;
@@ -99,16 +95,13 @@ class Speed extends Component {
   };
 
   createQuestionCorrect = () => {
-
     var s = JSON.stringify(this.state.list[this.state.index]);
     var s1 = JSON.parse(s);
     let i = this.state.index;
     let qord = '';
     if (this.state.state === 0) {
       qord = s1.name;
-
-    }
-    else {
+    } else {
       qord = s1[1];
     }
     i++;
@@ -120,22 +113,17 @@ class Speed extends Component {
 
     this.setState({ SuccessHistory: this.state.SuccessHistory.concat(qord) });
     this.setState({ history: this.state.history.concat(qord) });
-
-
-
   };
 
   gameEnd = () => {
     localStorage.setItem('pass', this.state.pass);
     localStorage.setItem('count', this.state.count);
-    localStorage.setItem('history', "스피드");
+    localStorage.setItem('history', '스피드');
     localStorage.setItem('history', this.state.history);
     localStorage.setItem('successHistory', this.state.SuccessHistory);
-
   };
 
   start = () => {
-
     this.setState({ start: 1 });
 
     var s = JSON.stringify(this.state.list[this.state.index]);
@@ -145,9 +133,7 @@ class Speed extends Component {
     let qord = '';
     if (this.state.state === 0) {
       qord = s1.name;
-
-    }
-    else {
+    } else {
       qord = s1[1];
     }
 
@@ -155,8 +141,7 @@ class Speed extends Component {
     this.setState({ index: i });
     this.setState({ word: qord });
     this.timerID = setInterval(() => this.tick(), 1000);
-  }
-
+  };
 
   render() {
     const { word } = this.state;
@@ -181,32 +166,34 @@ class Speed extends Component {
     }
 
     let pass = '';
-    let start = <button className="button" onClick={this.start}>
-      {teamName}팀   시작하기
-  </button>;
+    let start = (
+      <button className="start word-title" onClick={this.start}>
+        {teamName}팀 시작하기
+      </button>
+    );
 
     if (this.state.start === 1) {
-      start =
-        <button className="button" onClick={this.createQuestionCorrect}>
+      start = (
+        <button className="btn correct" onClick={this.createQuestionCorrect}>
           Correct
         </button>
+      );
 
-      pass = <button className="button" onClick={this.createQuestionPass}>
-        Pass
-      </button>
-
+      pass = (
+        <button className="btn pass" onClick={this.createQuestionPass}>
+          Pass
+        </button>
+      );
     }
     return (
-
-
       <div className="korean">
         <div className="Header">
-          <button className="button">
+          <button className="btn cancel">
             <Link to="/">X</Link>
           </button>
         </div>
         <div className="main">
-          <h1 className="word-title" >{word}</h1>
+          <h1 className="word-title">{word}</h1>
           <div className="nav">
             {start}
             {pass}
@@ -214,8 +201,7 @@ class Speed extends Component {
         </div>
         <Line strokeWidth="4" percent={this.state.time} />
 
-
-        <button className="button" onClick={this.gameEnd}>
+        <button className="btn score" onClick={this.gameEnd}>
           <Link to="/score">score</Link>
         </button>
       </div>

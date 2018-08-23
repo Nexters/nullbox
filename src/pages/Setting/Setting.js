@@ -4,9 +4,7 @@ import { Link } from 'react-router-dom';
 import arrow from '../../assets/P03_setting/icon_scrolldownarrow.png';
 import axios from 'axios';
 
-
 class Setting extends Component {
-
   state = {
     easy: '',
     difficult: '',
@@ -16,248 +14,194 @@ class Setting extends Component {
     time: 30,
   };
 
-
   componentDidMount() {
-    axios.get(`http://nexters-env-1.upmjem4hcw.us-east-2.elasticbeanstalk.com/api/category/1`).then(
-      r => {
+    axios
+      .get(
+        `http://nexters-env-1.upmjem4hcw.us-east-2.elasticbeanstalk.com/api/category/1`
+      )
+      .then(r => {
         this.setState({ list: r.data });
-
-      }
-    )
+      });
   }
 
-
-  category = (event) => {
+  category = event => {
     let target = event.target;
     let id = target.id;
 
-
-
     if (target.style.color === 'yellow') {
-      target.style.color = "";
+      target.style.color = '';
+    } else {
+      target.style = 'color : yellow';
     }
-
-    else {
-      target.style = "color : yellow";
-    }
-
   };
 
-  game1 = (event) => {
+  game1 = event => {
     localStorage.setItem('difficulty', 1);
     let target = event.target;
     let id = target.id;
 
-
-
     if (target.style.color === 'yellow') {
-      target.style.color = "";
-    }
-
-    else {
-      target.style = "color : yellow";
+      target.style.color = '';
+    } else {
+      target.style = 'color : yellow';
     }
   };
 
-  game2 = (event) => {
+  game2 = event => {
     localStorage.setItem('difficulty', 2);
     let target = event.target;
     let id = target.id;
 
     if (target.style.color === 'yellow') {
-      target.style.color = "";
-    }
-
-    else {
-      target.style = "color : yellow";
+      target.style.color = '';
+    } else {
+      target.style = 'color : yellow';
     }
   };
 
   speed = () => {
+    localStorage.setItem('team', this.state.team);
+    localStorage.setItem('j', this.state.team);
+    localStorage.setItem('t', 1);
 
-    localStorage.setItem("team", this.state.team);
-    localStorage.setItem("j", this.state.team);
-    localStorage.setItem("t", 1);
-
-    var arr = document.querySelectorAll(".button");
+    var arr = document.querySelectorAll('.button');
     let i = this.state.categoryId;
 
     for (var j = 0; j < arr.length; j++) {
-      if (arr[j].style.color === "yellow") {
+      if (arr[j].style.color === 'yellow') {
         if (i == '') {
           i += arr[j].id;
-        }
-        else {
-          i += ",";
+        } else {
+          i += ',';
           i += arr[j].id;
         }
-
       }
     }
     console.log(i);
 
-    localStorage.setItem("category", i);
-    localStorage.setItem("time", this.state.time);
-
+    localStorage.setItem('category', i);
+    localStorage.setItem('time', this.state.time);
   };
 
   korean = () => {
-    localStorage.setItem("team", this.state.team);
-    localStorage.setItem("j", this.state.team);
-    localStorage.setItem("t", 1);
-    localStorage.setItem("time", this.state.time);
-
-  }
+    localStorage.setItem('team', this.state.team);
+    localStorage.setItem('j', this.state.team);
+    localStorage.setItem('t', 1);
+    localStorage.setItem('time', this.state.time);
+  };
 
   brand = () => {
-    localStorage.setItem("team", this.state.team);
-    localStorage.setItem("j", this.state.team);
-    localStorage.setItem("t", 1);
-    localStorage.setItem("time", this.state.time);
+    localStorage.setItem('team', this.state.team);
+    localStorage.setItem('j', this.state.team);
+    localStorage.setItem('t', 1);
+    localStorage.setItem('time', this.state.time);
+  };
 
-  }
-
-
-  handleChange = (event) => {
+  handleChange = event => {
     let target = event.target;
     let i = target.value;
     this.setState({ team: i });
+  };
 
-  }
-
-  handleChangeTime = (event) => {
+  handleChangeTime = event => {
     let target = event.target;
     let i = target.value;
     this.setState({ time: i });
-  }
+  };
 
   render() {
     let explain = localStorage.getItem('explain');
     let param = localStorage.getItem('game');
 
-
     var s = JSON.stringify(this.state.list);
     var s1 = JSON.parse(s);
 
-    let category = s1.map(list =>
+    let category = s1.map(list => (
       <button class="checkbox" id={list.id} onClick={this.category.bind(this)}>
-        <div className="button" id={list.id}>{list.name}</div>
-      </button>);
+        <div className="btn-fill select" id={list.id}>
+          {list.name}
+        </div>
+      </button>
+    ));
 
+    let selectTeam = (
+      <section class="radio-items" onChange={this.handleChange}>
+        <span className="game-info"> team</span>
+        <div class="btn-radio">
+          <input
+            id="b1"
+            class="only-sr checked"
+            type="radio"
+            name="team"
+            value="1"
+          />
+          <label for="b1">1</label>
+        </div>
+        <div class="btn-radio">
+          <input id="b2" class="only-sr" type="radio" name="team" value="2" />
+          <label for="b2">2</label>
+        </div>
+        <div class="btn-radio">
+          <input id="b3" class="only-sr" type="radio" name="team" value="3" />
+          <label for="b3">3</label>
+        </div>
+        <div class="btn-radio">
+          <input id="b4" class="only-sr" type="radio" name="team" value="4" />
+          <label for="b4">4</label>
+        </div>
+        <div class="btn-radio">
+          <input id="b5" class="only-sr" type="radio" name="team" value="5" />
+          <label for="b4">5</label>
+        </div>
+      </section>
+    );
 
-    let selectTeam = <section class="radio-items" onChange={this.handleChange}>
-      <span className="game-info"> 팀</span>
-      <div class="radio-btn">
-        <input
-          id="b1"
-          class="only-sr checked"
-          type="radio"
-          name="team"
-          value="1"
+    let selectTime = (
+      <section class="radio-items" onChange={this.handleChangeTime}>
+        <span className="game-info"> time</span>
+        <div class="btn-radio">
+          <input
+            id="b1"
+            class="only-sr checked"
+            type="radio"
+            name="temp2"
+            value="30"
+          />
+          <label for="b1">30초</label>
+        </div>
+        <div class="btn-radio">
+          <input id="b2" class="only-sr" type="radio" name="temp2" value="60" />
+          <label for="b2">1분</label>
+        </div>
+        <div class="btn-radio">
+          <input id="b3" class="only-sr" type="radio" name="temp2" value="90" />
+          <label for="b3">1분 30초</label>
+        </div>
+        <div class="btn-radio">
+          <input
+            id="b4"
+            class="only-sr"
+            type="radio"
+            name="temp2"
+            value="120"
+          />
+          <label for="b4">2분</label>
+        </div>
+        <div class="btn-radio">
+          <input
+            id="b5"
+            class="only-sr"
+            type="radio"
+            name="temp2"
+            value="180"
+          />
+          <label for="b4">2분 30초</label>
+        </div>
+      </section>
+    );
 
-        />
-        <label for="b1">1</label>
-      </div>
-      <div class="radio-btn">
-        <input
-          id="b2"
-          class="only-sr"
-          type="radio"
-          name="team"
-          value="2"
-        />
-        <label for="b2">2</label>
-      </div>
-      <div class="radio-btn">
-        <input
-          id="b3"
-          class="only-sr"
-          type="radio"
-          name="team"
-          value="3"
-        />
-        <label for="b3">3</label>
-      </div>
-      <div class="radio-btn">
-        <input
-          id="b4"
-          class="only-sr"
-          type="radio"
-          name="team"
-          value="4"
-        />
-        <label for="b4">4</label>
-      </div>
-      <div class="radio-btn">
-        <input
-          id="b5"
-          class="only-sr"
-          type="radio"
-          name="team"
-          value="5"
-        />
-        <label for="b4">5</label>
-      </div>
-    </section>
-
-    let selectTime = <section class="radio-items" onChange={this.handleChangeTime}>
-      <span className="game-info"> time</span>
-      <div class="radio-btn">
-        <input
-          id="b1"
-          class="only-sr checked"
-          type="radio"
-          name="temp2"
-          value="30"
-
-        />
-        <label for="b1">30초</label>
-      </div>
-      <div class="radio-btn">
-        <input
-          id="b2"
-          class="only-sr"
-          type="radio"
-          name="temp2"
-          value="60"
-        />
-        <label for="b2">1분</label>
-      </div>
-      <div class="radio-btn">
-        <input
-          id="b3"
-          class="only-sr"
-          type="radio"
-          name="temp2"
-          value="90"
-        />
-        <label for="b3">1분 30초</label>
-      </div>
-      <div class="radio-btn">
-        <input
-          id="b4"
-          class="only-sr"
-          type="radio"
-          name="temp2"
-          value="120"
-        />
-        <label for="b4">2분</label>
-      </div>
-      <div class="radio-btn">
-        <input
-          id="b5"
-          class="only-sr"
-          type="radio"
-          name="temp2"
-          value="180"
-        />
-        <label for="b4">2분 30초</label>
-      </div>
-    </section>;
-
-    if (param === "스피드퀴즈") {
+    if (param === '스피드퀴즈') {
       return (
-
         <div className="setting">
           <div className="header">
             <Link to="/">
@@ -273,25 +217,17 @@ class Setting extends Component {
             {selectTeam}
             {selectTime}
             <div className="next-btn">
-
-              <div className="category-button">
-
-                {category}
-
-              </div>
+              <div className="category-button">{category}</div>
             </div>
             <Link to="/Speed" onClick={this.speed}>
               <p>준비하기</p>
               <img src={arrow} alt="" />
             </Link>
-
           </article>
-        </div >
+        </div>
       );
-    }
-    else if (param === "브랜드이름") {
+    } else if (param === '브랜드이름') {
       return (
-
         <div className="setting">
           <div className="header">
             <Link to="/">
@@ -305,19 +241,17 @@ class Setting extends Component {
               <br />
             </div>
 
-
             {selectTeam}
             {selectTime}
 
-            <div className="brand-button">
+            <div className="home-button">
+              <button className="btn-fill" onClick={this.game1.bind(this)}>
+                쉬움
+              </button>
 
-              <button className="button" onClick={this.game1.bind(this)}>쉬움</button>
-
-
-
-              <button className="button" onClick={this.game2.bind(this)}>어려움</button>
-
-
+              <button className="btn-fill" onClick={this.game2.bind(this)}>
+                어려움
+              </button>
             </div>
             <div className="next-btn">
               <Link to="/Brand" onClick={this.brand}>
@@ -326,13 +260,10 @@ class Setting extends Component {
               </Link>
             </div>
           </article>
-        </div >
+        </div>
       );
-    }
-
-    else if (param === "초성게임") {
+    } else if (param === '초성게임') {
       return (
-
         <div className="setting">
           <div className="header">
             <Link to="/">
@@ -349,8 +280,6 @@ class Setting extends Component {
             {selectTeam}
             {selectTime}
 
-
-
             <div className="next-btn">
               <Link to="/Korean" onClick={this.korean}>
                 <p>준비하기</p>
@@ -358,10 +287,10 @@ class Setting extends Component {
               </Link>
             </div>
           </article>
-        </div >
+        </div>
       );
     }
   }
-};
+}
 
 export default Setting;

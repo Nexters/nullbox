@@ -139,17 +139,17 @@ class Korean extends Component {
     }
 
     let pass = '';
-    let start = <button className="button" onClick={this.start}>
+    let start = <button className="start word-title" onClick={this.start}>
       {teamName}팀   시작하기
   </button>;
 
     if (this.state.start === 1) {
       start =
-        <button className="button correct" onClick={this.createQuestionCorrect}>
+        <button className="btn correct" onClick={this.createQuestionCorrect}>
           Correct
         </button>
 
-      pass = <button className="button pass" onClick={this.createQuestionPass}>
+      pass = <button className="btn pass" onClick={this.createQuestionPass}>
         Pass
       </button>
 
@@ -159,7 +159,7 @@ class Korean extends Component {
     return (
       <div className="korean">
         <div className="Header">
-          <button className="button">
+          <button className="btn cancel">
             <Link to="/">X</Link>
           </button>
         </div>
@@ -173,7 +173,7 @@ class Korean extends Component {
         <Line strokeWidth="4" percent={this.state.time} />
 
 
-        <button className="button" onClick={this.gameEnd}>
+        <button className="btn score" onClick={this.gameEnd}>
           <Link to="/score">score</Link>
         </button>
       </div>

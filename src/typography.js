@@ -8,7 +8,7 @@ const typography = new Typography({
     },
     {
       name: 'Nunito',
-      styles: ['400', '600'],
+      styles: ['400', '600', '900'],
     },
   ],
   headerFontFamily: [
