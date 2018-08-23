@@ -63,12 +63,8 @@ class Speed extends Component {
       time: this.state.time + 100 / t,
     });
 
-<<<<<<< HEAD
-    var url = 'http://localhost:3000/score';
-=======
     var url = window.location.href;
     url = url + '/score';
->>>>>>> master
 
     if (this.state.time > 100) {
       window.location = url;

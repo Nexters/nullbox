@@ -1,13 +1,8 @@
 .header {
-<<<<<<< HEAD
   width: 25vh;
   height: 10vw;
   padding: 5vh;
   text-align: center;
-=======
-  height: 10vh;
-  width: 100%;
->>>>>>> master
   font-family: NotoSansCJKkr;
   font-size: 1.2em;
   font-weight: 400;
@@ -17,31 +12,9 @@
   letter-spacing: normal;
   text-align: center;
   color: #fd575f;
-<<<<<<< HEAD
 }
 
 .back {
-=======
-  margin-top: 3%;
-  margin-left: 3%;
-}
-
-.button {
-  width: 20vh;
-  height: 12vh;
-  border-radius: 6px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-  background-color: #242348;
-  border: solid 1px #30b9a0;
-  color: #fff;
-  font-weight: 600;
-  font-size: 1.3em;
-  letter-spacing: 2px;
-  display: flex;
-}
-
-.cancel {
->>>>>>> master
   position: absolute;
   left: 0;
   top: 0;

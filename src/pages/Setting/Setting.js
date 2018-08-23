@@ -11,10 +11,7 @@ class Setting extends Component {
     team: '1',
     list: [],
     categoryId: '',
-<<<<<<< HEAD
-=======
     time: 30,
->>>>>>> master
   };
 
   componentDidMount() {
@@ -121,11 +118,7 @@ class Setting extends Component {
 
     let category = s1.map(list => (
       <button class="checkbox" id={list.id} onClick={this.category.bind(this)}>
-<<<<<<< HEAD
         <div className="btn-fill select" id={list.id}>
-=======
-        <div className="button" id={list.id}>
->>>>>>> master
           {list.name}
         </div>
       </button>
@@ -133,13 +126,8 @@ class Setting extends Component {
 
     let selectTeam = (
       <section class="radio-items" onChange={this.handleChange}>
-<<<<<<< HEAD
         <span className="game-info"> team</span>
         <div class="btn-radio">
-=======
-        <span className="game-info"> 팀</span>
-        <div class="radio-btn">
->>>>>>> master
           <input
             id="b1"
             class="only-sr checked"
@@ -149,7 +137,6 @@ class Setting extends Component {
           />
           <label for="b1">1</label>
         </div>
-<<<<<<< HEAD
         <div class="btn-radio">
           <input id="b2" class="only-sr" type="radio" name="team" value="2" />
           <label for="b2">2</label>
@@ -163,21 +150,6 @@ class Setting extends Component {
           <label for="b4">4</label>
         </div>
         <div class="btn-radio">
-=======
-        <div class="radio-btn">
-          <input id="b2" class="only-sr" type="radio" name="team" value="2" />
-          <label for="b2">2</label>
-        </div>
-        <div class="radio-btn">
-          <input id="b3" class="only-sr" type="radio" name="team" value="3" />
-          <label for="b3">3</label>
-        </div>
-        <div class="radio-btn">
-          <input id="b4" class="only-sr" type="radio" name="team" value="4" />
-          <label for="b4">4</label>
-        </div>
-        <div class="radio-btn">
->>>>>>> master
           <input id="b5" class="only-sr" type="radio" name="team" value="5" />
           <label for="b4">5</label>
         </div>
@@ -187,11 +159,7 @@ class Setting extends Component {
     let selectTime = (
       <section class="radio-items" onChange={this.handleChangeTime}>
         <span className="game-info"> time</span>
-<<<<<<< HEAD
         <div class="btn-radio">
-=======
-        <div class="radio-btn">
->>>>>>> master
           <input
             id="b1"
             class="only-sr checked"
@@ -201,7 +169,6 @@ class Setting extends Component {
           />
           <label for="b1">30초</label>
         </div>
-<<<<<<< HEAD
         <div class="btn-radio">
           <input id="b2" class="only-sr" type="radio" name="temp2" value="60" />
           <label for="b2">1분</label>
@@ -211,17 +178,6 @@ class Setting extends Component {
           <label for="b3">1분 30초</label>
         </div>
         <div class="btn-radio">
-=======
-        <div class="radio-btn">
-          <input id="b2" class="only-sr" type="radio" name="temp2" value="60" />
-          <label for="b2">1분</label>
-        </div>
-        <div class="radio-btn">
-          <input id="b3" class="only-sr" type="radio" name="temp2" value="90" />
-          <label for="b3">1분 30초</label>
-        </div>
-        <div class="radio-btn">
->>>>>>> master
           <input
             id="b4"
             class="only-sr"
@@ -231,11 +187,7 @@ class Setting extends Component {
           />
           <label for="b4">2분</label>
         </div>
-<<<<<<< HEAD
         <div class="btn-radio">
-=======
-        <div class="radio-btn">
->>>>>>> master
           <input
             id="b5"
             class="only-sr"
@@ -292,21 +244,12 @@ class Setting extends Component {
             {selectTeam}
             {selectTime}
 
-<<<<<<< HEAD
             <div className="home-button">
               <button className="btn-fill" onClick={this.game1.bind(this)}>
                 쉬움
               </button>
 
               <button className="btn-fill" onClick={this.game2.bind(this)}>
-=======
-            <div className="brand-button">
-              <button className="button" onClick={this.game1.bind(this)}>
-                쉬움
-              </button>
-
-              <button className="button" onClick={this.game2.bind(this)}>
->>>>>>> master
                 어려움
               </button>
             </div>

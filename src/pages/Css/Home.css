@@ -4,14 +4,9 @@
   align-items: center;
   height: 100vh;
   justify-content: center;
-<<<<<<< HEAD
-  font: #fff;
-=======
   width: 180px;
   height: 180px;
   object-fit: contain;
-
->>>>>>> master
 }
 
 .border-gradation {
@@ -47,14 +42,7 @@
   flex-direction: row;
   justify-content: space-between;
 }
-<<<<<<< HEAD
 
-.btn {
-  width: 10vw;
-  height: 10vh;
-  font-size: 1em;
-  /* default */
-=======
 .brand-button {
   display: flex;
   flex-direction: row;
@@ -62,10 +50,10 @@
   align-items: center;
   margin: 10;
 }
+
 .game-button {
   width: 25vw;
   height: 8vh;
->>>>>>> master
   margin: 0.5vw;
   border-radius: 6px;
   border: solid 2px #30b9a0;
@@ -74,13 +62,8 @@
   color: #ececec;
   object-fit: contain;
   text-align: center;
-<<<<<<< HEAD
   vertical-align: middle;
-  letter-spacing: 2px;
-=======
-  vertical-align: middle ;
   padding-top: 6%;
->>>>>>> master
 }
 
 .home {
@@ -210,15 +193,10 @@ button:hover {
   letter-spacing: normal;
   text-align: center;
   color: #2eb299;
-<<<<<<< HEAD
   display: flex;
   justify-content: center;
-=======
- display: flex;
- flex-wrap: wrap;
- justify-content: center;
- align-items: center;
->>>>>>> master
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .game-info {
@@ -234,7 +212,7 @@ button:hover {
   text-align: center;
   color: #ffffff;
   margin-left: 10%;
-  vertical-align:top !important;
+  vertical-align: top !important;
 }
 
 .btn-radio {
