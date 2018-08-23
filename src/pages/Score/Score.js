@@ -7,7 +7,7 @@ class Score extends Component {
     i: 0,
   };
 
-  showResult = () => {};
+  showResult = () => { };
 
   gameEnd = () => {
     let pass = localStorage.getItem('pass');
@@ -156,7 +156,17 @@ class Score extends Component {
           <div className="header">Score</div>
 
           <div className="main">
-            <div className="wordBox">{historyResult}</div>
+
+            <div className="wordBox">
+
+              {historyResult}
+
+            </div>
+          </div>
+
+          <div className="container">
+            <div className="count">{score}</div>
+
             <div className="nav">
               <Link to="/" className="home">
                 {' '}

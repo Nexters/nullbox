@@ -48,7 +48,9 @@ class Brand extends Component {
       time: this.state.time + 100 / t,
     });
 
-    var url = 'http://localhost:3000/score';
+    var url = window.location.href;
+    url = url + "/Score";
+
 
     if (this.state.time > 100) {
       window.location = url;

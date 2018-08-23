@@ -55,3 +55,10 @@
 article {
   text-align: center;
 }
+
+.checkbox {
+  border : none ;
+  background: none;
+  vertical-align: middle;
+  margin-top: 0.5%;
+}
