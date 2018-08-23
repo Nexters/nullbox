@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Line } from 'rc-progress';
 import 'rc-progress/assets/index.css';
-import './Speed.css';
 import { list } from '../../../node_modules/postcss';
 import axios from 'axios';
 
@@ -17,11 +16,12 @@ class Speed extends Component {
     count: 0,
     pass: 0,
     state: 0,
+    setTime: 0,
+    start: 0,
   };
 
   componentDidMount() {
 
-    this.timerID = setInterval(() => this.tick(), 1000);
     let id = localStorage.getItem("category");
     console.log(id);
 
@@ -45,21 +45,29 @@ class Speed extends Component {
 
       this.setState({ state: 1 });
     }
+    let t = localStorage.getItem('time');
 
-
-
+    this.setState({ setTime: t });
   }
-
-
 
   componentWillUnmount() {
     clearInterval(this.timerID);
   }
 
   tick() {
+    let t = this.state.setTime;
+
+    this.gameEnd();
+
     this.setState({
-      time: this.state.time + 1,
+      time: this.state.time + (100 / t),
     });
+
+    var url = 'http://localhost:3000/score'
+
+    if (this.state.time > 100) {
+      window.location = url;
+    }
   }
 
   createQuestionPass = () => {
@@ -118,8 +126,11 @@ class Speed extends Component {
     localStorage.setItem('pass', this.state.pass);
     localStorage.setItem('count', this.state.count);
     localStorage.setItem('history', "스피드");
+    localStorage.setItem('history', this.state.history);
+    localStorage.setItem('successHistory', this.state.SuccessHistory);
 
   };
+
   start = () => {
 
     this.setState({ start: 1 });
@@ -140,12 +151,13 @@ class Speed extends Component {
     i++;
     this.setState({ index: i });
     this.setState({ word: qord });
-
+    this.timerID = setInterval(() => this.tick(), 1000);
   }
 
 
   render() {
     const { word } = this.state;
+    console.log(this.state.setTime);
 
     let teamName = '';
     let t = localStorage.getItem('t');

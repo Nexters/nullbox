@@ -3,12 +3,12 @@ import Typography from 'typography';
 const typography = new Typography({
   googleFonts: [
     {
-      name: 'Nunito',
-      styles: ['400', '600'],
-    },
-    {
       name: 'Open Sans',
       styles: ['400'],
+    },
+    {
+      name: 'Nunito',
+      styles: ['400', '600'],
     },
   ],
   headerFontFamily: [

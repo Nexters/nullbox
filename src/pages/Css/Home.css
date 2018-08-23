@@ -1,0 +1,173 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+
+}
+
+.home-inform {
+  width: 25vh;
+  height: 10vw;
+  font-size: 1.2em;
+  font-weight: 400;
+  padding: 5vh;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ff5e4d;
+}
+
+.logo {
+  width: 60vh;
+}
+
+.main-text {
+  color: #2eb299;
+  font-size: 1.2em;
+  font-weight: 500;
+  width: 75vw;
+  text-align: left;
+  padding: 5vh 0 0;
+}
+
+.home-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.brand-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10;
+}
+.game-button {
+  width: 25vw;
+  height: 8vh;
+  margin: 0.5vw;
+  object-fit: contain;
+  border-radius: 6px;
+  border: solid 2px #30b9a0;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  background-color: #242348;
+  color: #ececec;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 5%;
+}
+
+.game-button p {
+  padding: auto 0;
+  text-align: center;
+  vertical-align: middle;
+  background: #ff5e4d;
+}
+
+.game-button-more {
+  width: 25vh;
+  height: 5vw;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-style: normal;
+  color: #7fe5ce;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: normal;
+  position: absolute;
+  bottom: 0;
+}
+
+.game-name {
+  width: 100%;
+  height: 74px;
+  font-family: NotoSansCJKkr;
+  font-size: 40px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #2eb299;
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: center;
+}
+.game-info{
+  width: 815px;
+  height: 98px;
+  opacity: 0.9;
+  font-family: NotoSansCJKkr;
+  font-size: 26px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.62;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin-left: 10%;
+}
+label{
+  width: 99px;
+  height: 38px;
+  font-family: NotoSansCJKkr;
+  font-size: 26px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #e8f8f5;
+}
+
+.history{
+  width: 122px;
+  height: 70px;
+  opacity: 0.9;
+  font-family: BlackHanSans;
+  font-size: 70px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 4.4px;
+  text-align: center;
+  color: #2eb299;
+  margin-right: 3%;
+}
+
+.history1{
+  width: 123px;
+  height: 70px;
+  opacity: 0.7;
+  font-family: BlackHanSans;
+  font-size: 70px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 4.4px;
+  text-align: center;
+  color: #ffffff;
+  margin-right: 3%;
+
+}

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Line } from 'rc-progress';
 import 'rc-progress/assets/index.css';
-import './Korean.css';
+import '../Css/Korean.css';
 
 const korean = [
   'ㄱ',
@@ -31,20 +31,32 @@ class Korean extends Component {
     count: 0,
     pass: 0,
     start: 0,
+    setTime: 0,
   };
 
   componentDidMount() {
-    this.timerID = setInterval(() => this.tick(), 1000);
+    let t = localStorage.getItem('time');
+
+    this.setState({ setTime: t });
   }
 
   componentWillUnmount() {
     clearInterval(this.timerID);
   }
-
   tick() {
+    let t = this.state.setTime;
+
+    this.gameEnd();
+
     this.setState({
-      time: this.state.time + 1,
+      time: this.state.time + (100 / t),
     });
+
+    var url = 'http://localhost:3000/score'
+
+    if (this.state.time > 100) {
+      window.location = url;
+    }
   }
 
   createQuestionPass = () => {
@@ -101,6 +113,7 @@ class Korean extends Component {
     let qord = korean[first] + ' ' + korean[second];
 
     this.setState({ word: qord });
+    this.timerID = setInterval(() => this.tick(), 1000);
   }
 
   render() {
@@ -131,11 +144,11 @@ class Korean extends Component {
 
     if (this.state.start === 1) {
       start =
-        <button className="button" onClick={this.createQuestionCorrect}>
+        <button className="button correct" onClick={this.createQuestionCorrect}>
           Correct
         </button>
 
-      pass = <button className="button" onClick={this.createQuestionPass}>
+      pass = <button className="button pass" onClick={this.createQuestionPass}>
         Pass
       </button>
 
