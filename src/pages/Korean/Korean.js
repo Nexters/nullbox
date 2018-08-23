@@ -49,10 +49,10 @@ class Korean extends Component {
     this.gameEnd();
 
     this.setState({
-      time: this.state.time + (100 / t),
+      time: this.state.time + 100 / t,
     });
 
-    var url = 'http://localhost:3000/score'
+    var url = 'http://localhost:3000/score';
 
     if (this.state.time > 100) {
       window.location = url;
@@ -69,7 +69,6 @@ class Korean extends Component {
     this.setState({ word: qord });
     this.setState({ index: i++ });
     this.setState({ history: this.state.history.concat(qord) });
-
 
     i = this.state.pass;
     i++;
@@ -88,20 +87,17 @@ class Korean extends Component {
     this.setState({ SuccessHistory: this.state.SuccessHistory.concat(qord) });
     this.setState({ history: this.state.history.concat(qord) });
 
-
     i = this.state.count;
     i++;
     this.setState({ count: i });
   };
 
   gameEnd = () => {
-
     localStorage.setItem('history', this.state.history);
     localStorage.setItem('successHistory', this.state.SuccessHistory);
 
     localStorage.setItem('pass', this.state.pass);
     localStorage.setItem('count', this.state.count);
-
   };
 
   start = () => {
@@ -114,7 +110,7 @@ class Korean extends Component {
 
     this.setState({ word: qord });
     this.timerID = setInterval(() => this.tick(), 1000);
-  }
+  };
 
   render() {
     const { word } = this.state;
@@ -138,32 +134,35 @@ class Korean extends Component {
     }
 
     let pass = '';
-    let start = <button className="button" onClick={this.start}>
-      {teamName}팀   시작하기
-  </button>;
+    let start = (
+      <button className="btn start" onClick={this.start}>
+        {teamName}팀 시작하기
+      </button>
+    );
 
     if (this.state.start === 1) {
-      start =
-        <button className="button correct" onClick={this.createQuestionCorrect}>
+      start = (
+        <button className="btn correct" onClick={this.createQuestionCorrect}>
           Correct
         </button>
+      );
 
-      pass = <button className="button pass" onClick={this.createQuestionPass}>
-        Pass
-      </button>
-
+      pass = (
+        <button className="btn pass" Click={this.createQuestionPass}>
+          Pass
+        </button>
+      );
     }
-
 
     return (
       <div className="korean">
         <div className="Header">
-          <button className="button">
+          <button className="btn cancel">
             <Link to="/">X</Link>
           </button>
         </div>
         <div className="main">
-          <h1 className="word-title" >{word}</h1>
+          <h1 className="word-title">{word}</h1>
           <div className="nav">
             {start}
             {pass}
@@ -171,8 +170,7 @@ class Korean extends Component {
         </div>
         <Line strokeWidth="4" percent={this.state.time} />
 
-
-        <button className="button" onClick={this.gameEnd}>
+        <button className="btn score" onClick={this.gameEnd}>
           <Link to="/score">score</Link>
         </button>
       </div>

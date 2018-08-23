@@ -49,29 +49,31 @@ class Home extends Component {
     return (
       <Fragment>
         <Flex center full column>
-          <p className="home-inform">서비스 소개</p>
-          <img src={logo} alt="logo" className="logo" />
-          <p className="main-text">바로가기</p>
-          <div className="home-button">
-            <Link to="/Setting/스피드게임">
-
-              <div className="game-button" onClick={this.game1}>
-                {this.state.game1}
-              </div>
+          <div className="container-basic">
+            <Link to="/#">
+              <p className="btn-top inform">서비스 소개</p>
             </Link>
-            <Link to="/Setting/초성게임">
-              <div className="game-button" onClick={this.game2}>
-                {this.state.game2}
-              </div>
-            </Link>
-            <Link to="/Setting/브랜드게임">
-              <div className="game-button" onClick={this.game3}>
-                {this.state.game3}
-              </div>
-            </Link>
-
+            <img src={logo} alt="logo" className="logo" />
+            <p className="main-text">바로가기</p>
+            <div className="home-button">
+              <Link to="/Setting/스피드게임">
+                <div className="btn home" onClick={this.game1}>
+                  {this.state.game1}
+                </div>
+              </Link>
+              <Link to="/Setting/초성게임">
+                <div className="btn home" onClick={this.game2}>
+                  {this.state.game2}
+                </div>
+              </Link>
+              <Link to="/Setting/브랜드게임">
+                <div className="btn home" onClick={this.game3}>
+                  {this.state.game3}
+                </div>
+              </Link>
+            </div>
+            <p className="btn-more">더 많은 게임 보기</p>
           </div>
-          <div className="game-button-more">더 많은 게임 보기</div>
         </Flex>
       </Fragment>
     );
