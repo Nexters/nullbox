@@ -49,8 +49,7 @@ class Brand extends Component {
     });
 
     var url = window.location.href;
-    url = url + "/Score";
-
+    url = url + '/Score';
 
     if (this.state.time > 100) {
       window.location = url;
@@ -147,9 +146,9 @@ class Brand extends Component {
     return (
       <div className="korean">
         <div className="Header">
-          <button className="btn cancel">
-            <Link to="/">X</Link>
-          </button>
+          <Link to="/">
+            <button className="btn cancel">X</button>
+          </Link>
         </div>
         <div className="main">
           <h1 className="word-title">{word}</h1>
@@ -159,10 +158,11 @@ class Brand extends Component {
           </div>
         </div>
         <Line strokeWidth="4" percent={this.state.time} />
-
-        <button className="btn score" onClick={this.gameEnd}>
-          <Link to="/score">score</Link>
-        </button>
+        <Link to="/score">
+          <button className="btn score" onClick={this.gameEnd}>
+            score
+          </button>
+        </Link>
       </div>
     );
   }
