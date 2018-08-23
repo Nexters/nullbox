@@ -17,6 +17,9 @@ class App extends Component {
       <Fragment>
         <Route exact path="/" component={Home} />
         <Route exact path="/Score" component={Score} />
+        <Route exact path="/Korean/Score" component={Score} />
+        <Route exact path="/Brand/Score" component={Score} />
+        <Route exact path="/Speed/Score" component={Score} />
         <Route exact path="/Korean" component={Korean} />
         <Route exact path="/Setting/:subjects" component={Setting} />
         <Route exact path="/Info" component={Info} />
