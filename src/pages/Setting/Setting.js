@@ -64,7 +64,7 @@ class Setting extends Component {
     localStorage.setItem('j', this.state.team);
     localStorage.setItem('t', 1);
 
-    var arr = document.querySelectorAll('.button');
+    var arr = document.querySelectorAll('.btn-fill select');
     let i = this.state.categoryId;
 
     for (var j = 0; j < arr.length; j++) {
