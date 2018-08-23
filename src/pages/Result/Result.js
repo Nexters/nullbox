@@ -81,6 +81,36 @@ const Count = styled.p`
   background-color: var(--pale-turquoise);
   -webkit-text-stroke: 2px #2eb299;
 `;
+const Pass = styled.p`
+width: 48px;
+height: 35px;
+font - family: NotoSansCJKkr;
+font - size: 40px;
+font - weight: bold;
+font - style: normal;
+font - stretch: normal;
+line - height: 0.88;
+letter - spacing: normal;
+text - align: center;
+color: #7fe5ce;
+color: var(--light - teal);
+text-align: center;
+margin-top: 20%;
+`;
+
+const Time = styled.p`
+width: 102px;
+height: 59px;
+font-family: NotoSansCJKkr;
+font-size: 40px;
+font-weight: bold;
+font-style: normal;
+font-stretch: normal;
+line-height: normal;
+letter-spacing: normal;
+text-align: center;
+color: #2eb299;
+`;
 
 const Button = styled.button`
   width: 90px;
@@ -99,9 +129,36 @@ class Result extends Component {
     time: 0,
   };
 
-  showResult = () => {};
+  showResult = () => { };
 
   render() {
+
+    let time = localStorage.getItem('time');
+
+    let timeResult = '';
+
+    switch (time) {
+      case '30':
+        timeResult = '30'
+        break;
+      case '60':
+        timeResult = '1:00'
+        break;
+      case "90":
+        timeResult = '1:30'
+        break;
+      case "120":
+        timeResult = '2:00'
+        break;
+      case "150":
+        timeResult = '2:30'
+        break;
+
+      default:
+        break;
+    }
+
+
     const { word } = this.state;
     let score = localStorage.getItem('score');
     let game = localStorage.getItem('game');
@@ -117,17 +174,25 @@ class Result extends Component {
       result = <Link to="/Setting/브랜드게임">브랜드이름 한번 더하기</Link>;
     }
 
-    let a = localStorage.getItem('A');
-    let b = localStorage.getItem('B');
-    let c = localStorage.getItem('C');
-    let d = localStorage.getItem('D');
-    let e = localStorage.getItem('E');
+    let a = localStorage.getItem('Acount');
+    let b = localStorage.getItem('Bcount');
+    let c = localStorage.getItem('Ccount');
+    let d = localStorage.getItem('Dcount');
+    let e = localStorage.getItem('Ecount');
+
+    let Apass = localStorage.getItem('Apass');
+    let Bpass = localStorage.getItem('Bpass');
+    let Cpass = localStorage.getItem('Cpass');
+    let Dpass = localStorage.getItem('Dpass');
+    let Epass = localStorage.getItem('Epass');
 
     let Ascore = (
       <Flex row>
         <Alpha>A</Alpha>
         <Team>팀 </Team>
-        <Count>{a}</Count>
+        <Count>{a}/</Count>
+        <Pass> {Apass}</Pass>
+        <Time>{timeResult}</Time>
       </Flex>
     );
 
@@ -135,28 +200,36 @@ class Result extends Component {
       <Flex row>
         <Alpha>B</Alpha>
         <Team>팀 </Team>
-        <Count>{b}</Count>
+        <Count>{b}/</Count>
+        <Pass> {Bpass}</Pass>
+        <Time>{timeResult}</Time>
       </Flex>
     );
     let Cscore = (
       <Flex row>
         <Alpha>C</Alpha>
         <Team>팀 </Team>
-        <Count>{c}</Count>
+        <Count>{c}/</Count>
+        <Pass>{Cpass}</Pass>
+        <Time>{timeResult}</Time>
       </Flex>
     );
     let Dscore = (
       <Flex row>
         <Alpha>D</Alpha>
         <Team>팀 </Team>
-        <Count>{d}</Count>
+        <Count>{d}/</Count>
+        <Pass> {Dpass}</Pass>
+        <Time>{timeResult}</Time>
       </Flex>
     );
     let Escore = (
       <Flex row>
         <Alpha>E</Alpha>
         <Team>팀 </Team>
-        <Count>{e}</Count>
+        <Count>{e}/</Count>
+        <Pass>{Epass}</Pass>
+        <Time>{timeResult}</Time>
       </Flex>
     );
 
@@ -176,11 +249,20 @@ class Result extends Component {
       Escore = '';
     }
 
-    localStorage.setItem('A', '');
-    localStorage.setItem('B', '');
-    localStorage.setItem('C', '');
-    localStorage.setItem('D', '');
-    localStorage.setItem('E', '');
+    localStorage.setItem('Acount', '');
+    localStorage.setItem('Bcount', '');
+    localStorage.setItem('Ccount', '');
+    localStorage.setItem('Dcount', '');
+    localStorage.setItem('Ecount', '');
+
+
+
+    localStorage.setItem('Apass', '');
+    localStorage.setItem('Bpass', '');
+    localStorage.setItem('Cpass', '');
+    localStorage.setItem('Dpass', '');
+    localStorage.setItem('Epass', '');
+
 
     return (
       <Fragment>

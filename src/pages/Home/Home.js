@@ -45,7 +45,23 @@ class Home extends Component {
   };
 
   render() {
-    console.log(this.state.explain);
+
+
+    localStorage.setItem('Acount', '');
+    localStorage.setItem('Bcount', '');
+    localStorage.setItem('Ccount', '');
+    localStorage.setItem('Dcount', '');
+    localStorage.setItem('Ecount', '');
+
+
+
+    localStorage.setItem('Apass', '');
+    localStorage.setItem('Bpass', '');
+    localStorage.setItem('Cpass', '');
+    localStorage.setItem('Dpass', '');
+    localStorage.setItem('Epass', '');
+
+
     return (
       <Fragment>
         <Flex center full column>

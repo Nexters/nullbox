@@ -296,7 +296,7 @@ button:hover {
   text-align: center;
   color: #2eb299;
   margin-right: 3%;
-  display: inline;
+  display: table-header-group;
 
 }
 
@@ -314,9 +314,26 @@ button:hover {
   text-align: center;
   color: #ffffff;
   margin-right: 3%;
-  display: inline;
+  display: table-header-group;
 
 
+}
+
+.brandName{
+  width: 122px;
+  height: 70px;
+  opacity: 0.9;
+  font-family: BlackHanSans;
+  font-size: 10em;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 4.4px;
+  text-align: center;
+  color: #2eb299;
+  margin-right: 3%;
+  display: table-header-group;
 }
 
 /* game font */

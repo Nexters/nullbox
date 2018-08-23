@@ -192,7 +192,7 @@ class Setting extends Component {
             class="only-sr"
             type="radio"
             name="temp2"
-            value="180"
+            value="150"
           />
           <label for="b4">2분 30초</label>
         </div>

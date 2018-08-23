@@ -22,6 +22,9 @@ class Brand extends Component {
   componentDidMount() {
     let id = localStorage.getItem('difficulty');
 
+    if (id === '') {
+      id = 1;
+    }
     axios
       .get(
         `http://nexters-env-1.upmjem4hcw.us-east-2.elasticbeanstalk.com//api/category/3/${id}`
@@ -87,7 +90,8 @@ class Brand extends Component {
   gameEnd = () => {
     localStorage.setItem('pass', this.state.pass);
     localStorage.setItem('count', this.state.count);
-    localStorage.setItem('history', '브랜드');
+    localStorage.setItem('history', this.state.word);
+
   };
 
   start = () => {
