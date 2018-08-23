@@ -63,7 +63,12 @@ class Speed extends Component {
       time: this.state.time + 100 / t,
     });
 
+<<<<<<< HEAD
     var url = 'http://localhost:3000/score';
+=======
+    var url = window.location.href;
+    url = url + '/score';
+>>>>>>> master
 
     if (this.state.time > 100) {
       window.location = url;
@@ -165,7 +170,11 @@ class Speed extends Component {
 
     let pass = '';
     let start = (
+<<<<<<< HEAD
       <button className="start word-title" onClick={this.start}>
+=======
+      <button className="btn start" onClick={this.start}>
+>>>>>>> master
         {teamName}팀 시작하기
       </button>
     );
@@ -199,7 +208,11 @@ class Speed extends Component {
         </div>
         <Line strokeWidth="4" percent={this.state.time} />
 
+<<<<<<< HEAD
         <button className="btn score" onClick={this.gameEnd}>
+=======
+        <button className="button" onClick={this.gameEnd}>
+>>>>>>> master
           <Link to="/score">score</Link>
         </button>
       </div>

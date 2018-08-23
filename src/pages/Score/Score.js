@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import './Score.css';
+
 
 class Score extends Component {
   state = {
@@ -110,7 +110,7 @@ class Score extends Component {
     if (history === '브랜드') {
       return (
         <div className="score">
-          <div className="Header">Score</div>
+          <div className="header">Score</div>
           <div className="main">
             <div className="wordBox">
               <h3 className="word">{teamName}팀</h3>
@@ -130,7 +130,7 @@ class Score extends Component {
     } else if (history === '스피드') {
       return (
         <div className="score">
-          <div className="Header">Score</div>
+          <div className="header">Score</div>
           <div className="main">
             <div className="wordBox">{historyResult}</div>
             <div className="nav">
@@ -154,9 +154,23 @@ class Score extends Component {
 
       return (
         <div className="score">
-          <div className="Header">Score</div>
+
+          <div className="header">Score</div>
+
           <div className="main">
+<<<<<<< HEAD
             <div className="wordBox">{historyResult}</div>
+=======
+            <div className="wordBox">
+
+              {historyResult}
+
+            </div>
+          </div>
+
+          <div className="container">
+            <div className="count">{score}</div>
+>>>>>>> master
             <div className="nav">
               <Link to="/" className="home">
                 {' '}
