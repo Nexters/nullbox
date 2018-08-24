@@ -57,13 +57,13 @@
   margin: 0.5vw;
   border-radius: 6px;
   border: solid 2px #30b9a0;
-
   color: #ececec;
   object-fit: contain;
   text-align: center;
-  vertical-align: middle ;
+  vertical-align: middle;
   padding-top: 6%;
 }
+
 .btn {
   width: 10vw;
   height: 10vh;
@@ -77,8 +77,6 @@
   color: #ececec;
   object-fit: contain;
   text-align: center;
-
-
   letter-spacing: 2px;
 }
 
@@ -297,7 +295,6 @@ button:hover {
   color: #2eb299;
   margin-right: 3%;
   display: table-header-group;
-
 }
 
 .history1 {
@@ -315,11 +312,9 @@ button:hover {
   color: #ffffff;
   margin-right: 3%;
   display: table-header-group;
-
-
 }
 
-.brandName{
+.brandName {
   width: 122px;
   height: 70px;
   opacity: 0.9;
