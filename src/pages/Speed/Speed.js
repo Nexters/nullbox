@@ -185,7 +185,7 @@ class Speed extends Component {
       );
     }
     return (
-      <div className="korean">
+      <div className="container-basic">
         <div className="Header">
           <Link to="/">
             <button className="btn cancel">X</button>
@@ -193,7 +193,7 @@ class Speed extends Component {
         </div>
         <div className="main">
           <h1 className="word-title">{word}</h1>
-          <div className="nav">
+          <div className="main-info">
             {start}
             {pass}
           </div>

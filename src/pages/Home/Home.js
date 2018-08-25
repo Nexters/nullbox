@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import logo from './../../assets/P01_main/img_logo.png';
+import logo from './../../img/img_logo.png';
 import Flex, { FlexItem } from 'styled-flex-component';
 import '../Css/Home.css';
 
@@ -45,22 +45,16 @@ class Home extends Component {
   };
 
   render() {
-
-
     localStorage.setItem('Acount', '');
     localStorage.setItem('Bcount', '');
     localStorage.setItem('Ccount', '');
     localStorage.setItem('Dcount', '');
     localStorage.setItem('Ecount', '');
-
-
-
     localStorage.setItem('Apass', '');
     localStorage.setItem('Bpass', '');
     localStorage.setItem('Cpass', '');
     localStorage.setItem('Dpass', '');
     localStorage.setItem('Epass', '');
-
 
     return (
       <Fragment>
@@ -69,8 +63,10 @@ class Home extends Component {
             <Link to="/Info">
               <p className="btn-top inform">서비스 소개</p>
             </Link>
-            <img src={logo} alt="logo" className="logo" />
-            <p className="main-text">바로가기</p>
+            <p>
+              <img src={logo} alt="logo" className="logo" />
+            </p>
+            <p className="main-text" /> /*바로가기 잠시지움*/
             <div className="home-button">
               <Link to="/Setting/스피드게임">
                 <div className="btn home" onClick={this.game1}>

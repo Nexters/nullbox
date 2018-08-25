@@ -1,11 +1,63 @@
+h1 {
+  font-family: NotoSansCJKkr;
+  font-size: 2em;
+  font-weight: 500;
+  text-align: center;
+  color: #2eb299;
+  letter-spacing: 2px;
+  margin: 2vh 0 3vh;
+}
+
+h4 {
+  font-family: NotoSansCJKkr;
+  font-size: 1.5em;
+  width: 100%;
+  font-weight: 100;
+  line-height: 1.62;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+p {
+  font-family: NotoSansCJKkr;
+  font-size: 13px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fd575f;
+  margin-top: 2vh;
+  margin-left: 3vh;
+}
+
+.info-text {
+  width: 60vw;
+  text-align: center;
+}
+
+.info-text-wide {
+  width: 80vw;
+  text-align: center;
+}
+
+.line {
+  width: 80%;
+  height: 5px;
+  background-image: linear-gradient(to right, #fe565d, #7fe5ce), linear-gradient(307deg, #fe565d, #7fe5ce);
+  margin: 10vh;
+}
+
 .container-basic {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  text-align: center;
   justify-content: center;
-  width: 180px;
-  height: 180px;
   object-fit: contain;
 }
 
@@ -32,7 +84,7 @@
   font-weight: 500;
   width: 75vw;
   text-align: left;
-  padding: 5vh 0 0;
+  padding: 6vh 0 4vh;
 }
 
 /* need confirm******** */
@@ -82,12 +134,16 @@
 
 .home {
   width: 25vw;
-  height: 8vh;
+  height: 5vh;
   font-size: 1.5rem;
   letter-spacing: 0.05em;
   font-weight: 600;
   vertical-align: middle;
   padding-top: 5%;
+}
+
+.home:hover {
+  background-color: #30b9a0;
 }
 
 .btn-top {
@@ -127,11 +183,20 @@
   padding: 10% 0;
 }
 
+.start:hover {
+  border: solid 5px #30b9a0;
+}
+
 .cancel {
   position: absolute;
-  top: 20vh;
+  top: 50%;
   left: 8vh;
+  margin-top: -5vh;
   color: #fff;
+}
+
+.cancel:hover {
+  border: solid 5px #30b9a0;
 }
 
 .pass {
@@ -141,11 +206,19 @@
   color: #fff;
 }
 
+.pass:hover {
+  border: solid 5px #30b9a0;
+}
+
 .correct {
   position: absolute;
   right: 8vh;
   top: 20vh;
   color: #fff;
+}
+
+.correct:hover {
+  border: solid 5px #30b9a0;
 }
 
 .score {
@@ -159,7 +232,7 @@
 }
 
 .btn-more {
-  width: 25vh;
+  width: 20vh;
   height: 5vw;
   text-align: center;
   margin: 0 auto;
@@ -172,6 +245,82 @@
   letter-spacing: normal;
   position: absolute;
   bottom: 0;
+}
+
+.btn-next {
+  display: block;
+  width: 20vh;
+  height: 5vw;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-style: normal;
+  color: #7fe5ce;
+  font-size: 1.5em;
+  line-height: 2em;
+  font-weight: 600;
+  letter-spacing: normal;
+  position: absolute;
+  align: center;
+  left: 50%;
+  bottom: 2vw;
+  margin-left: -10vh;
+}
+
+.btn-next:hover {
+  font: white;
+}
+
+.btn-next-team {
+  color: #fff;
+  width: 12vw;
+  height: 12vh;
+  object-fit: contain;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-style: normal;
+  border-radius: 6px;
+  background-color: #403e70;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.75);
+  font-size: 1.5em;
+  font-weight: 500;
+  position: absolute;
+  right: 8vw;
+  bottom: 4vw;
+}
+
+.btn-next-team div {
+  margin-top: 20px;
+  height: 50%;
+}
+
+.btn-next-home {
+  color: #fff;
+  width: 8vw;
+  height: 12vh;
+  object-fit: contain;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-style: normal;
+  border-radius: 6px;
+  background-color: #403e70;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.75);
+  font-size: 1.5em;
+  font-weight: 500;
+  position: absolute;
+  right: 21vw;
+  bottom: 4vw;
+}
+
+.btn-next-home div {
+  margin-top: 20px;
+  width: 100%;
+  height: 50%;
 }
 
 /* btn animation */
@@ -188,25 +337,13 @@ a:visited {
 
 a:hover {
   color: inherit;
-  text-decoration: underline;
-}
-
-button:hover {
-  border: solid 5px #30b9a0;
 }
 
 .game-name {
   width: 100%;
-  height: 74px;
   font-family: NotoSansCJKkr;
-  font-size: 40px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
+  font-size: 1.5em;
   text-align: center;
-  color: #2eb299;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -216,8 +353,8 @@ button:hover {
 .game-info {
   width: 60vw;
   opacity: 0.9;
+  margin: 0 auto;
   font-family: NotoSansCJKkr;
-  font-size: 1.5em;
   font-weight: 300;
   font-style: normal;
   font-stretch: normal;
@@ -225,7 +362,6 @@ button:hover {
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;
-  margin-left: 10%;
   vertical-align: top !important;
 }
 
@@ -237,7 +373,7 @@ button:hover {
   vertical-align: middle;
   padding: 1% 0;
   width: 12.5vw;
-  height: 6.25vh;
+  height: 5vh;
   margin: 0.5vw;
   object-fit: contain;
   border-radius: 4px;
@@ -249,7 +385,8 @@ button:hover {
 
 .btn-fill {
   width: 30vw;
-  padding: 5% 0;
+  height: 5vh;
+  padding: 0;
   display: inline-block;
   color: #fff;
   font-size: 1.8em;
@@ -258,11 +395,17 @@ button:hover {
   border-radius: 4px;
   background-color: #403e70;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  vertical-align: middle;
 }
 
 .select {
-  width: 20vw;
-  height: 10vh;
+  width: 15vw;
+  height: 5vh;
+  background-color: #403e70;
+}
+
+.select:hover {
+  background-color: #2eb299;
 }
 
 .label {
@@ -338,7 +481,50 @@ button:hover {
   font-family: Nunito;
   font-size: 10em;
   text-shadow: -1px 0 ff1722, 0 1px ff1722, 1px 0 ff1722, 0 -1px ff1722;
+  background-color: #0d032e;
+  border-color: #0d032e;
   -webkit-text-fill-color: #ff9594;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #ff1722;
+}
+
+.word-title:hover {
+  border: none;
+}
+
+/* game start page */
+
+.main {
+  height: 90vh;
+  width: 100%;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.main-info {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.rc-progress-line-path {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  background-image: linear-gradient(to right, #fe565d 0%, #7fe5ce 100%);
+  stroke-linecap: butt;
+  stroke: #0d062e;
+  position: absolute;
+  bottom: 5vw;
+}
+
+.checkbox {
+  border: none;
+  background: none;
+  vertical-align: middle;
+  margin-top: 0.5%;
 }
