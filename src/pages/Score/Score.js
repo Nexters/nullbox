@@ -125,9 +125,14 @@ class Score extends Component {
 
     if (team === '1') {
       result = (
-        <Link to="/Result" className="nextScore">
-          <p className="nextTextScore">결과보기</p>
-        </Link>
+        <div className="btn-next-result">
+          <Link to="/Result">
+            <div>
+              <img src="../../img/ic_home.png" alt="" />
+            </div>
+            결과보기
+          </Link>
+        </div>
       );
     }
 
