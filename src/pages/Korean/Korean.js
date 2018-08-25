@@ -171,13 +171,11 @@ class Korean extends Component {
         <Line strokeWidth="4" percent={this.state.time} />
 
         {/* 개발편의상 스코어 남겨두었음 */}
-        {
-          <Link to="/score">
-            <button className="btn score" onClick={this.gameEnd}>
-              score
-            </button>
-          </Link>
-        }
+        <Link to="/score">
+          <button className="btn score" onClick={this.gameEnd}>
+            score
+          </button>
+        </Link>
       </div>
     );
   }
