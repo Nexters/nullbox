@@ -2,15 +2,13 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../Css/Score.css';
 
-import '../../assets/P06_result/ic_home.png'
-
 class Score extends Component {
   state = {
     time: 0,
     i: 0,
   };
 
-  showResult = () => { };
+  showResult = () => {};
 
   gameEnd = () => {
     let pass = localStorage.getItem('pass');
@@ -29,44 +27,48 @@ class Score extends Component {
     let teamName = '';
     let t = localStorage.getItem('t');
 
-
-
     let time = localStorage.getItem('time');
 
     let timeResult = '';
 
     switch (time) {
       case '30':
-        timeResult = '30'
+        timeResult = '30';
         break;
       case '60':
-        timeResult = '1:00'
+        timeResult = '1:00';
         break;
-      case "90":
-        timeResult = '1:30'
+      case '90':
+        timeResult = '1:30';
         break;
-      case "120":
-        timeResult = '2:00'
+      case '120':
+        timeResult = '2:00';
         break;
-      case "150":
-        timeResult = '2:30'
+      case '150':
+        timeResult = '2:30';
         break;
 
       default:
         break;
     }
 
-
-
-
     let result = (
-      <Link to="/Speed" className="nextScore" onClick={this.gameEnd}>
-        <p className="nextTextScore">
-          다음팀 시작하기</p>
-      </Link>
+      <div className="btn-next-team" onClick={this.gameEnd}>
+        <Link to="/Speed">
+          <div>
+            <img
+              src="../../img/ic_rightarrow.png"
+              width="28px"
+              height="46px"
+              alt=""
+            />
+            {/* /Users/qurian/Documents/GitHub/nullbox/src/img/ic_rightarrow.png */}
+            {/* /Users/qurian/Documents/GitHub/nullbox/src/pages/Css/Score.css */}
+          </div>
+          다음팀 시작하기
+        </Link>
+      </div>
     );
-
-
 
     let historyResult = [];
     var arr1 = history.split(',');
@@ -88,39 +90,43 @@ class Score extends Component {
     for (var i = 0; i < historyResult.length; i++) {
       if (i < 8) {
         historyResult1[i] = historyResult[i];
-      }
-      else if (i < 16) {
+      } else if (i < 16) {
         historyResult2[i] = historyResult[i];
+      } else {
+        historyResult3[i] = historyResult[i];
       }
-      else { historyResult3[i] = historyResult[i]; }
-
-
     }
-
 
     if (game === '초성게임') {
       result = (
-        <Link to="/Korean" className="nextScore">
-          <p className="nextTextScore">
-            다음팀 시작하기</p>
-        </Link>
+        <div className="btn-next-team">
+          <Link to="/Korean">
+            <div>
+              <img src="../../img/ic_rightarrow.png" alt="" />
+            </div>
+            다음팀 시작하기
+          </Link>
+        </div>
       );
     }
 
     if (game === '브랜드이름') {
       result = (
-        <Link to="/Brand" className="nextScore">
-          <p className="nextTextScore">
-            다음팀 시작하기</p>
-        </Link>
+        <div className="btn-next-team">
+          <Link to="/Brand">
+            <div>
+              <img src="../../img/ic_rightarrow.png" alt="" />
+            </div>
+            다음팀 시작하기
+          </Link>
+        </div>
       );
     }
 
     if (team === '1') {
       result = (
         <Link to="/Result" className="nextScore">
-          <p className="nextTextScore">
-            결과보기</p>
+          <p className="nextTextScore">결과보기</p>
         </Link>
       );
     }
@@ -162,12 +168,11 @@ class Score extends Component {
 
     t++;
 
-
     localStorage.setItem('t', t);
 
     if (localStorage.getItem('game') === '브랜드이름') {
       let brand = localStorage.getItem('history');
-      console.log("do");
+      console.log('do');
       return (
         <div className="scoreScore">
           <div className="headerScore">Score</div>
@@ -175,25 +180,24 @@ class Score extends Component {
           <div className="mainScore">
             <div className="wordBoxScoreBrand">
               <p className="brandName">{brand}</p>;
-              </div>
+            </div>
           </div>
 
           <div className="containerScore">
             <div className="countScore">{count}</div>
             <div className="TimeScore">{timeResult}</div>
-            <div className="navScore">
-              <Link to="/" className="homeScore">
-                <p className="homeTextScore">
-                  홈으로</p>
+            <div className="btn-next-home">
+              <Link to="/">
+                <div>
+                  <img src="../../img/ic_home.png" alt="" />
+                </div>
+                홈으로
               </Link>
-              {result}
             </div>
           </div>
         </div>
       );
-    }
-
-    else {
+    } else {
       let score = success.split(',').length;
 
       if (success === '') {
@@ -207,26 +211,23 @@ class Score extends Component {
           <div className="headerScore">Score</div>
 
           <div className="mainScore">
-
-
             <div className="wordBoxScore">{historyResult1}</div>
             <div className="wordBoxScore">{historyResult2}</div>
             <div className="wordBoxScore">{historyResult3}</div>
-
           </div>
 
           <div className="containerScore">
             <div className="countScore">{score}</div>
             <div className="TimeScore">{timeResult}</div>
             <div className="navScore">
-
-
-              <Link to="/" className="homeScore">
-
-
-                <p className="homeTextScore">
-                  홈으로</p>
-              </Link>
+              <div className="btn-next-home">
+                <Link to="/">
+                  <div>
+                    <img src="../../img/ic_home.png" alt="" />
+                  </div>
+                  홈으로
+                </Link>
+              </div>
               {result}
             </div>
           </div>

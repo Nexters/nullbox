@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Line } from 'rc-progress';
 import 'rc-progress/assets/index.css';
-import '../Css/Korean.css';
 
 const korean = [
   'ㄱ',
@@ -156,7 +155,7 @@ class Korean extends Component {
     }
 
     return (
-      <div className="korean">
+      <div className="container-basic">
         <div className="Header">
           <Link to="/">
             <button className="btn cancel">X</button>
@@ -164,17 +163,21 @@ class Korean extends Component {
         </div>
         <div className="main">
           <h1 className="word-title">{word}</h1>
-          <div className="nav">
+          <div className="main-info">
             {start}
             {pass}
           </div>
         </div>
         <Line strokeWidth="4" percent={this.state.time} />
-        <Link to="/score">
-          <button className="btn score" onClick={this.gameEnd}>
-            score
-          </button>
-        </Link>
+
+        {/* 개발편의상 스코어 남겨두었음 */}
+        {
+          <Link to="/score">
+            <button className="btn score" onClick={this.gameEnd}>
+              score
+            </button>
+          </Link>
+        }
       </div>
     );
   }

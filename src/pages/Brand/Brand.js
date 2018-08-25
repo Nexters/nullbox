@@ -91,7 +91,6 @@ class Brand extends Component {
     localStorage.setItem('pass', this.state.pass);
     localStorage.setItem('count', this.state.count);
     localStorage.setItem('history', this.state.word);
-
   };
 
   start = () => {
@@ -148,7 +147,7 @@ class Brand extends Component {
       );
     }
     return (
-      <div className="korean">
+      <div className="container-basic">
         <div className="Header">
           <Link to="/">
             <button className="btn cancel">X</button>
@@ -156,7 +155,7 @@ class Brand extends Component {
         </div>
         <div className="main">
           <h1 className="word-title">{word}</h1>
-          <div className="nav">
+          <div className="main-info">
             {start}
             {pass}
           </div>

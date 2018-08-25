@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import arrow from '../../assets/P03_setting/icon_scrolldownarrow.png';
+import arrow from '../../img/icon_scrolldownarrow.png';
 import axios from 'axios';
 
 class Setting extends Component {
@@ -202,85 +202,100 @@ class Setting extends Component {
     if (param === '스피드퀴즈') {
       return (
         <div className="setting">
-          <div className="header">
+          <div className="container-basic">
             <Link to="/">
-              <p className="text">뒤로가기</p>
+              <p className="btn-top back">뒤로가기</p>
+            </Link>
+            <div className="info-text-wide">
+              <div className="game-name">
+                <h1>{param}</h1>
+              </div>
+              <div className="game-info">
+                <h4>{explain}</h4>
+                <br />
+              </div>
+              {selectTeam}
+              {selectTime}
+              <div className="next-btn">
+                <div className="category-button">{category}</div>
+              </div>
+            </div>
+          </div>
+          <div className="btn-next">
+            <Link to="/speed" onClick={this.speed}>
+              준비하기
+              <div>
+                <img src={arrow} alt="" />
+              </div>
             </Link>
           </div>
-          <article>
-            <div className="game-name">{param}</div>
-            <div className="game-info">
-              {explain}
-              <br />
-            </div>
-            {selectTeam}
-            {selectTime}
-            <div className="next-btn">
-              <div className="category-button">{category}</div>
-            </div>
-            <Link to="/Speed" onClick={this.speed}>
-              <p>준비하기</p>
-              <img src={arrow} alt="" />
-            </Link>
-          </article>
         </div>
       );
     } else if (param === '브랜드이름') {
       return (
         <div className="setting">
-          <div className="header">
+          <div className="container-basic">
             <Link to="/">
-              <p className="text">뒤로가기</p>
+              <p className="btn-top back">뒤로가기</p>
             </Link>
+            <div className="text-info-wide">
+              <div className="game-name">
+                <h1>{param}</h1>
+              </div>
+              <div className="game-info">
+                <h4>{explain}</h4>
+                <br />
+              </div>
+              {selectTeam}
+              {selectTime}
+              <div className="home-button">
+                <button className="btn-fill" onClick={this.game1.bind(this)}>
+                  쉬움
+                </button>
+                <button className="btn-fill" onClick={this.game2.bind(this)}>
+                  어려움
+                </button>
+              </div>
+              <div className="btn-next">
+                <Link to="/Brand" onClick={this.brand}>
+                  준비하기
+                  <div>
+                    <img src={arrow} alt="" />
+                  </div>
+                </Link>
+              </div>
+            </div>
           </div>
-          <article>
-            <div className="game-name">{param}</div>
-            <div className="game-info">
-              {explain}
-              <br />
-            </div>
-            {selectTeam}
-            {selectTime}
-            <div className="home-button">
-              <button className="btn-fill" onClick={this.game1.bind(this)}>
-                쉬움
-              </button>
-              <button className="btn-fill" onClick={this.game2.bind(this)}>
-                어려움
-              </button>
-            </div>
-            <div className="next-btn">
-              <Link to="/Brand" onClick={this.brand}>
-                <p>준비하기</p>
-                <img src={arrow} alt="" />
-              </Link>
-            </div>
-          </article>
         </div>
       );
     } else if (param === '초성게임') {
       return (
         <div className="setting">
-          <div className="header">
+          <div className="container-basic">
             <Link to="/">
-              <p className="text">뒤로가기</p>
+              <p className="btn-top back">뒤로가기</p>
             </Link>
+
+            <div className="info-text-wide">
+              <div className="game-name">
+                <h1>{param}</h1>
+              </div>
+              <div className="game-info">
+                <h4>{explain}</h4>
+                <br />
+              </div>
+              {selectTeam}
+              {selectTime}
+              <div className="btn-next">
+                <Link to="/korean" onClick={this.korean}>
+                  준비하기
+                  <div>
+                    <img src={arrow} alt="" />
+                  </div>
+                </Link>
+              </div>
+            </div>
           </div>
-          <article>
-            <div className="game-name">{param}</div>
-            <div className="game-info">
-              {explain}
-              <br />
-            </div>
-            {selectTeam}
-            {selectTime}
-            <div className="next-btn">
-              <Link to="/Korean" onClick={this.korean}>
-                <p>준비하기</p>
-                <img src={arrow} alt="" />
-              </Link>
-            </div>
-          </article>
         </div>
       );
     }
