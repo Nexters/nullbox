@@ -13,7 +13,7 @@ class Score extends Component {
   gameEnd = () => {
     let pass = localStorage.getItem('pass');
     let count = localStorage.getItem('count');
-    var s = '맞힌 개수 : ' + count + '  pass한 개수:' + pass;
+    var s = '맞힌 개수: ' + count + '  pass한 개수:' + pass;
   };
 
   render() {
