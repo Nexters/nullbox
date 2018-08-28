@@ -134,23 +134,33 @@ class Setting extends Component {
             name="team"
             value="1"
           />
-          <label for="b1">1</label>
+          <label for="b1">
+            <span />1
+          </label>
         </div>
         <div class="btn-radio">
           <input id="b2" class="only-sr" type="radio" name="team" value="2" />
-          <label for="b2">2</label>
+          <label for="b2">
+            <span />2
+          </label>
         </div>
         <div class="btn-radio">
           <input id="b3" class="only-sr" type="radio" name="team" value="3" />
-          <label for="b3">3</label>
+          <label for="b3">
+            <span />3
+          </label>
         </div>
         <div class="btn-radio">
           <input id="b4" class="only-sr" type="radio" name="team" value="4" />
-          <label for="b4">4</label>
+          <label for="b4">
+            <span />4
+          </label>
         </div>
         <div class="btn-radio">
           <input id="b5" class="only-sr" type="radio" name="team" value="5" />
-          <label for="b4">5</label>
+          <label for="b5">
+            <span />5
+          </label>
         </div>
       </section>
     );
