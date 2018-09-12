@@ -16,7 +16,7 @@ class Setting extends Component {
   componentDidMount() {
     axios
       .get(
-        `http://nexters-env-1.upmjem4hcw.us-east-2.elasticbeanstalk.com/api/category/1`
+        `http://192.168.0.9:8080/nullBox_BackEnd/api/category/1`
       )
       .then(r => {
         this.setState({ list: r.data });

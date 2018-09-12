@@ -27,7 +27,7 @@ class Speed extends Component {
     if (id === '') {
       axios
         .get(
-          `http://nexters-env-1.upmjem4hcw.us-east-2.elasticbeanstalk.com//api/question/all`
+          `http://192.168.0.9:8080/nullBox_BackEnd/api/question/all`
         )
         .then(r => {
           this.setState({ list: r.data });
@@ -37,7 +37,7 @@ class Speed extends Component {
     } else {
       axios
         .get(
-          `http://nexters-env-1.upmjem4hcw.us-east-2.elasticbeanstalk.com//api/question?ids=${id}`
+          `http://192.168.0.9:8080/nullBox_BackEnd/api/question?ids=${id}`
         )
         .then(r => {
           this.setState({ list: r.data });
