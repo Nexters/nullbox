@@ -24,7 +24,7 @@ class Speed extends Component {
     let id = localStorage.getItem('category');
     console.log(id);
 
-    const url = 'http://localhost:8080/nullBox';
+    const url = 'http://192.168.0.10:8080/nullBox';
     if (id === '') {
       axios
         .get(
