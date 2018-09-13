@@ -85,7 +85,7 @@ const Pass = styled.p`
 width: 48px;
 height: 35px;
 font - family: NotoSansCJKkr;
-font - size: 40px;
+font - size: 70px;
 font - weight: bold;
 font - style: normal;
 font - stretch: normal;
@@ -95,7 +95,7 @@ text - align: center;
 color: #7fe5ce;
 color: var(--light - teal);
 text-align: center;
-margin-top: 20%;
+margin-top: 13%;
 `;
 
 const Time = styled.p`
@@ -190,9 +190,9 @@ class Result extends Component {
       <Flex row>
         <Alpha>A</Alpha>
         <Team>팀 </Team>
-        <Count>{a}/</Count>
-        <Pass> {Apass}</Pass>
-        <Time>{timeResult}</Time>
+        <Count>{a} 맞음 </Count>
+        <Pass> {Apass} Pass</Pass>
+        <Time>{timeResult}초</Time>
       </Flex>
     );
 
@@ -200,36 +200,36 @@ class Result extends Component {
       <Flex row>
         <Alpha>B</Alpha>
         <Team>팀 </Team>
-        <Count>{b}/</Count>
-        <Pass> {Bpass}</Pass>
-        <Time>{timeResult}</Time>
+        <Count>{b} 맞음 </Count>
+        <Pass> {Bpass} Pass</Pass>
+        <Time>{timeResult} 초 </Time>
       </Flex>
     );
     let Cscore = (
       <Flex row>
         <Alpha>C</Alpha>
         <Team>팀 </Team>
-        <Count>{c}/</Count>
-        <Pass>{Cpass}</Pass>
-        <Time>{timeResult}</Time>
+        <Count>{c} 맞음 </Count>
+        <Pass>{Cpass} Pass</Pass>
+        <Time>{timeResult} 초 </Time>
       </Flex>
     );
     let Dscore = (
       <Flex row>
         <Alpha>D</Alpha>
         <Team>팀 </Team>
-        <Count>{d}/</Count>
-        <Pass> {Dpass}</Pass>
-        <Time>{timeResult}</Time>
+        <Count>{d} 맞음 </Count>
+        <Pass> {Dpass} Pass</Pass>
+        <Time>{timeResult} 초 </Time>
       </Flex>
     );
     let Escore = (
       <Flex row>
         <Alpha>E</Alpha>
         <Team>팀 </Team>
-        <Count>{e}/</Count>
-        <Pass>{Epass}</Pass>
-        <Time>{timeResult}</Time>
+        <Count>{e} 맞음 </Count>
+        <Pass>{Epass} Pass</Pass>
+        <Time>{timeResult} 초</Time>
       </Flex>
     );
 
@@ -277,10 +277,15 @@ class Result extends Component {
               {Escore}
             </Flex>
 
-            <Link to="/" className="home">
-              <Button>홈으로</Button>
-            </Link>
-            <Button>{result}</Button>
+            <div className="btn-next-home">
+              <Link to="/">
+                <div>
+                  <img src="../../img/ic_home.png" alt="" />
+                </div>
+                홈으로
+                </Link>
+            </div>
+
           </Container>
         </Flex>
       </Fragment>

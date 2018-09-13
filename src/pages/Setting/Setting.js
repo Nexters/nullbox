@@ -14,9 +14,11 @@ class Setting extends Component {
   };
 
   componentDidMount() {
+    const url = 'http://localhost:8080/nullBox';
     axios
+
       .get(
-        `http://192.168.0.9:8080/nullBox_BackEnd/api/category/1`
+        url + `/api/category/1`
       )
       .then(r => {
         this.setState({ list: r.data });
@@ -129,7 +131,7 @@ class Setting extends Component {
         <div class="btn-radio">
           <input
             id="b1"
-            class="only-sr checked"
+            class="only-sr"
             type="radio"
             name="team"
             value="1"
@@ -170,41 +172,43 @@ class Setting extends Component {
         <span className="game-info"> time</span>
         <div class="btn-radio">
           <input
-            id="b1"
-            class="only-sr checked"
+            id="t1"
+            class="only-sr"
             type="radio"
-            name="temp2"
+            name="time"
             value="30"
           />
-          <label for="b1">30초</label>
+          <label for="t1"> <span />30초
+
+          </label>
         </div>
         <div class="btn-radio">
-          <input id="b2" class="only-sr" type="radio" name="temp2" value="60" />
-          <label for="b2">1분</label>
+          <input id="t2" class="only-sr" type="radio" name="time" value="60" />
+          <label for="t2">  <span />1분</label>
         </div>
         <div class="btn-radio">
-          <input id="b3" class="only-sr" type="radio" name="temp2" value="90" />
-          <label for="b3">1분 30초</label>
+          <input id="t3" class="only-sr" type="radio" name="time" value="90" />
+          <label for="t3"> <span /> 1분 30초</label>
         </div>
         <div class="btn-radio">
           <input
-            id="b4"
+            id="t4"
             class="only-sr"
             type="radio"
-            name="temp2"
+            name="time"
             value="120"
           />
-          <label for="b4">2분</label>
+          <label for="t4">  <span />2분</label>
         </div>
         <div class="btn-radio">
           <input
-            id="b5"
+            id="t5"
             class="only-sr"
             type="radio"
-            name="temp2"
+            name="time"
             value="150"
           />
-          <label for="b4">2분 30초</label>
+          <label for="t5"> <span /> 2분 30초</label>
         </div>
       </section>
     );

@@ -21,13 +21,13 @@ class Brand extends Component {
 
   componentDidMount() {
     let id = localStorage.getItem('difficulty');
-
+    const url = 'http://localhost:8080/nullBox';
     if (id === '') {
       id = 1;
     }
     axios
       .get(
-        `http://192.168.0.9:8080/nullBox_BackEnd/api/category/3/${id}`
+        url + `/api/category/3/${id}`
       )
       .then(r => {
         this.setState({ list: r.data });

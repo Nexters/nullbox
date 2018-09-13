@@ -16,10 +16,12 @@ class Home extends Component {
         explain3: '',
     };
 
+
     componentDidMount() {
+        const url = 'http://localhost:8080/nullBox';
         axios
             .get(
-                `http://192.168.0.9:8080/nullBox_BackEnd/api/list`
+                url + `/api/list`
             )
             .then(r => {
                 this.setState({ game1: r.data[0].name });

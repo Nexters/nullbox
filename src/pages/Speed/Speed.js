@@ -24,10 +24,11 @@ class Speed extends Component {
     let id = localStorage.getItem('category');
     console.log(id);
 
+    const url = 'http://localhost:8080/nullBox';
     if (id === '') {
       axios
         .get(
-          `http://192.168.0.9:8080/nullBox_BackEnd/api/question/all`
+          url + `/api/question/all`
         )
         .then(r => {
           this.setState({ list: r.data });
@@ -37,7 +38,7 @@ class Speed extends Component {
     } else {
       axios
         .get(
-          `http://192.168.0.9:8080/nullBox_BackEnd/api/question?ids=${id}`
+          url + `/api/question?ids=${id}`
         )
         .then(r => {
           this.setState({ list: r.data });
