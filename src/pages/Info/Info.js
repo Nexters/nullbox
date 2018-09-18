@@ -33,9 +33,8 @@ class Info extends Component {
             </div>
             <div className="line" />
             <div className="info-text">
-              <h1>제작</h1>
               <h4>
-                NEXTERS 9TH | team null, 김민영 신현식 김현규 김대경 장승훈
+                NEXTERS 13TH | team NULL 김대경 김민영 김현규 신현식 장승훈
                 <br />
                 Copyright 2018. NEXTERS all rights reserved.
               </h4>
