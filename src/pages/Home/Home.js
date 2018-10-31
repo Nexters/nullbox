@@ -1,9 +1,10 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import logo from './../../img/img_logo.png';
+import d from './../../img/icon_scrolldownarrow.png';
 import Flex, { FlexItem } from 'styled-flex-component';
 import '../Css/Home.css';
-
+import { URL } from '../url';
 import axios from 'axios';
 
 class Home extends Component {
@@ -18,7 +19,7 @@ class Home extends Component {
 
 
     componentDidMount() {
-        const url = 'http://192.168.0.10:8080/nullBox';
+        const url = URL;
         axios
             .get(
                 url + `/api/list`
@@ -87,6 +88,7 @@ class Home extends Component {
                             </Link>
                         </div>
                         <p className="btn-more">더 많은 게임 보기</p>
+                        <img src={d} />
                     </div>
                 </Flex>
             </Fragment>

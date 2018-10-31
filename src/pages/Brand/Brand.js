@@ -5,7 +5,7 @@ import 'rc-progress/assets/index.css';
 // import './Brand.css';
 import { list } from '../../../node_modules/postcss';
 import axios from 'axios';
-
+import { URL } from '../url';
 class Brand extends Component {
   state = {
     index: 0,
@@ -21,7 +21,7 @@ class Brand extends Component {
 
   componentDidMount() {
     let id = localStorage.getItem('difficulty');
-    const url = 'http://192.168.0.10:8080/nullBox';
+    const url = URL;
     if (id === '') {
       id = 1;
     }
