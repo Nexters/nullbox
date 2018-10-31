@@ -1,4 +1,6 @@
-* { box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+}
 
 span.svg {
   display: block;
@@ -26,7 +28,8 @@ span.svg1 {
   align-items: left;
   z-index: -1;
 }
-span.svg2  {
+
+span.svg2 {
   display: block;
   margin: auto;
   margin-top: 2%;
@@ -39,11 +42,12 @@ span.svg2  {
   z-index: -1;
 
 }
-span.svg3  {
+
+span.svg3 {
   display: block;
   margin: auto;
-margin-top: 40%;
-margin-left: 5%;
+  margin-top: 40%;
+  margin-left: 5%;
   width: 20%;
   display: flex;
   position: fixed;
@@ -52,51 +56,107 @@ margin-left: 5%;
   z-index: -1;
 
 }
+
 @keyframes fireworkone {
-  0%   { opacity: 0;}
-  25%  { opacity: .15;}
-  50%  { opacity: .3;}
-  75%  { opacity: .15;}
-  100% { opacity: 0;}
-}
-@keyframes fireworktwo {
-  0%   { opacity: 0;}
-  25%  { opacity: .45;}
-  50%  { opacity: .8;}
-  75%  { opacity: .45;}
-  100% { opacity: 0;}
-}
-@keyframes fireworthree {
-  0%   { opacity: 0;}
-  25%  { opacity: .55;}
-  50%  { opacity: 1;}
-  75%  { opacity: .55;}
-  100% { opacity: 0;}
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: .15;
+  }
+
+  50% {
+    opacity: .3;
+  }
+
+  75% {
+    opacity: .15;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
-.firework-icon .cls-1, .firework-icon .cls-2, .firework-icon .cls-3 {
+@keyframes fireworktwo {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: .45;
+  }
+
+  50% {
+    opacity: .8;
+  }
+
+  75% {
+    opacity: .45;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fireworthree {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: .55;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: .55;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.firework-icon .cls-1,
+.firework-icon .cls-2,
+.firework-icon .cls-3 {
   opacity: 0;
   animation-duration: 1s;
-  animation-iteration-count: infinite; }
+  animation-iteration-count: infinite;
+}
 
 .firework-icon .cls-3 {
   fill: #f9b0b0;
   animation-name: fireworthree;
-  animation-delay: .11s; }
+  animation-delay: .11s;
+}
 
 .firework-icon .cls-2 {
   fill: #fe565d;
   animation-name: fireworktwo;
-  animation-delay: .41s; }
+  animation-delay: .41s;
+}
 
 .firework-icon .cls-1 {
   fill: #7fe5ce;
   animation-name: fireworkone;
-  animation-delay: .71s;}
+  animation-delay: .71s;
+}
 
 @keyframes elastic-pulse {
-  0%   { transform: scale(0.2);}
-  100% { transform: scale(1);}
+  0% {
+    transform: scale(0.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .img-firework {

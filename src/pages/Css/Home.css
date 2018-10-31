@@ -74,6 +74,7 @@ margin-left: 3vh; */
   object-fit: contain;
   margin-top: -4%;
 }
+
 .container-basic .logo {
   margin-top: 30vh;
 }
@@ -164,8 +165,8 @@ margin-left: 3vh; */
 }
 
 .btn-top {
-  width: 20vh;
-  height: 3vw;
+  width: 40vh;
+  height: 4vw;
   padding: 5vh;
   text-align: center;
   vertical-align: middle;
@@ -226,6 +227,7 @@ margin-left: 3vh; */
 .pass:hover {
   border: solid 5px #30b9a0;
 }
+
 .Line-Copy-4 {
   width: 330.6px;
   height: 328.5px;
@@ -236,6 +238,7 @@ margin-left: 3vh; */
   border-image-source: linear-gradient(to bottom, #fb555d, var(--light-teal));
   border-image-slice: 1;
 }
+
 .correct {
   position: absolute;
   right: 8vh;
@@ -272,6 +275,7 @@ margin-left: 3vh; */
   position: absolute;
   bottom: 0;
 }
+
 .btn-more-next {
   width: 40vh;
   height: 5vw;
