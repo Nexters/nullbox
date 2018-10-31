@@ -5,12 +5,12 @@ h1 {
   text-align: center;
   color: #2eb299;
   letter-spacing: 2px;
-  margin: 2vh 0 3vh;
+  margin: 3vh 0 8vh;
 }
 
 h4 {
   font-family: NotoSansCJKkr;
-  font-size: 1.5em;
+  font-size: 1.3em;
   width: 100%;
   font-weight: 100;
   line-height: 1.62;
@@ -19,6 +19,7 @@ h4 {
   letter-spacing: normal;
   text-align: center;
   color: #ffffff;
+  margin: 0;
 }
 
 p {
@@ -30,18 +31,21 @@ p {
   letter-spacing: normal;
   text-align: left;
   color: #fd575f;
-  margin-top: 2vh;
-  margin-left: 3vh;
 }
+
+/* margin-top: 2vh;
+margin-left: 3vh; */
 
 .info-text {
   width: 60vw;
   text-align: center;
+  margin: 0;
 }
 
 .info-text-wide {
   width: 80vw;
   text-align: center;
+  margin: 0;
 }
 
 .line {
@@ -55,10 +59,11 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
   text-align: center;
   justify-content: center;
   object-fit: contain;
+  margin: 0;
+
 }
 
 .border-gradation {
@@ -75,7 +80,7 @@ p {
 .logo {
   width: 60vh;
   text-align: center;
-  margin: 0 auto;
+  margin: 8vh auto;
 }
 
 .main-text {
@@ -84,7 +89,7 @@ p {
   font-weight: 500;
   width: 75vw;
   text-align: left;
-  padding: 6vh 0 4vh;
+  padding: 2vh 0 3vh;
 }
 
 /* need confirm******** */
@@ -147,18 +152,18 @@ p {
 }
 
 .btn-top {
-  width: 25vh;
-  height: 10vw;
+  width: 20vh;
+  height: 3vw;
   padding: 5vh;
   text-align: center;
+  vertical-align: middle;
   font-family: NotoSansCJKkr;
   font-size: 1.2em;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
-  text-align: center;
   color: #fd575f;
 }
 
@@ -241,7 +246,7 @@ p {
   font-style: normal;
   color: #7fe5ce;
   font-weight: 600;
-  line-height: normal;
+  line-height: 2em;
   letter-spacing: normal;
   position: absolute;
   bottom: 0;
@@ -344,6 +349,15 @@ p {
   margin-top: 20px;
   width: 100%;
   height: 50%;
+}
+
+.ic_scrolldownarrow {
+  width: 0.5vh;
+  height: 0.5vw;
+  object-fit: contain;
+  transform: rotate(90deg);
+  padding-top: 5vh;
+  opacity: 0.8;
 }
 
 /* ratio buttion class */
