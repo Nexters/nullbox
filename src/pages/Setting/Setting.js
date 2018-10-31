@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import arrow from '../../img/icon_scrolldownarrow.png';
 import axios from 'axios';
-
+import { URL } from '../url';
 class Setting extends Component {
   state = {
     easy: '',
@@ -14,7 +14,7 @@ class Setting extends Component {
   };
 
   componentDidMount() {
-    const url = 'http://192.168.0.10:8080/nullBox';
+    const url = URL;
     axios
 
       .get(

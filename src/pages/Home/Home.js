@@ -1,10 +1,12 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import logo from './../../img/img_logo.png';
+
 import ic_scrolldownarrow from './../../img/ic_scrolldownarrow.png';
+
 import Flex, { FlexItem } from 'styled-flex-component';
 import '../Css/Home.css';
-
+import { URL } from '../url';
 import axios from 'axios';
 
 class Home extends Component {
@@ -41,6 +43,7 @@ class Home extends Component {
     localStorage.setItem('explain', this.state.explain3);
     localStorage.setItem('game', this.state.game3);
   };
+
 
   render() {
     localStorage.setItem('Acount', '');
@@ -95,6 +98,7 @@ class Home extends Component {
       </Fragment>
     );
   }
+
 }
 
 export default Home;

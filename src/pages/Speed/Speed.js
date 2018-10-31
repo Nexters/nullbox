@@ -4,7 +4,7 @@ import { Line } from 'rc-progress';
 import 'rc-progress/assets/index.css';
 import { list } from '../../../node_modules/postcss';
 import axios from 'axios';
-
+import { URL } from '../url';
 class Speed extends Component {
   state = {
     index: 0,
@@ -24,7 +24,7 @@ class Speed extends Component {
     let id = localStorage.getItem('category');
     console.log(id);
 
-    const url = 'http://192.168.0.10:8080/nullBox';
+    const url = URL;
     if (id === '') {
       axios
         .get(
