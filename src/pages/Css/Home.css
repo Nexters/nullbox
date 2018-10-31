@@ -139,7 +139,7 @@ margin-left: 3vh; */
 
 .home {
   width: 25vw;
-  height: 5vh;
+  height: 8vh;
   font-size: 1.5rem;
   letter-spacing: 0.05em;
   font-weight: 600;
@@ -214,7 +214,16 @@ margin-left: 3vh; */
 .pass:hover {
   border: solid 5px #30b9a0;
 }
-
+.Line-Copy-4 {
+  width: 330.6px;
+  height: 328.5px;
+  transform: rotate(-10deg);
+  opacity: 0.8;
+  border-style: solid;
+  border-width: 2px;
+  border-image-source: linear-gradient(to bottom, #fb555d, var(--light-teal));
+  border-image-slice: 1;
+}
 .correct {
   position: absolute;
   right: 8vh;
@@ -237,7 +246,22 @@ margin-left: 3vh; */
 }
 
 .btn-more {
-  width: 20vh;
+  width: 40vh;
+  height: 5vw;
+  text-align: center;
+  margin-bottom: 3%;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-style: normal;
+  color: #7fe5ce;
+  font-weight: 600;
+  line-height: 2em;
+  letter-spacing: normal;
+  position: absolute;
+  bottom: 0;
+}
+.btn-more-next {
+  width: 40vh;
   height: 5vw;
   text-align: center;
   margin: 0 auto;
