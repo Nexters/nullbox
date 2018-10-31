@@ -15,14 +15,9 @@ class Setting extends Component {
 
   componentDidMount() {
     const url = URL;
-    axios
-
-      .get(
-        url + `/api/category/1`
-      )
-      .then(r => {
-        this.setState({ list: r.data });
-      });
+    axios.get(url + `/api/category/1`).then(r => {
+      this.setState({ list: r.data });
+    });
   }
 
   category = event => {
@@ -127,88 +122,79 @@ class Setting extends Component {
 
     let selectTeam = (
       <section class="radio-items" onChange={this.handleChange}>
-        <span className="game-info">Team</span>
-        <div class="btn-radio">
-          <input
-            id="b1"
-            class="only-sr"
-            type="radio"
-            name="team"
-            value="1"
-          />
-          <label for="b1">
-            <span />1
-          </label>
+        <div class="btn-radio-empty">
+          <span />팀 수
         </div>
-        <div class="btn-radio">
+        <label class="btn-radio" for="b1">
+          1개 팀
+          <input id="b1" class="only-sr" type="radio" name="team" value="2" />
+          <span class="checkmark" />
+        </label>
+        <label class="btn-radio" for="b2">
+          2개 팀
           <input id="b2" class="only-sr" type="radio" name="team" value="2" />
-          <label for="b2">
-            <span />2
-          </label>
-        </div>
-        <div class="btn-radio">
-          <input id="b3" class="only-sr" type="radio" name="team" value="3" />
-          <label for="b3">
-            <span />3
-          </label>
-        </div>
-        <div class="btn-radio">
-          <input id="b4" class="only-sr" type="radio" name="team" value="4" />
-          <label for="b4">
-            <span />4
-          </label>
-        </div>
-        <div class="btn-radio">
-          <input id="b5" class="only-sr" type="radio" name="team" value="5" />
-          <label for="b5">
-            <span />5
-          </label>
-        </div>
+          <span class="checkmark" />
+        </label>
+        <label class="btn-radio" for="b3">
+          3개 팀
+          <input id="b3" class="only-sr" type="radio" name="team" value="2" />
+          <span class="checkmark" />
+        </label>
+        <label class="btn-radio" for="b4">
+          4개 팀
+          <input id="b4" class="only-sr" type="radio" name="team" value="2" />
+          <span class="checkmark" />
+        </label>
+        <label class="btn-radio" for="b5">
+          5개 팀
+          <input id="b5" class="only-sr" type="radio" name="team" value="2" />
+          <span class="checkmark" />
+        </label>
       </section>
     );
 
     let selectTime = (
       <section class="radio-items" onChange={this.handleChangeTime}>
-        <span className="game-info"> time</span>
+        <div class="btn-radio-empty">
+          <span>제한시간</span>
+        </div>
         <div class="btn-radio">
-          <input
-            id="t1"
-            class="only-sr"
-            type="radio"
-            name="time"
-            value="30"
-          />
-          <label for="t1"> <span />30초
-
+          <input id="t1" class="only-sr" type="radio" name="time" value="30" />
+          <label for="t1">
+            {' '}
+            <span />
+            30초
           </label>
         </div>
         <div class="btn-radio">
           <input id="t2" class="only-sr" type="radio" name="time" value="60" />
-          <label for="t2">  <span />1분</label>
+          <label for="t2">
+            {' '}
+            <span />
+            1분
+          </label>
         </div>
         <div class="btn-radio">
           <input id="t3" class="only-sr" type="radio" name="time" value="90" />
-          <label for="t3"> <span /> 1분 30초</label>
+          <label for="t3">
+            {' '}
+            <span /> 1분 30초
+          </label>
         </div>
         <div class="btn-radio">
-          <input
-            id="t4"
-            class="only-sr"
-            type="radio"
-            name="time"
-            value="120"
-          />
-          <label for="t4">  <span />2분</label>
+          <input id="t4" class="only-sr" type="radio" name="time" value="120" />
+          <label for="t4">
+            {' '}
+            <span />
+            2분
+          </label>
         </div>
         <div class="btn-radio">
-          <input
-            id="t5"
-            class="only-sr"
-            type="radio"
-            name="time"
-            value="150"
-          />
-          <label for="t5"> <span /> 2분 30초</label>
+          <input id="t5" class="only-sr" type="radio" name="time" value="150" />
+          <label for="t5">
+            {' '}
+            <span /> 2분 30초
+          </label>
         </div>
       </section>
     );
@@ -274,7 +260,7 @@ class Setting extends Component {
                 <Link to="/Brand" onClick={this.brand}>
                   준비하기
                   <div>
-                    <img src={arrow} alt="" />
+                    <img src={arrow} alt="arrow" />
                   </div>
                 </Link>
               </div>
