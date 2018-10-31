@@ -37,7 +37,7 @@ p {
 margin-left: 3vh; */
 
 .info-text {
-  width: 60vw;
+  width: 65vw;
   text-align: center;
   margin: 0;
 }
@@ -62,8 +62,10 @@ margin-left: 3vh; */
   text-align: center;
   justify-content: center;
   object-fit: contain;
-  margin: 0;
+}
 
+.container-basic .logo {
+  margin-top: 30vh;
 }
 
 .border-gradation {
@@ -87,7 +89,7 @@ margin-left: 3vh; */
   color: #2eb299;
   font-size: 1.2em;
   font-weight: 500;
-  width: 75vw;
+  width: 77vw;
   text-align: left;
   padding: 2vh 0 3vh;
 }
@@ -360,31 +362,6 @@ margin-left: 3vh; */
   opacity: 0.8;
 }
 
-/* ratio buttion class */
-
-input[type="radio"] {
-  display: none;
-}
-
-input[type="radio"]+label {
-  color: #f2f2f2;
-  font-family: Arial, sans-serif;
-}
-
-input[type="radio"]+label span {
-  display: inline-block;
-  width: 19px;
-  height: 19px;
-  margin: -2px 10px 0 0;
-  vertical-align: middle;
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -38px top no-repeat;
-  cursor: pointer;
-}
-
-input[type="radio"]:checked+label span {
-  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -57px top no-repeat;
-}
-
 /* btn animation */
 
 a:link {
@@ -403,6 +380,7 @@ a:hover {
 
 .game-name {
   width: 100%;
+  margin-top: 15vh;
   font-family: NotoSansCJKkr;
   font-size: 1.5em;
   text-align: center;
@@ -413,9 +391,9 @@ a:hover {
 }
 
 .game-info {
-  width: 60vw;
+  width: 55vw;
   opacity: 0.9;
-  margin: 0 auto;
+  margin: 2.5vh auto;
   font-family: NotoSansCJKkr;
   font-weight: 300;
   font-style: normal;
@@ -433,14 +411,96 @@ a:hover {
   font-size: 1.3em;
   text-align: center;
   vertical-align: middle;
-  padding: 1% 0;
-  width: 12.5vw;
+  padding: 1vh;
+  width: 10vw;
   height: 5vh;
   margin: 0.5vw;
   object-fit: contain;
   border-radius: 4px;
   background-color: #403e70;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.btn-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.btn-radio:hover input~.checkmark {
+  color: #fff;
+  background-color: #242348;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10vw;
+  height: 5vh;
+  padding: 1vh;
+  background-color: none;
+}
+
+.btn-radio input:checked~.checkmark {
+  color: #fff;
+  padding: 1vh;
+  width: 10vw;
+  height: 5vh;
+  object-fit: contain;
+  border-radius: 4px;
+  border-color: white;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.btn-radio input:checked~.checkmark:after {
+  display: block;
+}
+
+.btn-radio .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #2196F3;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* ratio buttion class */
+
+.btn-radio-empty {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.6em;
+  text-align: center;
+  vertical-align: middle;
+  padding: 1vh;
+  width: 12.5vw;
+  height: 5vh;
+  margin: 0.5vw;
+  object-fit: contain;
+}
+
+.btn-radio a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .container-select {}
