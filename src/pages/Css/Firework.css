@@ -3,7 +3,7 @@
 span.svg {
   display: block;
   margin: auto;
-  margin-top: -20%;
+  margin-top: -16%;
   margin-left: 36%;
   width: 20%;
   height: 30vh;
@@ -11,18 +11,20 @@ span.svg {
   position: fixed;
   flex-direction: column;
   align-items: center;
+  z-index: -1;
 }
 
 span.svg1 {
   display: block;
   margin: auto;
-  margin-top: -20%;
+  margin-top: -18%;
   width: 20%;
   height: 60vh;
   display: flex;
   position: fixed;
   flex-direction: column;
   align-items: left;
+  z-index: -1;
 }
 span.svg2  {
   display: block;
@@ -34,6 +36,7 @@ span.svg2  {
   position: fixed;
   flex-direction: column;
   align-items: center;
+  z-index: -1;
 
 }
 span.svg3  {
@@ -46,6 +49,7 @@ margin-left: 5%;
   position: fixed;
   flex-direction: column;
   align-items: center;
+  z-index: -1;
 
 }
 @keyframes fireworkone {

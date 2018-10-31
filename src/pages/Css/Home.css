@@ -64,6 +64,16 @@ margin-left: 3vh; */
   object-fit: contain;
 }
 
+
+.container-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  object-fit: contain;
+  margin-top: -4%;
+}
 .container-basic .logo {
   margin-top: 30vh;
 }
