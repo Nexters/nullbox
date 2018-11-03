@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../Css/Score.css';
+import ic_home from '../../img/ic_home.png';
+import ic_rightarrow from '../../img/ic_rightarrow.png';
 
 class Score extends Component {
   state = {
@@ -55,15 +57,8 @@ class Score extends Component {
     let result = (
       <div className="btn-next-team" onClick={this.gameEnd}>
         <Link to="/Speed">
-          <div>
-            <img
-              src="../../img/ic_rightarrow.png"
-              width="28px"
-              height="46px"
-              alt=""
-            />
-            {/* /Users/qurian/Documents/GitHub/nullbox/src/img/ic_rightarrow.png */}
-            {/* /Users/qurian/Documents/GitHub/nullbox/src/pages/Css/Score.css */}
+          <div className="icon">
+            <img src={ic_rightarrow} width="24vh" alt="" />
           </div>
           다음팀 시작하기
         </Link>
@@ -101,8 +96,8 @@ class Score extends Component {
       result = (
         <div className="btn-next-team">
           <Link to="/Korean">
-            <div>
-              <img src="../../img/ic_rightarrow.png" alt="" />
+            <div className="icon">
+              <img src={ic_rightarrow} width="24vh" alt="" />
             </div>
             다음팀 시작하기
           </Link>
@@ -115,7 +110,7 @@ class Score extends Component {
         <div className="btn-next-team">
           <Link to="/Brand">
             <div>
-              <img src="../../img/ic_rightarrow.png" alt="" />
+              <img src={ic_rightarrow} width="24vh" alt="" />
             </div>
             다음팀 시작하기
           </Link>
@@ -128,7 +123,7 @@ class Score extends Component {
         <div className="btn-next-result">
           <Link to="/Result">
             <div>
-              <img src="../../img/ic_home.png" alt="" />
+              <img src={ic_rightarrow} width="24vh" alt="" />
             </div>
             결과보기
           </Link>
@@ -194,7 +189,7 @@ class Score extends Component {
             <div className="btn-next-home">
               <Link to="/">
                 <div>
-                  <img src="../../img/ic_home.png" alt="" />
+                  <img src={ic_home} width="40vh" alt="" />
                 </div>
                 홈으로
               </Link>
@@ -227,8 +222,8 @@ class Score extends Component {
             <div className="navScore">
               <div className="btn-next-home">
                 <Link to="/">
-                  <div>
-                    <img src="../../img/ic_home.png" alt="" />
+                  <div className="icon">
+                    <img src={ic_home} width="40vh" alt="" />
                   </div>
                   홈으로
                 </Link>

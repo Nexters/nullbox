@@ -135,10 +135,10 @@ class Korean extends Component {
 
     let pass = '';
     let start = (
-      <button className="start word-title" onClick={this.start}>
+      <button className="start intro-title" onClick={this.start}>
         {teamName}팀 시작하기
         <br />
-        <div className="start-press">누르면 시작합니다.</div>
+        <div className="intro-title-sub">누르면 시작합니다.</div>
       </button>
     );
 
@@ -303,12 +303,18 @@ class Korean extends Component {
           </div>
         </div>
 
-        <Line strokeWidth="2" trailWidth="2" percent={this.state.time} strokeLinecap="square" trailColor="rgba(255,255,255,0.05)" />
+        <Line
+          strokeWidth="2"
+          trailWidth="2"
+          percent={this.state.time}
+          strokeLinecap="square"
+          trailColor="rgba(255,255,255,0.05)"
+        />
 
         {/* 개발편의상 스코어 남겨두었음 */}
         <Link to="/score">
           <button className="btn score" onClick={this.gameEnd}>
-            score
+            결과 바로보기
           </button>
         </Link>
       </div>

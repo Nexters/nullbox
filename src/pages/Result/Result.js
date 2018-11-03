@@ -82,34 +82,34 @@ const Count = styled.p`
   -webkit-text-stroke: 2px #2eb299;
 `;
 const Pass = styled.p`
-width: 48px;
-height: 35px;
-font - family: NotoSansCJKkr;
-font - size: 70px;
-font - weight: bold;
-font - style: normal;
-font - stretch: normal;
-line - height: 0.88;
-letter - spacing: normal;
-text - align: center;
-color: #7fe5ce;
-color: var(--light - teal);
-text-align: center;
-margin-top: 13%;
+  width: 48px;
+  height: 35px;
+  font-family: NotoSansCJKkr;
+  font-size: 70px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.88;
+  letter-spacing: normal;
+  text-align: center;
+  color: #7fe5ce;
+  color: var(--light - teal);
+  text-align: center;
+  margin-top: 13%;
 `;
 
 const Time = styled.p`
-width: 102px;
-height: 59px;
-font-family: NotoSansCJKkr;
-font-size: 40px;
-font-weight: bold;
-font-style: normal;
-font-stretch: normal;
-line-height: normal;
-letter-spacing: normal;
-text-align: center;
-color: #2eb299;
+  width: 102px;
+  height: 59px;
+  font-family: NotoSansCJKkr;
+  font-size: 40px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #2eb299;
 `;
 
 const Button = styled.button`
@@ -129,35 +129,33 @@ class Result extends Component {
     time: 0,
   };
 
-  showResult = () => { };
+  showResult = () => {};
 
   render() {
-
     let time = localStorage.getItem('time');
 
     let timeResult = '';
 
     switch (time) {
       case '30':
-        timeResult = '30'
+        timeResult = '30';
         break;
       case '60':
-        timeResult = '1:00'
+        timeResult = '1:00';
         break;
-      case "90":
-        timeResult = '1:30'
+      case '90':
+        timeResult = '1:30';
         break;
-      case "120":
-        timeResult = '2:00'
+      case '120':
+        timeResult = '2:00';
         break;
-      case "150":
-        timeResult = '2:30'
+      case '150':
+        timeResult = '2:30';
         break;
 
       default:
         break;
     }
-
 
     const { word } = this.state;
     let score = localStorage.getItem('score');
@@ -255,18 +253,15 @@ class Result extends Component {
     localStorage.setItem('Dcount', '');
     localStorage.setItem('Ecount', '');
 
-
-
     localStorage.setItem('Apass', '');
     localStorage.setItem('Bpass', '');
     localStorage.setItem('Cpass', '');
     localStorage.setItem('Dpass', '');
     localStorage.setItem('Epass', '');
 
-
     return (
       <Fragment>
-        <Flex full column>
+        <Flex full columsn>
           <Text>RESULT SCORE</Text>
           <Container>
             <Flex center column>
@@ -280,12 +275,11 @@ class Result extends Component {
             <div className="btn-next-home">
               <Link to="/">
                 <div>
-                  <img src="../../img/ic_home.png" alt="" />
+                  <img src="/../../../img/ic-home.png" alt="" />
                 </div>
                 홈으로
-                </Link>
+              </Link>
             </div>
-
           </Container>
         </Flex>
       </Fragment>

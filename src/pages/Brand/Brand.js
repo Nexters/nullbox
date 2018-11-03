@@ -6,7 +6,6 @@ import 'rc-progress/assets/index.css';
 import { list } from '../../../node_modules/postcss';
 import axios from 'axios';
 import { URL } from '../url';
-import '../Css/Progress.css'
 class Brand extends Component {
   state = {
     index: 0,
@@ -26,13 +25,9 @@ class Brand extends Component {
     if (id === '') {
       id = 1;
     }
-    axios
-      .get(
-        url + `/api/category/3/${id}`
-      )
-      .then(r => {
-        this.setState({ list: r.data });
-      });
+    axios.get(url + `/api/category/3/${id}`).then(r => {
+      this.setState({ list: r.data });
+    });
 
     let t = localStorage.getItem('time');
 
@@ -293,7 +288,13 @@ class Brand extends Component {
             {pass}
           </div>
         </div>
-        <Line strokeWidth="2" trailWidth="2" percent={this.state.time} strokeLinecap="square" trailColor="rgba(255,255,255,0.05)" />
+        <Line
+          strokeWidth="2"
+          trailWidth="2"
+          percent={this.state.time}
+          strokeLinecap="square"
+          trailColor="rgba(255,255,255,0.05)"
+        />
         <Link to="/score">
           <button className="btn score" onClick={this.gameEnd}>
             score

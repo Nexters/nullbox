@@ -258,8 +258,14 @@ margin-left: 3vh; */
   color: rgba(255, 255, 255, 0.8);
   background-color: none;
   border-radius: 6px;
-  border: solid 2px #080516;
+  border: solid 2px rgba(255, 255, 255, 0);
+  background-color: rgba(255, 255, 255, 0);
 }
+
+.score:hover {
+  border: solid 5px #fe565d;
+}
+
 
 .btn-more {
   width: 40vh;
@@ -337,8 +343,9 @@ margin-left: 3vh; */
   bottom: 4vw;
 }
 
-.btn-next-team div {
-  margin-top: 20px;
+.btn-next-team .icon {
+  margin: 1.5vh 0 1vh;
+  width: 100%;
   height: 50%;
 }
 
@@ -378,16 +385,17 @@ margin-left: 3vh; */
   position: absolute;
   right: 8vw;
   bottom: 4vw;
+  z-index: 2;
 }
 
-.btn-next-result div {
-  margin-top: 20px;
+.btn-next-result .icon {
+  margin: 1.5vh 0 1vh;
   width: 100%;
   height: 50%;
 }
 
-.btn-next-home div {
-  margin-top: 20px;
+.btn-next-home .icon {
+  margin: 1.5vh 0 1vh;
   width: 100%;
   height: 50%;
 }
@@ -643,20 +651,41 @@ a:hover {
 .word-title {
   font-weight: 900;
   font-family: Nunito;
-  font-size: 5em;
+  font-size: 8em;
   text-shadow: -1px 0 ff1722, 0 1px ff1722, 1px 0 ff1722, 0 -1px ff1722;
   background-color: #0d032e;
   border-color: #0d032e;
   -webkit-text-fill-color: #ff9594;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #ff1722;
+
 }
 
-.start-press {
-  font-size: 0.5em;
-  -webkit-text-fill-color: none;
+.intro-title {
+  font-weight: 600;
+  font-family: Nunito;
+  font-size: 6em;
+  text-shadow: -1px 0 ff1722, 0 1px ff1722, 1px 0 ff1722, 0 -1px ff1722;
+  background-color: #0d032e;
+  border-color: #0d032e;
+  -webkit-text-fill-color: #ff9594;
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: none;
+  -webkit-text-stroke-color: #ff1722;
+  line-height: 1.5em;
+  padding: 10vh 0 0;
+
+}
+
+.intro-title-sub {
+  font-weight: 300;
+  font-family: Nunito;
+  font-size: 0.4em;
+  text-shadow: -1px 0 ff1722, 0 1px ff1722, 1px 0 ff1722, 0 -1px ff1722;
+  background-color: #0d032e;
+  border-color: #0d032e;
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
 }
 
 .word-title:hover {
