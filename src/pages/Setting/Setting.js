@@ -143,7 +143,6 @@ class Setting extends Component {
           4개 팀
           <input id="b4" class="only-sr" type="radio" name="team" value="4" />
           <span class="checkmark" />
-
         </label>
         <label class="btn-radio" for="b5">
           5개 팀
@@ -160,41 +159,65 @@ class Setting extends Component {
         </div>
         <div class="btn-radio">
           <label for="t1">
-            <input id="t1" class="only-sr" type="radio" name="time" value="30" />
-
+            <input
+              id="t1"
+              class="only-sr"
+              type="radio"
+              name="time"
+              value="30"
+            />
             <span class="checkmark" />
-
             30초
           </label>
         </div>
         <div class="btn-radio">
           <label for="t2">
-            <input id="t2" class="only-sr" type="radio" name="time" value="60" />
-
+            <input
+              id="t2"
+              class="only-sr"
+              type="radio"
+              name="time"
+              value="60"
+            />
             <span class="checkmark" />
             1분
           </label>
         </div>
         <div class="btn-radio">
           <label for="t3">
-            <input id="t3" class="only-sr" type="radio" name="time" value="90" />
-
+            <input
+              id="t3"
+              class="only-sr"
+              type="radio"
+              name="time"
+              value="90"
+            />
             <span class="checkmark" />
             1분 30초
           </label>
         </div>
         <div class="btn-radio">
           <label for="t4">
-            <input id="t4" class="only-sr" type="radio" name="time" value="120" />
-
+            <input
+              id="t4"
+              class="only-sr"
+              type="radio"
+              name="time"
+              value="120"
+            />
             <span class="checkmark" />
             2분
           </label>
         </div>
         <div class="btn-radio">
           <label for="t5">
-            <input id="t5" class="only-sr" type="radio" name="time" value="150" />
-
+            <input
+              id="t5"
+              class="only-sr"
+              type="radio"
+              name="time"
+              value="150"
+            />
             <span class="checkmark" />
             2분 30초
           </label>

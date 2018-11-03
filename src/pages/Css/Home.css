@@ -198,7 +198,8 @@ margin-left: 3vh; */
 
 .start {
   width: 60vw;
-  padding: 10% 0;
+  padding: 5vw 0;
+  position: bottom;
 }
 
 .start:hover {
@@ -642,13 +643,20 @@ a:hover {
 .word-title {
   font-weight: 900;
   font-family: Nunito;
-  font-size: 10em;
+  font-size: 5em;
   text-shadow: -1px 0 ff1722, 0 1px ff1722, 1px 0 ff1722, 0 -1px ff1722;
   background-color: #0d032e;
   border-color: #0d032e;
   -webkit-text-fill-color: #ff9594;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #ff1722;
+}
+
+.start-press {
+  font-size: 0.5em;
+  -webkit-text-fill-color: none;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: none;
 }
 
 .word-title:hover {

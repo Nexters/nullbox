@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Line } from 'rc-progress';
 // import 'rc-progress/assets/index.css';
-import '../Css/Progress.css'
 const korean = [
   'ㄱ',
   'ㄴ',
@@ -138,6 +137,8 @@ class Korean extends Component {
     let start = (
       <button className="start word-title" onClick={this.start}>
         {teamName}팀 시작하기
+        <br />
+        <div className="start-press">누르면 시작합니다.</div>
       </button>
     );
 
