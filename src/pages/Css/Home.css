@@ -486,6 +486,7 @@ a:hover {
   height: 5vh;
   padding: 1vh;
   background-color: none;
+  opacity: 0.5;
 }
 
 .btn-radio input:checked~.checkmark {
@@ -506,6 +507,7 @@ a:hover {
 
 .btn-radio input:checked~.checkmark:after {
   display: block;
+
 }
 
 .btn-radio .checkmark:after {
@@ -518,6 +520,7 @@ a:hover {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+
 }
 
 /* ratio buttion class */

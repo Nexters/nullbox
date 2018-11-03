@@ -73,7 +73,6 @@ class Setting extends Component {
         }
       }
     }
-    console.log(i);
 
     localStorage.setItem('category', i);
     localStorage.setItem('time', this.state.time);
@@ -127,7 +126,7 @@ class Setting extends Component {
         </div>
         <label class="btn-radio" for="b1">
           1개 팀
-          <input id="b1" class="only-sr" type="radio" name="team" value="2" />
+          <input id="b1" class="only-sr" type="radio" name="team" value="1" />
           <span class="checkmark" />
         </label>
         <label class="btn-radio" for="b2">
@@ -137,17 +136,18 @@ class Setting extends Component {
         </label>
         <label class="btn-radio" for="b3">
           3개 팀
-          <input id="b3" class="only-sr" type="radio" name="team" value="2" />
+          <input id="b3" class="only-sr" type="radio" name="team" value="3" />
           <span class="checkmark" />
         </label>
         <label class="btn-radio" for="b4">
           4개 팀
-          <input id="b4" class="only-sr" type="radio" name="team" value="2" />
+          <input id="b4" class="only-sr" type="radio" name="team" value="4" />
           <span class="checkmark" />
+
         </label>
         <label class="btn-radio" for="b5">
           5개 팀
-          <input id="b5" class="only-sr" type="radio" name="team" value="2" />
+          <input id="b5" class="only-sr" type="radio" name="team" value="5" />
           <span class="checkmark" />
         </label>
       </section>
@@ -159,41 +159,44 @@ class Setting extends Component {
           <span>제한시간</span>
         </div>
         <div class="btn-radio">
-          <input id="t1" class="only-sr" type="radio" name="time" value="30" />
           <label for="t1">
-            {' '}
-            <span />
+            <input id="t1" class="only-sr" type="radio" name="time" value="30" />
+
+            <span class="checkmark" />
+
             30초
           </label>
         </div>
         <div class="btn-radio">
-          <input id="t2" class="only-sr" type="radio" name="time" value="60" />
           <label for="t2">
-            {' '}
-            <span />
+            <input id="t2" class="only-sr" type="radio" name="time" value="60" />
+
+            <span class="checkmark" />
             1분
           </label>
         </div>
         <div class="btn-radio">
-          <input id="t3" class="only-sr" type="radio" name="time" value="90" />
           <label for="t3">
-            {' '}
-            <span /> 1분 30초
+            <input id="t3" class="only-sr" type="radio" name="time" value="90" />
+
+            <span class="checkmark" />
+            1분 30초
           </label>
         </div>
         <div class="btn-radio">
-          <input id="t4" class="only-sr" type="radio" name="time" value="120" />
           <label for="t4">
-            {' '}
-            <span />
+            <input id="t4" class="only-sr" type="radio" name="time" value="120" />
+
+            <span class="checkmark" />
             2분
           </label>
         </div>
         <div class="btn-radio">
-          <input id="t5" class="only-sr" type="radio" name="time" value="150" />
           <label for="t5">
-            {' '}
-            <span /> 2분 30초
+            <input id="t5" class="only-sr" type="radio" name="time" value="150" />
+
+            <span class="checkmark" />
+            2분 30초
           </label>
         </div>
       </section>

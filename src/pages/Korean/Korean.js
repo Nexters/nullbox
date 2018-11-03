@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Line } from 'rc-progress';
-import 'rc-progress/assets/index.css';
-
+// import 'rc-progress/assets/index.css';
+import '../Css/Progress.css'
 const korean = [
   'ㄱ',
   'ㄴ',
@@ -31,6 +31,7 @@ class Korean extends Component {
     pass: 0,
     start: 0,
     setTime: 0,
+    color: '#7fe5ce',
   };
 
   componentDidMount() {
@@ -168,7 +169,8 @@ class Korean extends Component {
             {pass}
           </div>
         </div>
-        <Line strokeWidth="4" percent={this.state.time} />
+
+        <Line strokeWidth="1" percent={this.state.time} trailColor="white" />
 
         {/* 개발편의상 스코어 남겨두었음 */}
         <Link to="/score">
