@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Line } from 'rc-progress';
-import 'rc-progress/assets/index.css';
 import { list } from '../../../node_modules/postcss';
 import axios from 'axios';
 import { URL } from '../url';
+import '../Css/Progress.css'
 class Speed extends Component {
   state = {
     index: 0,
