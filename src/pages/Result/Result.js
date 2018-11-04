@@ -2,7 +2,8 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Flex from 'styled-flex-component';
-
+import '../Css/Result.css'
+import line from './../../img/img_line.png';
 const Text = styled.p`
   font-family: NotoSansCJKkr;
   font-size: 20px;
@@ -121,6 +122,19 @@ const Button = styled.button`
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
   font-size: 14px;
 `;
+const Title = styled.p`
+  width: 109px;
+  height: 59px;
+  font-family: NotoSansCJKkr;
+  font-size: 40px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2eb299;
+`;
 
 const ButtonBox = styled.div``;
 
@@ -129,7 +143,7 @@ class Result extends Component {
     time: 0,
   };
 
-  showResult = () => {};
+  showResult = () => { };
 
   render() {
     let time = localStorage.getItem('time');
@@ -188,9 +202,11 @@ class Result extends Component {
       <Flex row>
         <Alpha>A</Alpha>
         <Team>팀 </Team>
-        <Count>{a} 맞음 </Count>
+        <img src={line}
+          class="img_line"></img>
+        <Count>{a}/ </Count>
         <Pass> {Apass} Pass</Pass>
-        <Time>{timeResult}초</Time>
+        <Time>{timeResult}</Time>
       </Flex>
     );
 
@@ -198,36 +214,44 @@ class Result extends Component {
       <Flex row>
         <Alpha>B</Alpha>
         <Team>팀 </Team>
-        <Count>{b} 맞음 </Count>
+        <img src={line}
+          class="img_line"></img>
+        <Count>{b}/</Count>
         <Pass> {Bpass} Pass</Pass>
-        <Time>{timeResult} 초 </Time>
+        <Time>{timeResult} </Time>
       </Flex>
     );
     let Cscore = (
       <Flex row>
         <Alpha>C</Alpha>
         <Team>팀 </Team>
-        <Count>{c} 맞음 </Count>
+        <img src={line}
+          class="img_line"></img>
+        <Count>{c}/ </Count>
         <Pass>{Cpass} Pass</Pass>
-        <Time>{timeResult} 초 </Time>
+        <Time>{timeResult}</Time>
       </Flex>
     );
     let Dscore = (
       <Flex row>
         <Alpha>D</Alpha>
         <Team>팀 </Team>
-        <Count>{d} 맞음 </Count>
+        <img src={line}
+          class="img_line"></img>
+        <Count>{d}/</Count>
         <Pass> {Dpass} Pass</Pass>
-        <Time>{timeResult} 초 </Time>
+        <Time>{timeResult} </Time>
       </Flex>
     );
     let Escore = (
       <Flex row>
         <Alpha>E</Alpha>
         <Team>팀 </Team>
-        <Count>{e} 맞음 </Count>
+        <img src={line}
+          class="img_line"></img>
+        <Count>{e}/ </Count>
         <Pass>{Epass} Pass</Pass>
-        <Time>{timeResult} 초</Time>
+        <Time>{timeResult}</Time>
       </Flex>
     );
 
@@ -265,6 +289,12 @@ class Result extends Component {
           <Text>RESULT SCORE</Text>
           <Container>
             <Flex center column>
+              <Flex row>
+                <Title>NAME</Title>
+                <Title>SCORE</Title>
+                <Title>TIME</Title>
+
+              </Flex>
               {Ascore}
               {Bscore}
               {Cscore}

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import arrow from '../../img/icon_scrolldownarrow.png';
 import axios from 'axios';
 import { URL } from '../url';
+
 class Setting extends Component {
   state = {
     easy: '',

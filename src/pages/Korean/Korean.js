@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Line } from 'rc-progress';
 // import 'rc-progress/assets/index.css';
+import '../Css/Progress.css'
 const korean = [
   'ㄱ',
   'ㄴ',
@@ -303,18 +304,12 @@ class Korean extends Component {
           </div>
         </div>
 
-        <Line
-          strokeWidth="2"
-          trailWidth="2"
-          percent={this.state.time}
-          strokeLinecap="square"
-          trailColor="rgba(255,255,255,0.05)"
-        />
+        <Line strokeWidth="2" trailWidth="2" percent={this.state.time} strokeLinecap="square" trailColor="rgba(255,255,255,0.05)" />
 
         {/* 개발편의상 스코어 남겨두었음 */}
         <Link to="/score">
           <button className="btn score" onClick={this.gameEnd}>
-            결과 바로보기
+            score
           </button>
         </Link>
       </div>
