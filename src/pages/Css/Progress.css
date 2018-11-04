@@ -1,0 +1,8 @@
+.rc-progress-line-path{
+  stroke:
+  #150e35;
+}
+.rc-progress-line{
+  margin-top: 3%;
+  background: linear-gradient(to right, #7fe5ce, #fe565d);
+}

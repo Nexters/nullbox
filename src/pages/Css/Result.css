@@ -1,0 +1,38 @@
+.flex-citwDR gtvXcH{
+ padding: 4%;
+}
+
+.sc-gzVnrw gQjqQm{
+  font-size: 28px;
+}
+.gQjqQm {
+  font-size: 28px;
+  margin-top: 5%;
+}
+.cMZjny{
+  margin-left: 7%;
+}
+
+.gcEEPi{
+  padding-top: 21px;
+  margin-left: 7%;
+}
+.img_line {
+  width: 400px;
+  height: 4px;
+  object-fit: contain;
+  border-style: solid;
+  border-width: 2px;
+  border-image-source: linear-gradient(to right, #7fe5ce, #fe565d);
+  border-image-slice: 1;
+  margin-top: 6%;
+  margin-left: 2%;
+
+}
+.jOkSoX:first-of-type{
+  margin-right: 139%;
+  margin-left: -61%;
+}
+.jOkSoX:first-of-type+p{
+ margin-right: 21%;
+}
