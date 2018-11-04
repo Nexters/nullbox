@@ -188,7 +188,7 @@ class Score extends Component {
             <div className="TimeScore">{timeResult}</div>
             <div className="btn-next-home">
               <Link to="/">
-                <div>
+                <div className="icon">
                   <img src={ic_home} width="40vh" alt="" />
                 </div>
                 홈으로

@@ -487,6 +487,25 @@ a:hover {
   background-color: #242348;
 }
 
+.radio-items {
+  width: 100%;
+}
+
+.category-button {
+  display: inline-block;
+  width: 60vw;
+  text-align: center;
+}
+
+.checkbox {
+  width: 10vw;
+  border: none;
+  background: none;
+  padding: 0px;
+  vertical-align: middle;
+  margin-top: 0.5vh;
+}
+
 .checkmark {
   position: absolute;
   top: 0;
@@ -543,7 +562,7 @@ a:hover {
   padding: 1vh;
   width: 12.5vw;
   height: 5vh;
-  margin: 0.5vw;
+  margin: 0vw;
   object-fit: contain;
 }
 
@@ -556,24 +575,29 @@ a:hover {
 .container-select {}
 
 .btn-fill {
-  width: 30vw;
-  height: 5vh;
-  padding: 0;
   display: inline-block;
   color: #fff;
-  font-size: 1.8em;
+  font-size: 1.3em;
+  font-weight: 500;
+  padding: 1vh;
+  width: 10vw;
+  height: 5vh;
+  margin: 0.5vw;
+  background-color: none;
   text-align: center;
-  vertical-align: middle;
-  border-radius: 4px;
-  background-color: #403e70;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-  vertical-align: middle;
+  object-fit: contain;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
+
 .select {
-  width: 15vw;
-  height: 5vh;
-  background-color: #403e70;
+  background-color: none;
 }
 
 .select:hover {
@@ -720,11 +744,4 @@ a:hover {
   stroke: #0d062e;
   position: absolute;
   bottom: 5vw;
-}
-
-.checkbox {
-  border: none;
-  background: none;
-  vertical-align: middle;
-  margin-top: 0.5%;
 }

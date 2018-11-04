@@ -4,7 +4,7 @@ import { Line } from 'rc-progress';
 import { list } from '../../../node_modules/postcss';
 import axios from 'axios';
 import { URL } from '../url';
-import '../Css/Progress.css'
+import '../Css/Progress.css';
 class Speed extends Component {
   state = {
     index: 0,
@@ -289,8 +289,10 @@ class Speed extends Component {
 
     let pass = '';
     let start = (
-      <button className="start word-title" onClick={this.start}>
+      <button className="start intro-title" onClick={this.start}>
         {teamName}팀 시작하기
+        <br />
+        <div className="intro-title-sub">누르면 시작합니다.</div>
       </button>
     );
 

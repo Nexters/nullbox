@@ -25,10 +25,10 @@ class Setting extends Component {
     let target = event.target;
     let id = target.id;
 
-    if (target.style.color === 'yellow') {
+    if (target.style.color === 'color: #f9b0b0') {
       target.style.color = '';
     } else {
-      target.style = 'color : yellow';
+      target.style = 'color : #f9b0b0';
     }
   };
 
@@ -37,10 +37,10 @@ class Setting extends Component {
     let target = event.target;
     let id = target.id;
 
-    if (target.style.color === 'yellow') {
+    if (target.style.color === 'color : #f9b0b0') {
       target.style.color = '';
     } else {
-      target.style = 'color : yellow';
+      target.style = 'color : #f9b0b0';
     }
   };
 
@@ -49,10 +49,10 @@ class Setting extends Component {
     let target = event.target;
     let id = target.id;
 
-    if (target.style.color === 'yellow') {
+    if (target.style.color === 'color: #f9b0b0') {
       target.style.color = '';
     } else {
-      target.style = 'color : yellow';
+      target.style = 'color : #f9b0b0';
     }
   };
 
@@ -243,9 +243,9 @@ class Setting extends Component {
               </div>
               {selectTeam}
               {selectTime}
-              <div className="next-btn">
+              <section class="radio-items">
                 <div className="category-button">{category}</div>
-              </div>
+              </section>
             </div>
           </div>
           <div className="btn-next">
