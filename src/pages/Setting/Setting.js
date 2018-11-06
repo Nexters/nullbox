@@ -275,11 +275,15 @@ class Setting extends Component {
               </div>
               {selectTeam}
               {selectTime}
-              <div className="home-button">
-                <button className="btn-fill" onClick={this.game1.bind(this)}>
+              <div className="radio-items">
+                <button
+                  className="btn-fill level"
+                  onClick={this.game1.bind(this)}>
                   쉬움
                 </button>
-                <button className="btn-fill" onClick={this.game2.bind(this)}>
+                <button
+                  className="btn-fill level"
+                  onClick={this.game2.bind(this)}>
                   어려움
                 </button>
               </div>

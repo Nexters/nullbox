@@ -541,12 +541,12 @@ a:hover {
 }
 
 .btn-radio .checkmark:after {
-  left: 9px;
-  top: 5px;
-  width: 5px;
-  height: 10px;
-  border: solid #2196F3;
-  border-width: 0 3px 3px 0;
+  left: 10px;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  border: solid #30b9a0;
+  border-width: 0 4px 4px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
@@ -562,7 +562,7 @@ a:hover {
   text-align: center;
   vertical-align: middle;
   padding: 1vh;
-  width: 12.5vw;
+  width: 12vw;
   height: 5vh;
   margin: 0vw;
   object-fit: contain;
@@ -597,6 +597,38 @@ a:hover {
   user-select: none;
 }
 
+.level {
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  font-size: 1.3em;
+  text-align: center;
+  vertical-align: middle;
+  padding: 1vh;
+  left: 1vh;
+  width: 21vw;
+  height: 6vh;
+  margin: 5vh 0.5vw;
+  border-radius: 4px;
+  border-color: #403e70;
+  background-color: #403e70;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.level input:checked~.checkmark {
+  color: #fff;
+  padding: 1vh;
+  width: 10vw;
+  height: 5vh;
+  object-fit: contain;
+  border-radius: 4px;
+  border-color: white;
+}
 
 .select {
   background-color: none;
