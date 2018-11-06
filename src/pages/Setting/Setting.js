@@ -248,11 +248,11 @@ class Setting extends Component {
               </section>
             </div>
           </div>
-          <div className="btn-next">
+          <div className="btn-ready">
             <Link to="/speed" onClick={this.speed}>
               준비하기
               <div>
-                <img src={arrow} alt="" />
+                <img src={arrow} alt="arrow" />
               </div>
             </Link>
           </div>
@@ -283,7 +283,7 @@ class Setting extends Component {
                   어려움
                 </button>
               </div>
-              <div className="btn-next">
+              <div className="btn-ready">
                 <Link to="/Brand" onClick={this.brand}>
                   준비하기
                   <div>
@@ -313,11 +313,11 @@ class Setting extends Component {
               </div>
               {selectTeam}
               {selectTime}
-              <div className="btn-next">
+              <div className="btn-ready">
                 <Link to="/korean" onClick={this.korean}>
                   준비하기
                   <div>
-                    <img src={arrow} alt="" />
+                    <img src={arrow} alt="arrow" />
                   </div>
                 </Link>
               </div>

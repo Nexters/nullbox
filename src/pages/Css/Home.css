@@ -5,7 +5,7 @@ h1 {
   text-align: center;
   color: #2eb299;
   letter-spacing: 2px;
-  margin: 3vh 0 8vh;
+  margin: 3vh 0 6vh;
 }
 
 h4 {
@@ -299,29 +299,31 @@ margin-left: 3vh; */
   bottom: 0;
 }
 
-.btn-next {
+.btn-ready {
   display: block;
   width: 20vh;
-  height: 5vw;
+  height: 8vw;
+  background-color: rgb(36, 35, 72, 0.1);
+  border-radius: 6px;
   text-align: center;
   margin: 0 auto;
+  padding-bottom: 1vh;
   font-size: 1.2em;
-  font-weight: bold;
   font-style: normal;
   color: #7fe5ce;
   font-size: 1.5em;
   line-height: 2em;
   font-weight: 600;
   letter-spacing: normal;
-  position: absolute;
+  position: fixed;
   align: center;
   left: 50%;
-  bottom: 2vw;
+  bottom: -3vh;
   margin-left: -10vh;
 }
 
-.btn-next:hover {
-  font: white;
+.btn-ready:hover {
+  border: solid 2px #30b9a0;
 }
 
 .btn-next-team {
@@ -427,8 +429,7 @@ a:hover {
 
 .game-name {
   width: 100%;
-  margin-top: 15vh;
-  font-family: NotoSansCJKkr;
+  margin-top: 12vh;
   font-size: 1.5em;
   text-align: center;
   display: flex;
@@ -495,6 +496,7 @@ a:hover {
   display: inline-block;
   width: 60vw;
   text-align: center;
+  margin: 5vh 0 15vh;
 }
 
 .checkbox {
