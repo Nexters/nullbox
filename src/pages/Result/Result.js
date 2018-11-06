@@ -145,7 +145,7 @@ class Result extends Component {
     time: 0,
   };
 
-  showResult = () => {};
+  showResult = () => { };
 
   render() {
     let time = localStorage.getItem('time');
@@ -176,7 +176,6 @@ class Result extends Component {
     const { word } = this.state;
     let score = localStorage.getItem('score');
     let game = localStorage.getItem('game');
-    console.log(game);
 
     let result = <Link to="/Setting/스피드게임">스피드퀴즈 한번 더하기</Link>;
 

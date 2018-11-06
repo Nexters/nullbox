@@ -25,7 +25,7 @@ class Setting extends Component {
     let target = event.target;
     let id = target.id;
 
-    if (target.style.color === 'color: #f9b0b0') {
+    if (target.style.color === 'rgb(249, 176, 176)') {
       target.style.color = '';
     } else {
       target.style = 'color : #f9b0b0';
@@ -37,10 +37,12 @@ class Setting extends Component {
     let target = event.target;
     let id = target.id;
 
-    if (target.style.color === 'color : #f9b0b0') {
+    if (target.style.color === 'rgb(249, 176, 176)') {
       target.style.color = '';
+      target.nextSibling.style = 'color : #f9b0b0';
     } else {
       target.style = 'color : #f9b0b0';
+      target.nextSibling.style = '';
     }
   };
 
@@ -49,10 +51,12 @@ class Setting extends Component {
     let target = event.target;
     let id = target.id;
 
-    if (target.style.color === 'color: #f9b0b0') {
+    if (target.style.color === 'rgb(249, 176, 176)') {
       target.style.color = '';
+      target.previousSibling.style = 'color : #f9b0b0';
     } else {
       target.style = 'color : #f9b0b0';
+      target.previousSibling.style = '';
     }
   };
 
@@ -61,11 +65,12 @@ class Setting extends Component {
     localStorage.setItem('j', this.state.team);
     localStorage.setItem('t', 1);
 
-    var arr = document.querySelectorAll('.btn-fill select');
+    var arr = document.querySelectorAll('.btn-fill');
     let i = this.state.categoryId;
 
     for (var j = 0; j < arr.length; j++) {
-      if (arr[j].style.color === 'yellow') {
+
+      if (arr[j].style.color === 'rgb(249, 176, 176)') {
         if (i == '') {
           i += arr[j].id;
         } else {
