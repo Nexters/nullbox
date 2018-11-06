@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../Css/Score.css';
 import ic_home from '../../img/ic_home.png';
+import arrow from '../../img/icon_scrolldownarrow.png';
 import ic_rightarrow from '../../img/ic_rightarrow.png';
 
 class Score extends Component {
@@ -122,7 +123,7 @@ class Score extends Component {
       result = (
         <div className="btn-next-result">
           <Link to="/Result">
-            <div>
+            <div className="icon">
               <img src={ic_rightarrow} width="24vh" alt="" />
             </div>
             결과보기

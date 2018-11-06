@@ -620,8 +620,13 @@ a:hover {
   user-select: none;
 }
 
+.level:hover {
+  border-color: #fff;
+}
+
+
 .level input:checked~.checkmark {
-  color: #fff;
+  background-color: #2eb299;
   padding: 1vh;
   width: 10vw;
   height: 5vh;

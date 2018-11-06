@@ -2,8 +2,10 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Flex from 'styled-flex-component';
-import '../Css/Result.css'
+import '../Css/Result.css';
 import line from './../../img/img_line.png';
+import ic_home from '../../img/ic_home.png';
+
 const Text = styled.p`
   font-family: NotoSansCJKkr;
   font-size: 20px;
@@ -143,7 +145,7 @@ class Result extends Component {
     time: 0,
   };
 
-  showResult = () => { };
+  showResult = () => {};
 
   render() {
     let time = localStorage.getItem('time');
@@ -202,8 +204,7 @@ class Result extends Component {
       <Flex row>
         <Alpha>A</Alpha>
         <Team>팀 </Team>
-        <img src={line}
-          class="img_line"></img>
+        <img src={line} class="img_line" />
         <Count>{a}/ </Count>
         <Pass> {Apass} Pass</Pass>
         <Time>{timeResult}</Time>
@@ -214,8 +215,7 @@ class Result extends Component {
       <Flex row>
         <Alpha>B</Alpha>
         <Team>팀 </Team>
-        <img src={line}
-          class="img_line"></img>
+        <img src={line} class="img_line" />
         <Count>{b}/</Count>
         <Pass> {Bpass} Pass</Pass>
         <Time>{timeResult} </Time>
@@ -225,8 +225,7 @@ class Result extends Component {
       <Flex row>
         <Alpha>C</Alpha>
         <Team>팀 </Team>
-        <img src={line}
-          class="img_line"></img>
+        <img src={line} class="img_line" />
         <Count>{c}/ </Count>
         <Pass>{Cpass} Pass</Pass>
         <Time>{timeResult}</Time>
@@ -236,8 +235,7 @@ class Result extends Component {
       <Flex row>
         <Alpha>D</Alpha>
         <Team>팀 </Team>
-        <img src={line}
-          class="img_line"></img>
+        <img src={line} class="img_line" />
         <Count>{d}/</Count>
         <Pass> {Dpass} Pass</Pass>
         <Time>{timeResult} </Time>
@@ -247,8 +245,7 @@ class Result extends Component {
       <Flex row>
         <Alpha>E</Alpha>
         <Team>팀 </Team>
-        <img src={line}
-          class="img_line"></img>
+        <img src={line} class="img_line" />
         <Count>{e}/ </Count>
         <Pass>{Epass} Pass</Pass>
         <Time>{timeResult}</Time>
@@ -293,7 +290,6 @@ class Result extends Component {
                 <Title>NAME</Title>
                 <Title>SCORE</Title>
                 <Title>TIME</Title>
-
               </Flex>
               {Ascore}
               {Bscore}
@@ -304,8 +300,8 @@ class Result extends Component {
 
             <div className="btn-next-home">
               <Link to="/">
-                <div>
-                  <img src="/../../../img/ic-home.png" alt="" />
+                <div className="icon">
+                  <img src={ic_home} width="40vh" alt="" />
                 </div>
                 홈으로
               </Link>
