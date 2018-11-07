@@ -22,7 +22,6 @@ class Speed extends Component {
 
   componentDidMount() {
     let id = localStorage.getItem('category');
-    console.log(id);
 
     const url = URL;
     if (id === '') {
@@ -137,7 +136,7 @@ class Speed extends Component {
 
   render() {
     const { word } = this.state;
-    console.log(this.state.setTime);
+
     let firwork = (
       <svg
         xmlns="http://www.w3.org/2000/svg"

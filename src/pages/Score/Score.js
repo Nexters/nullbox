@@ -13,7 +13,7 @@ class Score extends Component {
     i: 0,
   };
 
-  showResult = () => {};
+  showResult = () => { };
 
   gameEnd = () => {
     let pass = localStorage.getItem('pass');
@@ -77,7 +77,6 @@ class Score extends Component {
     let historyResult3 = [];
     let historyResult4 = [];
     for (var i = 0; i < arr1.length; i++) {
-      console.log(arr2.indexOf(arr1[i]));
       if (arr2.indexOf(arr1[i]) === -1) {
         historyResult[i] = <p className="history1">{arr1[i]}</p>;
       } else {
@@ -165,7 +164,7 @@ class Score extends Component {
       teamName = 'E';
     }
     team -= 1;
-    console.log(team);
+
 
     localStorage.setItem('j', team);
 
@@ -175,7 +174,7 @@ class Score extends Component {
 
     if (localStorage.getItem('game') === '브랜드이름') {
       let brand = localStorage.getItem('history');
-      console.log('do');
+
       return (
         <div className="container-score">
           <div className="score-word">Score</div>
