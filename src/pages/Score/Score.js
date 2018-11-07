@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import '../Css/Score.css';
+import '../Css/Home.css';
+import '../Css/Firework.css';
 import ic_home from '../../img/ic_home.png';
 import arrow from '../../img/icon_scrolldownarrow.png';
 import ic_rightarrow from '../../img/ic_rightarrow.png';
@@ -175,8 +177,8 @@ class Score extends Component {
       let brand = localStorage.getItem('history');
       console.log('do');
       return (
-        <div className="scoreScore">
-          <div className="headerScore">Score</div>
+        <div className="container-score">
+          <div className="score-word">Score</div>
 
           <div className="mainScore">
             <div className="wordBoxScoreBrand">
@@ -184,7 +186,7 @@ class Score extends Component {
             </div>
           </div>
 
-          <div className="containerScore">
+          <div className="container-score">
             <div className="countScore">{count}</div>
             <div className="TimeScore">{timeResult}</div>
             <div className="btn-next-home">
@@ -208,8 +210,8 @@ class Score extends Component {
       localStorage.setItem('score', score);
 
       return (
-        <div className="scoreScore">
-          <div className="headerScore">Score</div>
+        <div className="container-score">
+          <div className="score-word">Score</div>
 
           <div className="mainScore">
             <div className="wordBoxScore">{historyResult1}</div>
@@ -217,7 +219,7 @@ class Score extends Component {
             <div className="wordBoxScore">{historyResult3}</div>
           </div>
 
-          <div className="containerScore">
+          <div className="container-score">
             <div className="countScore">{score}</div>
             <div className="TimeScore">{timeResult}</div>
             <div className="navScore">
