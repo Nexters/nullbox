@@ -176,15 +176,15 @@ class Score extends Component {
 
       return (
         <div className="container-score">
-          <div className="score-word">Score</div>
+          <div className="score-word">score</div>
 
           <div className="score-box-main">
-            <div className="score-answer-box">
+            <div className="score-answer-box-brand">
               <p className="score-brand-name">{brand}</p>;
             </div>
           </div>
 
-          <div className="container-score">
+          <div className="container-score-nav">
             <div className="score-count">{count}</div>
             <div className="score-time">{timeResult}</div>
             <div className="btn-next-home">
@@ -209,7 +209,7 @@ class Score extends Component {
 
       return (
         <div className="container-score">
-          <div className="score-word">Score</div>
+          <div className="score-word">score</div>
 
           <div className="score-box-main">
             <div className="score-answer-box">{historyResult1}</div>

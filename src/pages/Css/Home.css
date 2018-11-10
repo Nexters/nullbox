@@ -697,12 +697,13 @@ a:hover {
 }
 
 .score-brand-name {
-  display: block;
-  width: 10vw;
+  display: inline;
+  flex-direction: row;
+  width: 40vw;
   height: 5vh;
   opacity: 0.9;
   font-family: BlackHanSans;
-  font-size: 10em;
+  font-size: 5em;
   font-weight: 900;
   font-style: normal;
   font-stretch: normal;
@@ -713,7 +714,6 @@ a:hover {
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
   -webkit-text-stroke: 1px #7fe5ce;
   text-align: center;
-  display: table-header-group;
 }
 
 /* game font */
@@ -835,12 +835,19 @@ a:hover {
   height: 80vh;
   display: inline-block;
   text-align: right;
-  border: 1px solid black;
   justify-content: center;
   flex-direction: column;
   border: none;
 }
 
+.score-answer-box-brand {
+  width: 50vw;
+  height: 80vh;
+  text-align: center;
+  margin-top: 50vh;
+  display: inline-block;
+  justify-content: center;
+}
 
 /**************** container **************/
 
