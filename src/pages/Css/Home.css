@@ -658,54 +658,61 @@ a:hover {
   color: #e8f8f5;
 }
 
-.history {
-  width: 122px;
-  height: 70px;
+.history-correct {
+  display: block;
+  width: 10vw;
+  height: 5vh;
   opacity: 0.9;
   font-family: BlackHanSans;
-  font-size: 70px;
-  font-weight: normal;
+  font-size: 4em;
+  font-weight: 900;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
-  letter-spacing: 4.4px;
+  letter-spacing: 0;
   text-align: center;
-  color: #2eb299;
-  margin-right: 3%;
+  color: #a6faea;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 1px #7fe5ce;
+  text-align: center;
   display: table-header-group;
 }
 
-.history1 {
-  width: 123px;
-  height: 70px;
-  opacity: 0.7;
+.history-pass {
+  display: block;
+  width: 10vw;
+  height: 5vh;
+  opacity: 0.45;
   font-family: BlackHanSans;
-  font-size: 70px;
-  font-weight: normal;
+  font-size: 4em;
+  font-weight: 500;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
-  letter-spacing: 4.4px;
+  letter-spacing: 0;
   text-align: center;
   color: #ffffff;
-  margin-right: 3%;
+  text-shadow: 0 2px 3px rgba(255, 255, 255, 0.5);
   display: table-header-group;
 }
 
-.brandName {
-  width: 122px;
-  height: 70px;
+.score-brand-name {
+  display: block;
+  width: 10vw;
+  height: 5vh;
   opacity: 0.9;
   font-family: BlackHanSans;
   font-size: 10em;
-  font-weight: normal;
+  font-weight: 900;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
-  letter-spacing: 4.4px;
+  letter-spacing: 3px;
   text-align: center;
-  color: #2eb299;
-  margin-right: 3%;
+  color: #a6faea;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 1px #7fe5ce;
+  text-align: center;
   display: table-header-group;
 }
 
@@ -790,154 +797,85 @@ a:hover {
 /* score page */
 
 .container-score {
-  height: 100vh;
+  height: 90vh;
   width: 100vw;
   display: flex;
   flex-direction: row;
 }
 
+.container-score-nav {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
 .score-word {
-  height: 100vh;
-  width: 10vw;
-  font-size: 2em;
+  height: 90vh;
+  width: 20vw;
   color: #a6faea;
-  margin: 4vh;
-  color: white;
+  margin: 4vh 4vw;
   font-weight: 600;
   font-size: 3em;
 }
 
-
-.mainScore {
-  height: 100vh;
-  width: 55%;
+.score-box-main {
+  height: 90vh;
+  width: 50vw;
+  margin-top: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.containerScore {
-  height: 100vh;
-  width: 35%;
-  display: flex;
-  flex-direction: column;
-}
-
 /**************** main **************/
 
-.wordBoxScore {
-  width: 300px;
-  height: 80%;
-  display: inline;
+.score-answer-box {
+  width: 12vw;
+  height: 80vh;
+  display: inline-block;
+  text-align: right;
   border: 1px solid black;
   justify-content: center;
   flex-direction: column;
   border: none;
 }
 
-.wordTitleScore {
-  font-size: 4.6vh;
-  color: white;
-}
 
 /**************** container **************/
 
-.countScore {
-  width: 100%;
-  height: 50%;
+.score-count {
+  width: 30vw;
+  height: 30;
+  display: inline-block;
   font-size: 32.6vh;
   color: #f9b0b0;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   -webkit-text-stroke: 4px #fd575f;
   text-align: center;
-  margin-top: 10%;
+  vertical-align: bottom;
+  margin-top: 15vh;
 }
 
-.navScore {
+.score-nav {
   width: 100%;
   height: 50%;
   display: flex;
   flex-direction: row;
 }
 
-.homeScore {
-  width: 180px;
-  height: 180px;
-  border-radius: 6px;
-  background-color: #403e70;
-  background-color: var(--dusk);
-  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.75);
-  margin-right: 10%;
-  margin-left: 10%;
-}
-
-.nextScore {
-  width: 276px;
-  height: 180px;
-  object-fit: contain;
-  border-radius: 6px;
-  background-color: #403e70;
-  background-color: var(--dusk);
-  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.75);
-}
-
-/*******************************************/
-
-.homeTextScore {
-  width: 100px;
-  height: 31px;
-  opacity: 0.9;
+.score-time {
+  width: 30vw;
+  height: 10vh;
+  display: inline-block;
   font-family: NotoSansCJKkr;
-  font-size: 28px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.11;
-  letter-spacing: normal;
-  text-align: left;
-  color: #fff;
-  vertical-align: center;
-  margin-left: 26%;
-  margin-top: 60%;
-}
-
-.nextTextScore {
-  width: 230px;
-  height: 31px;
-  opacity: 0.9;
-  font-family: NotoSansCJKkr;
-  font-size: 28px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.11;
-  letter-spacing: normal;
-  text-align: left;
-  color: #ffffff;
-  margin-left: 10%;
-  margin-top: 40%;
-}
-
-.ic_home {
-  width: 51.8px;
-  height: 44px;
-  object-fit: contain;
-  opacity: 0.9;
-  background-color: #ffffff;
-}
-
-.TimeScore {
-  width: 143px;
-  height: 101px;
-  font-family: NotoSansCJKkr;
-  font-size: 68px;
-  font-weight: bold;
+  font-size: 4em;
+  font-weight: 900;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
-  letter-spacing: normal;
+  letter-spacing: 0.2em;
   text-align: center;
   color: #fd575f !important;
-  margin-left: 35%;
   color: var(--coral-pink-two);
 }

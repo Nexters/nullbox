@@ -13,7 +13,7 @@ class Score extends Component {
     i: 0,
   };
 
-  showResult = () => { };
+  showResult = () => {};
 
   gameEnd = () => {
     let pass = localStorage.getItem('pass');
@@ -78,9 +78,9 @@ class Score extends Component {
     let historyResult4 = [];
     for (var i = 0; i < arr1.length; i++) {
       if (arr2.indexOf(arr1[i]) === -1) {
-        historyResult[i] = <p className="history1">{arr1[i]}</p>;
+        historyResult[i] = <p className="history-correct">{arr1[i]}</p>;
       } else {
-        historyResult[i] = <p className="history">{arr1[i]}</p>;
+        historyResult[i] = <p className="history-pass">{arr1[i]}</p>;
       }
     }
 
@@ -165,7 +165,6 @@ class Score extends Component {
     }
     team -= 1;
 
-
     localStorage.setItem('j', team);
 
     t++;
@@ -179,15 +178,15 @@ class Score extends Component {
         <div className="container-score">
           <div className="score-word">Score</div>
 
-          <div className="mainScore">
-            <div className="wordBoxScoreBrand">
-              <p className="brandName">{brand}</p>;
+          <div className="score-box-main">
+            <div className="score-answer-box">
+              <p className="score-brand-name">{brand}</p>;
             </div>
           </div>
 
           <div className="container-score">
-            <div className="countScore">{count}</div>
-            <div className="TimeScore">{timeResult}</div>
+            <div className="score-count">{count}</div>
+            <div className="score-time">{timeResult}</div>
             <div className="btn-next-home">
               <Link to="/">
                 <div className="icon">
@@ -212,26 +211,24 @@ class Score extends Component {
         <div className="container-score">
           <div className="score-word">Score</div>
 
-          <div className="mainScore">
-            <div className="wordBoxScore">{historyResult1}</div>
-            <div className="wordBoxScore">{historyResult2}</div>
-            <div className="wordBoxScore">{historyResult3}</div>
+          <div className="score-box-main">
+            <div className="score-answer-box">{historyResult1}</div>
+            <div className="score-answer-box">{historyResult2}</div>
+            <div className="score-answer-box">{historyResult3}</div>
+            <div className="score-answer-box">{historyResult4}</div>
           </div>
-
-          <div className="container-score">
-            <div className="countScore">{score}</div>
-            <div className="TimeScore">{timeResult}</div>
-            <div className="navScore">
-              <div className="btn-next-home">
-                <Link to="/">
-                  <div className="icon">
-                    <img src={ic_home} width="40vh" alt="" />
-                  </div>
-                  홈으로
-                </Link>
-              </div>
-              {result}
+          <div className="container-score-nav">
+            <div className="score-count">{score}</div>
+            <div className="score-time">{timeResult}</div>
+            <div className="btn-next-home">
+              <Link to="/">
+                <div className="icon">
+                  <img src={ic_home} width="40vh" alt="" />
+                </div>
+                홈으로
+              </Link>
             </div>
+            {result}
           </div>
         </div>
       );
