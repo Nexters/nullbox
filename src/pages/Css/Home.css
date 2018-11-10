@@ -612,7 +612,7 @@ a:hover {
   border-radius: 4px;
   border-color: #403e70;
   background-color: #403e70;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 4px 0 rgba(26, 9, 9, 0.5);
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -636,7 +636,9 @@ a:hover {
 }
 
 .select {
-  background-color: none;
+  border-color: #fff;
+  font-size: 1.6em;
+  font-weight: 400;
 }
 
 .select:hover {

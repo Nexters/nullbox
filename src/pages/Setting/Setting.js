@@ -69,7 +69,6 @@ class Setting extends Component {
     let i = this.state.categoryId;
 
     for (var j = 0; j < arr.length; j++) {
-
       if (arr[j].style.color === 'rgb(249, 176, 176)') {
         if (i == '') {
           i += arr[j].id;
