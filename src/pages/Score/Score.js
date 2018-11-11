@@ -6,6 +6,7 @@ import '../Css/Firework.css';
 import ic_home from '../../img/ic_home.png';
 import arrow from '../../img/icon_scrolldownarrow.png';
 import ic_rightarrow from '../../img/ic_rightarrow.png';
+import ic_time_red from '../../img/ic-time-red.png';
 
 class Score extends Component {
   state = {
@@ -219,7 +220,10 @@ class Score extends Component {
           </div>
           <div className="container-score-nav">
             <div className="score-count">{score}</div>
-            <div className="score-time">{timeResult}</div>
+            <div className="score-time">
+              <img src={ic_time_red} width="50vw" alt="" />
+              {timeResult}
+            </div>
             <div className="btn-next-home">
               <Link to="/">
                 <div className="icon">

@@ -51,7 +51,8 @@ margin-left: 3vh; */
 .line {
   width: 80%;
   height: 5px;
-  background-image: linear-gradient(to right, #fe565d, #7fe5ce), linear-gradient(307deg, #fe565d, #7fe5ce);
+  background-image: linear-gradient(to right, #fe565d, #7fe5ce),
+    linear-gradient(307deg, #fe565d, #7fe5ce);
   margin: 10vh;
 }
 
@@ -63,7 +64,6 @@ margin-left: 3vh; */
   justify-content: center;
   object-fit: contain;
 }
-
 
 .container-main {
   display: flex;
@@ -265,7 +265,6 @@ margin-left: 3vh; */
 .score:hover {
   border: solid 5px #fe565d;
 }
-
 
 .btn-more {
   width: 40vh;
@@ -483,7 +482,7 @@ a:hover {
   width: 0;
 }
 
-.btn-radio:hover input~.checkmark {
+.btn-radio:hover input ~ .checkmark {
   color: #fff;
   background-color: #242348;
 }
@@ -519,7 +518,7 @@ a:hover {
   opacity: 0.5;
 }
 
-.btn-radio input:checked~.checkmark {
+.btn-radio input:checked ~ .checkmark {
   color: #fff;
   padding: 1vh;
   width: 10vw;
@@ -530,14 +529,13 @@ a:hover {
 }
 
 .checkmark:after {
-  content: "";
+  content: '';
   position: absolute;
   display: none;
 }
 
-.btn-radio input:checked~.checkmark:after {
+.btn-radio input:checked ~ .checkmark:after {
   display: block;
-
 }
 
 .btn-radio .checkmark:after {
@@ -550,7 +548,6 @@ a:hover {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-
 }
 
 /* ratio buttion class */
@@ -574,7 +571,8 @@ a:hover {
   height: 100%;
 }
 
-.container-select {}
+.container-select {
+}
 
 .btn-fill {
   display: inline-block;
@@ -624,8 +622,7 @@ a:hover {
   border-color: #fff;
 }
 
-
-.level input:checked~.checkmark {
+.level input:checked ~ .checkmark {
   background-color: #2eb299;
   padding: 1vh;
   width: 10vw;
@@ -730,7 +727,6 @@ a:hover {
   -webkit-text-fill-color: #ff9594;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #ff1722;
-
 }
 
 .intro-title {
@@ -745,7 +741,6 @@ a:hover {
   -webkit-text-stroke-color: #ff1722;
   line-height: 1.5em;
   padding: 10vh 0 0;
-
 }
 
 .intro-title-sub {
@@ -810,6 +805,7 @@ a:hover {
   width: 100vw;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .score-word {
@@ -855,15 +851,16 @@ a:hover {
 
 .score-count {
   width: 30vw;
-  height: 30;
+  height: 30vh;
   display: inline-block;
-  font-size: 32.6vh;
+  font-size: 12em;
+  font-weight: 900;
   color: #f9b0b0;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
   -webkit-text-stroke: 4px #fd575f;
   text-align: center;
   vertical-align: bottom;
-  margin-top: 15vh;
+  margin-top: 20vh;
 }
 
 .score-nav {
@@ -883,8 +880,12 @@ a:hover {
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   text-align: center;
   color: #fd575f !important;
   color: var(--coral-pink-two);
+}
+
+.score-time img {
+  margin: 0 20px;
 }
