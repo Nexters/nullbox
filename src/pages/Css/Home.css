@@ -369,6 +369,11 @@ margin-left: 3vh; */
   bottom: 4vw;
 }
 
+.end-game {
+  right: 8vw;
+  bottom: 4vw;
+}
+
 .btn-next-result {
   color: #fff;
   width: 12vw;
@@ -811,6 +816,15 @@ a:hover {
 .score-word {
   height: 90vh;
   width: 20vw;
+  color: #a6faea;
+  margin: 4vh 4vw;
+  font-weight: 600;
+  font-size: 3em;
+}
+
+.result-word {
+  height: 90vh;
+  width: 10vw;
   color: #a6faea;
   margin: 4vh 4vw;
   font-weight: 600;

@@ -145,7 +145,7 @@ class Result extends Component {
     time: 0,
   };
 
-  showResult = () => { };
+  showResult = () => {};
 
   render() {
     let time = localStorage.getItem('time');
@@ -282,11 +282,11 @@ class Result extends Component {
     return (
       <Fragment>
         <Flex full columsn>
-          <Text>RESULT SCORE</Text>
+          <div className="result-word">result</div>
           <Container>
             <Flex center column>
               <Flex row>
-                <Title>NAME</Title>
+                <Title>TEAM</Title>
                 <Title>SCORE</Title>
                 <Title>TIME</Title>
               </Flex>
@@ -297,7 +297,7 @@ class Result extends Component {
               {Escore}
             </Flex>
 
-            <div className="btn-next-home">
+            <div className="btn-next-home end-game">
               <Link to="/">
                 <div className="icon">
                   <img src={ic_home} width="40vh" alt="" />

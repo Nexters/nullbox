@@ -187,7 +187,10 @@ class Score extends Component {
 
           <div className="container-score-nav">
             <div className="score-count">{count}</div>
-            <div className="score-time">{timeResult}</div>
+            <div className="score-time">
+              <img src={ic_time_red} width="50vw" alt="" />
+              {timeResult}
+            </div>
             <div className="btn-next-home">
               <Link to="/">
                 <div className="icon">
