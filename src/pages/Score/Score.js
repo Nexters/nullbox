@@ -14,7 +14,7 @@ class Score extends Component {
     i: 0,
   };
 
-  showResult = () => {};
+  showResult = () => { };
 
   gameEnd = () => {
     let pass = localStorage.getItem('pass');
@@ -199,6 +199,7 @@ class Score extends Component {
                 홈으로
               </Link>
             </div>
+            {result}
           </div>
         </div>
       );
