@@ -14,7 +14,7 @@ class Score extends Component {
     i: 0,
   };
 
-  showResult = () => { };
+  showResult = () => {};
 
   gameEnd = () => {
     let pass = localStorage.getItem('pass');
@@ -112,7 +112,7 @@ class Score extends Component {
       result = (
         <div className="btn-next-team">
           <Link to="/Brand">
-            <div>
+            <div className="icon">
               <img src={ic_rightarrow} width="24vh" alt="" />
             </div>
             다음팀 시작하기

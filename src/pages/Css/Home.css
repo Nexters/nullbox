@@ -487,7 +487,7 @@ a:hover {
   width: 0;
 }
 
-.btn-radio:hover input ~ .checkmark {
+.btn-radio:hover input~.checkmark {
   color: #fff;
   background-color: #242348;
 }
@@ -523,7 +523,7 @@ a:hover {
   opacity: 0.5;
 }
 
-.btn-radio input:checked ~ .checkmark {
+.btn-radio input:checked~.checkmark {
   color: #fff;
   padding: 1vh;
   width: 10vw;
@@ -539,7 +539,7 @@ a:hover {
   display: none;
 }
 
-.btn-radio input:checked ~ .checkmark:after {
+.btn-radio input:checked~.checkmark:after {
   display: block;
 }
 
@@ -576,8 +576,7 @@ a:hover {
   height: 100%;
 }
 
-.container-select {
-}
+.container-select {}
 
 .btn-fill {
   display: inline-block;
@@ -627,7 +626,7 @@ a:hover {
   border-color: #fff;
 }
 
-.level input:checked ~ .checkmark {
+.level input:checked~.checkmark {
   background-color: #2eb299;
   padding: 1vh;
   width: 10vw;
