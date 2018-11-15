@@ -15,6 +15,7 @@ span.svg {
   align-items: center;
   z-index: -1;
 }
+
 span.svgGame {
   display: block;
   margin: auto;
@@ -28,12 +29,13 @@ span.svgGame {
   align-items: center;
   z-index: -1;
 }
+
 span.svgGame2 {
   display: block;
   margin: auto;
   margin-top: 16%;
   margin-left: 22%;
-    width: 39%;
+  width: 39%;
   height: 50vh;
   display: flex;
   position: fixed;
