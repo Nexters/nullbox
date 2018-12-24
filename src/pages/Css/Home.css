@@ -667,11 +667,11 @@ a:hover {
   height: 5vh;
   opacity: 0.9;
   font-family: BlackHanSans;
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: 900;
   font-style: normal;
   font-stretch: normal;
-  line-height: normal;
+  line-height: 1.4em;
   letter-spacing: 0;
   text-align: center;
   color: #a6faea;
@@ -687,11 +687,11 @@ a:hover {
   height: 5vh;
   opacity: 0.45;
   font-family: BlackHanSans;
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
-  line-height: normal;
+  line-height: 1.4em;
   letter-spacing: 0;
   text-align: center;
   color: #ffffff;
@@ -837,7 +837,6 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.8em;
 }
 
 /**************** main **************/
