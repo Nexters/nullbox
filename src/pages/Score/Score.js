@@ -14,7 +14,7 @@ class Score extends Component {
     i: 0,
   };
 
-  showResult = () => {};
+  showResult = () => { };
 
   gameEnd = () => {
     let pass = localStorage.getItem('pass');
@@ -79,9 +79,9 @@ class Score extends Component {
     let historyResult4 = [];
     for (var i = 0; i < arr1.length; i++) {
       if (arr2.indexOf(arr1[i]) === -1) {
-        historyResult[i] = <p className="history-correct">{arr1[i]}</p>;
-      } else {
         historyResult[i] = <p className="history-pass">{arr1[i]}</p>;
+      } else {
+        historyResult[i] = <p className="history-correct">{arr1[i]}</p>;
       }
     }
 
