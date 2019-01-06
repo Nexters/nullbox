@@ -14,7 +14,7 @@ class Score extends Component {
     i: 0,
   };
 
-  showResult = () => { };
+  showResult = () => {};
 
   gameEnd = () => {
     let pass = localStorage.getItem('pass');
@@ -73,7 +73,6 @@ class Score extends Component {
     var arr1 = history.split(',');
     var arr2 = success.split(',');
     let historyResult1 = [];
-
     let historyResult2 = [];
     let historyResult3 = [];
     let historyResult4 = [];

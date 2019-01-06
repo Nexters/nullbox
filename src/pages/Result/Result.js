@@ -2,143 +2,9 @@ import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Flex from 'styled-flex-component';
-import '../Css/Result.css';
+import '../Css/Home.css';
 import line from './../../img/img_line.png';
 import ic_home from '../../img/ic_home.png';
-
-const Text = styled.p`
-  font-family: NotoSansCJKkr;
-  font-size: 20px;
-  font-weight: 100;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: #a6faea;
-`;
-
-const Container = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-`;
-
-const Alpha = styled.p`
-  font-family: BlackHanSans;
-  font-size: 70px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: #f9b0b0;
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
-  -webkit-text-stroke: 1px #fd575f;
-  -webkit-text-stroke: 1px var(--coral-pink-two);
-`;
-
-const Team = styled.p`
-  font-family: BlackHanSans;
-  font-size: 70px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(135deg, #fd565f, #ff453a);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  -webkit-text-stroke: 1px #e65628;
-`;
-
-const Line = styled.div`
-  border-radius: 6px;
-  width: 30%;
-  border: solid 1px transparent;
-  background-image: linear-gradient(#fe565d, #7fe5ce),
-    linear-gradient(307deg, #fe565d, #7fe5ce);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-`;
-
-const Count = styled.p`
-  font-family: BlackHanSans;
-  font-size: 70px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: #a6faea;
-  color: var(--pale-turquoise);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  background-color: #a6faea;
-  background-color: var(--pale-turquoise);
-  -webkit-text-stroke: 2px #2eb299;
-`;
-const Pass = styled.p`
-  width: 48px;
-  height: 35px;
-  font-family: NotoSansCJKkr;
-  font-size: 70px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 0.88;
-  letter-spacing: normal;
-  text-align: center;
-  color: #7fe5ce;
-  color: var(--light - teal);
-  text-align: center;
-  margin-top: 13%;
-`;
-
-const Time = styled.p`
-  width: 102px;
-  height: 59px;
-  font-family: NotoSansCJKkr;
-  font-size: 40px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: #2eb299;
-`;
-
-const Button = styled.button`
-  width: 90px;
-  height: 90px;
-  border-radius: 6px;
-  background-color: #403e70;
-  justify-content: center;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-  font-size: 14px;
-`;
-const Title = styled.p`
-  width: 109px;
-  height: 59px;
-  font-family: NotoSansCJKkr;
-  font-size: 40px;
-  font-weight: 300;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: #2eb299;
-`;
-
-const ButtonBox = styled.div``;
 
 class Result extends Component {
   state = {
@@ -154,7 +20,7 @@ class Result extends Component {
 
     switch (time) {
       case '30':
-        timeResult = '30';
+        timeResult = '0:30';
         break;
       case '60':
         timeResult = '1:00';
@@ -201,53 +67,48 @@ class Result extends Component {
 
     let Ascore = (
       <Flex row>
-        <Alpha>A</Alpha>
-        <Team>팀 </Team>
+        <p className="result-team">A팀</p>
         <img src={line} class="img_line" />
-        <Count>{a}/ </Count>
-        <Pass> {Apass} Pass</Pass>
-        <Time>{timeResult}</Time>
+        <p className="result-count">{a}/ </p>
+        <p className="result-pass">{Apass} Pass</p>
+        <p className="result-time">{timeResult}</p>
       </Flex>
     );
 
     let Bscore = (
       <Flex row>
-        <Alpha>B</Alpha>
-        <Team>팀 </Team>
+        <p className="result-team">B팀</p>
         <img src={line} class="img_line" />
-        <Count>{b}/</Count>
-        <Pass> {Bpass} Pass</Pass>
-        <Time>{timeResult} </Time>
+        <p className="result-count">{b}/ </p>
+        <p className="result-pass">{Bpass} Pass</p>
+        <p className="result-time">{timeResult}</p>
       </Flex>
     );
     let Cscore = (
       <Flex row>
-        <Alpha>C</Alpha>
-        <Team>팀 </Team>
+        <p className="result-team">C팀</p>
         <img src={line} class="img_line" />
-        <Count>{c}/ </Count>
-        <Pass>{Cpass} Pass</Pass>
-        <Time>{timeResult}</Time>
+        <p className="result-count">{c}/ </p>
+        <p className="result-pass">{Cpass} Pass</p>
+        <p className="result-time">{timeResult}</p>
       </Flex>
     );
     let Dscore = (
       <Flex row>
-        <Alpha>D</Alpha>
-        <Team>팀 </Team>
+        <p className="result-team">D팀</p>
         <img src={line} class="img_line" />
-        <Count>{d}/</Count>
-        <Pass> {Dpass} Pass</Pass>
-        <Time>{timeResult} </Time>
+        <p className="result-count">{d}/ </p>
+        <p className="result-pass"> {Dpass} Pass</p>
+        <p className="result-time">{timeResult}</p>
       </Flex>
     );
     let Escore = (
       <Flex row>
-        <Alpha>E</Alpha>
-        <Team>팀 </Team>
+        <p className="result-team">E팀</p>
         <img src={line} class="img_line" />
-        <Count>{e}/ </Count>
-        <Pass>{Epass} Pass</Pass>
-        <Time>{timeResult}</Time>
+        <p className="result-count">{e}/ </p>
+        <p className="result-pass">{Epass} Pass</p>
+        <p className="result-time">{timeResult}</p>
       </Flex>
     );
 
@@ -283,12 +144,12 @@ class Result extends Component {
       <Fragment>
         <Flex full columsn>
           <div className="result-word">result</div>
-          <Container>
+          <div className="result-Container">
             <Flex center column>
               <Flex row>
-                <Title>TEAM</Title>
-                <Title>SCORE</Title>
-                <Title>TIME</Title>
+                <p className="result-title ra">TEAM</p>
+                <p className="result-title rb">SCORE</p>
+                <p className="result-title rc">TIME</p>
               </Flex>
               {Ascore}
               {Bscore}
@@ -305,7 +166,7 @@ class Result extends Component {
                 홈으로
               </Link>
             </div>
-          </Container>
+          </div>
         </Flex>
       </Fragment>
     );

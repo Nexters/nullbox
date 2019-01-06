@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import logo from './../../img/img_logo.png';
+import logo from './../../img/img_logo_m.png';
 import arrow from '../../img/icon_scrolldownarrow.png';
 import Flex, { FlexItem } from 'styled-flex-component';
 import '../Css/Home.css';
@@ -218,6 +218,11 @@ class Home extends Component {
                 </div>
               </Link>
             </div>
+
+            <p className="version-notice">
+              {' '}
+              플레이잇은 PC에 최적화 되었습니다. 큰 화면으로 이용해주세요.
+            </p>
 
             {/*<p className="btn-more">
                             더 많은 게임 보기</p>

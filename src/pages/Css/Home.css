@@ -266,6 +266,14 @@ margin-left: 3vh; */
   border: solid 5px #fe565d;
 }
 
+.version-notice {
+  color: gray;
+  text-align: center;
+  position: absolute;
+  bottom: 30px;
+  right: 150px;
+}
+
 .btn-more {
   width: 40vh;
   height: 5vw;
@@ -300,7 +308,7 @@ margin-left: 3vh; */
 
 .btn-ready {
   display: block;
-  width: 20vh;
+  width: 24vh;
   height: 8vw;
   background-color: rgb(36, 35, 72, 0.1);
   border-radius: 6px;
@@ -667,11 +675,11 @@ a:hover {
   height: 5vh;
   opacity: 0.9;
   font-family: BlackHanSans;
-  font-size: 2.5em;
-  font-weight: 900;
+  font-size: 2em;
+  font-weight: 600;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.4em;
+  line-height: 1.5em;
   letter-spacing: 0;
   text-align: center;
   color: #a6faea;
@@ -687,11 +695,11 @@ a:hover {
   height: 5vh;
   opacity: 0.45;
   font-family: BlackHanSans;
-  font-size: 2.5em;
-  font-weight: 500;
+  font-size: 2em;
+  font-weight: 400;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.4em;
+  line-height: 1.5em;
   letter-spacing: 0;
   text-align: center;
   color: #ffffff;
@@ -740,11 +748,16 @@ a:hover {
   text-shadow: -1px 0 ff1722, 0 1px ff1722, 1px 0 ff1722, 0 -1px ff1722;
   background-color: #0d032e;
   border-color: #0d032e;
+  border-radius: 2vh;
   -webkit-text-fill-color: #ff9594;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #ff1722;
   line-height: 1.5em;
   padding: 10vh 0 0;
+}
+
+.intro-title:hover {
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .intro-title-sub {
@@ -865,6 +878,7 @@ a:hover {
 .score-count {
   width: 30vw;
   height: 30vh;
+  margin-left: -40px;
   display: inline-block;
   font-size: 12em;
   font-weight: 900;
@@ -886,6 +900,7 @@ a:hover {
 .score-time {
   width: 30vw;
   height: 10vh;
+  margin-left: -40px;
   display: inline-block;
   font-family: NotoSansCJKkr;
   font-size: 4em;
@@ -901,4 +916,189 @@ a:hover {
 
 .score-time img {
   margin: 0 20px;
+}
+
+/**************** Result Temporary **************/
+
+.result-title {
+  width: 109px;
+  height: 60px;
+  font-family: NotoSansCJKkr;
+  font-size: 45px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2eb299;
+}
+
+.ra {
+  text-align: left;
+}
+
+.rb {
+  text-align: center;
+}
+
+.rc {
+  text-align: right;
+}
+
+
+.result-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.result-teamname {
+  font-family: BlackHanSans;
+  font-size: 70px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  vertical-align: middle;
+  color: #f9b0b0;
+  margin: 0 10px;
+}
+
+.result-line {
+  border-radius: 8px;
+  width: 30vh;
+  background-image: linear-gradient(#fe565d, #7fe5ce),
+    linear-gradient(307deg, #fe565d, #7fe5ce);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.result-team {
+  font-family: BlackHanSans;
+  font-size: 70px;
+  font-weight: normal;
+  font-style: 300;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 5px;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(135deg, #fd565f, #ff453a);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 1px #e65628;
+}
+
+.result-count {
+  font-family: BlackHanSans;
+  font-size: 70px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  letter-spacing: 5px;
+  color: #a6faea;
+  color: var(--light - teal);
+  -webkit-text-stroke: 2px #2eb299;
+}
+
+.result-pass {
+  width: 15vh;
+  height: 40px;
+  margin-top: 40px;
+  font-family: NotoSansCJKkr;
+  font-size: 2em;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 1em;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--pale-turquoise);
+  background-color: var(--pale-turquoise);
+  text-align: center;
+  -webkit-text-stroke: 1px #2eb299;
+}
+
+.result-time {
+  width: 20vw;
+  height: 10vh;
+  margin-top: 20px;
+  font-family: NotoSansCJKkr;
+  font-size: 2em;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: var(--pale-turquoise);
+  background-color: var(--pale-turquoise);
+  -webkit-text-stroke: 1px #2eb299;
+}
+
+.result-text {
+  font-family: NotoSansCJKkr;
+  font-size: 20px;
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #a6faea;
+}
+
+.img_line {
+  width: 400px;
+  height: 4px;
+  object-fit: contain;
+  border-style: solid;
+  border-width: 3px;
+  border-image-source: linear-gradient(to right, #7fe5ce, #fe565d);
+  border-image-slice: 1;
+  margin: 3vh 5vw;
+
+}
+
+/**************** Result.css **************/
+
+.flex-citwDR gtvXcH {
+  padding: 4%;
+}
+
+.sc-gzVnrw gQjqQm {
+  font-size: 28px;
+}
+
+.gQjqQm {
+  font-size: 28px;
+  margin-top: 5%;
+}
+
+.cMZjny {
+  margin-left: 7%;
+}
+
+.gcEEPi {
+  padding-top: 21px;
+  margin-left: 7%;
+}
+
+
+
+.jOkSoX:first-of-type {
+  margin-right: 139%;
+  margin-left: -61%;
+}
+
+.jOkSoX:first-of-type+p {
+  margin-right: 21%;
 }
