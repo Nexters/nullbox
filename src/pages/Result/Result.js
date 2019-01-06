@@ -65,12 +65,21 @@ class Result extends Component {
     let Dpass = localStorage.getItem('Dpass');
     let Epass = localStorage.getItem('Epass');
 
+    let Title = (
+      <Flex row>
+        <p className="result-empty-box1 result-title">TITLE</p>
+        <p className="result-empty-box2 " />
+        <p className="result-empty-box3 result-title">SCORE</p>
+        <p className="result-empty-box4 result-title">TIME</p>
+      </Flex>
+    );
+
     let Ascore = (
       <Flex row>
-        <p className="result-team">A팀</p>
+        <p className="result-team ">A팀</p>
         <img src={line} class="img_line" />
-        <p className="result-count">{a}/ </p>
-        <p className="result-pass">{Apass} Pass</p>
+        <p className="result-count">{a} </p>
+        <p className="result-pass">/ {Apass} Pass</p>
         <p className="result-time">{timeResult}</p>
       </Flex>
     );
@@ -79,8 +88,8 @@ class Result extends Component {
       <Flex row>
         <p className="result-team">B팀</p>
         <img src={line} class="img_line" />
-        <p className="result-count">{b}/ </p>
-        <p className="result-pass">{Bpass} Pass</p>
+        <p className="result-count">{b}</p>
+        <p className="result-pass">/ {Bpass} Pass</p>
         <p className="result-time">{timeResult}</p>
       </Flex>
     );
@@ -88,8 +97,8 @@ class Result extends Component {
       <Flex row>
         <p className="result-team">C팀</p>
         <img src={line} class="img_line" />
-        <p className="result-count">{c}/ </p>
-        <p className="result-pass">{Cpass} Pass</p>
+        <p className="result-count">{c}</p>
+        <p className="result-pass">/ {Cpass} Pass</p>
         <p className="result-time">{timeResult}</p>
       </Flex>
     );
@@ -97,8 +106,8 @@ class Result extends Component {
       <Flex row>
         <p className="result-team">D팀</p>
         <img src={line} class="img_line" />
-        <p className="result-count">{d}/ </p>
-        <p className="result-pass"> {Dpass} Pass</p>
+        <p className="result-count">{d}</p>
+        <p className="result-pass">/ {Dpass} Pass</p>
         <p className="result-time">{timeResult}</p>
       </Flex>
     );
@@ -106,8 +115,8 @@ class Result extends Component {
       <Flex row>
         <p className="result-team">E팀</p>
         <img src={line} class="img_line" />
-        <p className="result-count">{e}/ </p>
-        <p className="result-pass">{Epass} Pass</p>
+        <p className="result-count">{e}</p>
+        <p className="result-pass">/ {Epass} Pass</p>
         <p className="result-time">{timeResult}</p>
       </Flex>
     );
@@ -146,11 +155,7 @@ class Result extends Component {
           <div className="result-word">result</div>
           <div className="result-Container">
             <Flex center column>
-              <Flex row>
-                <p className="result-title ra">TEAM</p>
-                <p className="result-title rb">SCORE</p>
-                <p className="result-title rc">TIME</p>
-              </Flex>
+              {Title}
               {Ascore}
               {Bscore}
               {Cscore}

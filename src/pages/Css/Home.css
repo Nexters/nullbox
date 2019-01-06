@@ -921,8 +921,6 @@ a:hover {
 /**************** Result Temporary **************/
 
 .result-title {
-  width: 109px;
-  height: 60px;
   font-family: NotoSansCJKkr;
   font-size: 45px;
   font-weight: 300;
@@ -934,19 +932,6 @@ a:hover {
   color: #2eb299;
 }
 
-.ra {
-  text-align: left;
-}
-
-.rb {
-  text-align: center;
-}
-
-.rc {
-  text-align: right;
-}
-
-
 .result-Container {
   display: flex;
   justify-content: center;
@@ -954,23 +939,9 @@ a:hover {
   flex-direction: column;
 }
 
-.result-teamname {
-  font-family: BlackHanSans;
-  font-size: 70px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  vertical-align: middle;
-  color: #f9b0b0;
-  margin: 0 10px;
-}
-
 .result-line {
   border-radius: 8px;
-  width: 30vh;
+  width: 20vw;
   background-image: linear-gradient(#fe565d, #7fe5ce),
     linear-gradient(307deg, #fe565d, #7fe5ce);
   background-origin: border-box;
@@ -978,6 +949,7 @@ a:hover {
 }
 
 .result-team {
+  width: 10vw;
   font-family: BlackHanSans;
   font-size: 70px;
   font-weight: normal;
@@ -996,22 +968,22 @@ a:hover {
 }
 
 .result-count {
+  width: 5vw;
   font-family: BlackHanSans;
   font-size: 70px;
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
-  letter-spacing: normal;
   text-align: center;
-  letter-spacing: 5px;
+  letter-spacing: 10px;
   color: #a6faea;
   color: var(--light - teal);
   -webkit-text-stroke: 2px #2eb299;
 }
 
 .result-pass {
-  width: 15vh;
+  width: 10vw;
   height: 40px;
   margin-top: 40px;
   font-family: NotoSansCJKkr;
@@ -1028,9 +1000,10 @@ a:hover {
 }
 
 .result-time {
-  width: 20vw;
+  width: 10vw;
   height: 10vh;
   margin-top: 20px;
+  margin-right: 10vw;
   font-family: NotoSansCJKkr;
   font-size: 2em;
   font-weight: 900;
@@ -1044,10 +1017,17 @@ a:hover {
   -webkit-text-stroke: 1px #2eb299;
 }
 
+.result-empty-box4 {
+  width: 10vw;
+  height: 10vh;
+  margin-right: 10vw;
+  text-align: center;
+}
+
 .result-text {
   font-family: NotoSansCJKkr;
-  font-size: 20px;
-  font-weight: 100;
+  font-size: 1.5em;
+  font-weight: 600;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
@@ -1056,8 +1036,28 @@ a:hover {
   color: #a6faea;
 }
 
+.result-empty-box1 {
+  width: 10vw;
+  height: 12vh;
+  text-align: center;
+}
+
+.result-empty-box2 {
+  width: 30vw;
+  height: 12vh;
+}
+
+.result-empty-box3 {
+  width: 15vw;
+  height: 12vh;
+  text-align: center;
+  padding-right: 30px;
+}
+
+
+
 .img_line {
-  width: 400px;
+  width: 20vw;
   height: 4px;
   object-fit: contain;
   border-style: solid;
@@ -1069,36 +1069,3 @@ a:hover {
 }
 
 /**************** Result.css **************/
-
-.flex-citwDR gtvXcH {
-  padding: 4%;
-}
-
-.sc-gzVnrw gQjqQm {
-  font-size: 28px;
-}
-
-.gQjqQm {
-  font-size: 28px;
-  margin-top: 5%;
-}
-
-.cMZjny {
-  margin-left: 7%;
-}
-
-.gcEEPi {
-  padding-top: 21px;
-  margin-left: 7%;
-}
-
-
-
-.jOkSoX:first-of-type {
-  margin-right: 139%;
-  margin-left: -61%;
-}
-
-.jOkSoX:first-of-type+p {
-  margin-right: 21%;
-}
