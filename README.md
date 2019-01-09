@@ -4,7 +4,7 @@ Nexters 13기 활동
 Team NULLBox / Short Game for Player
 
 ## Try it!
-[Web Link]((http://www.play-it.site/))
+[Web Link](http://www.play-it.site/)
 
 ## Screen Shot
 
